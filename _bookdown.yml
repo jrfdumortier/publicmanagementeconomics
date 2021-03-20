@@ -6,4 +6,4 @@ view: https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/%s
 rmd_files: ["index.rmd","introduction.rmd","consumertheory.rmd"]
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: ""
