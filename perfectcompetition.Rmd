@@ -1,0 +1,300 @@
+# Perfect Competition
+Perfect competition is characterized by many buyers and many sellers in the market. All market participants are price taking agent, i.e., everyone takes the price prevailing in the market as given. Examples for perfectly competitive markets are agriculture, restaurant business, standardized products (e.g., office supplies), or unskilled labor market. The opposite case is a monopoly where we have a market with many buyers but only one seller. The monopoly is characterized by price-setting behavior. Examples are De Beers, IUPUI parking system, or the Bombardier 415 Superscooper. The third market structure that we are going to analyze in this course is the most common one: an oligopoly. In an oligopoly, we have many buyers but only a ``handful'' of sellers. Examples are Airbus and Boeing, or car manufacturers. Some oligopolies are not as well known as other such as the industry composed of BHP Billiton (\$66b), Rio Tinto (\$51b), Vale (\$44b), Glencore (\$232b), (compare to GM (\$155b) and Lilly (\$23b)). Other market structures include monopsonies (one buyer many sellers) and oligopsonies (few buyers and many sellers). Examples are defense contracts (Lockheed Martin, Boeing, Airbus) or Walmart in the case of monopsonies.
+
+As aforementioned, perfectly competitive markets are characterized by price-taking behavior. Individual economic agent cannot influence the price and hence, there is a nonstrategic environment. In order for price taking behavior to occur, a large number of buyers and sellers is necessary. Individual firm faces a horizontal demand curve, i.e., perfectly elastic, at the market price. One assumption that is usually made is that products are homogenous, i.e., all the products are the same such as  T-shirts, wheat, etc. We will see later that free entry and exit in and out of the market are important. No entry and exit barriers exist. Under perfect competition: $MR = p$, i.e., an individual firm's demand curve is a straight line (perfectly elastic).
+
+The firm takes the market price as given and sets $p=MC$ to obtain the profit-maximizing output level, i.e., slides along its MC curve (above average variable cost) with changing output price. Recall how profit and loss can be derived from the marginal and average cost functions based on the price (Figure \ref{fig:COM_Profit_Loss}). In the short-run, competitive firms can earn economic profit, or suffer an economic loss. The market sums buying and selling preferences of individual consumers and producers, and determines the market price. Each buyer and seller takes market price as given and is able to buy or sell the desired quantity. In the long-run, entry and exit of firms because of profits or losses. This shifts the market supply curve and changes the market price. Positive economic profit attracts new entrants until economic (not accounting!) profit is zero. This is called the zero economic profit condition in the long-run.
+
+Before turning to the Zero Economic Profit Condition, let us first consider the First Welfare Theorem. 
+
+> Under certain conditions, decentralized markets maximize total surplus for society, leaving no possible way for anyone to change the situation and make someone better off without making anyone else worse off.
+
+The invisible hand by Adam Smith refers to the information contained in prices and the self-interest by the market participants. The following is a quote from An Inquiry into the Nature and Causes of the Wealth of Nations by Adam Smith (1723-1790):
+
+> It is not from the benevolence of the butcher, the brewer, or the baker, that we expect our dinner, but from their regard to their own interest. We address ourselves, not to their humanity but to their self-love, and never talk to them of our own necessities but of their advantages.
+
+Note that the first welfare theorem contains the expression ``under certain conditions.'' The necessary conditions are:
+
+- No policies that distort prices, e.g., taxes, subsidies, price floors/ceilings, in a perfectly competitive market.
+- No market power such as in monopolies and oligopolies exist.
+- No externalities. Externalities can be either negative, e.g., pollution, or positive, e.g., recreational amenities.
+- No asymmetric information
+
+## Zero Economic Profit Condition
+
+```{r COMprofitloss,echo=FALSE,fig.cap="Derivation of profit and loss from the marginal and average cost functions based on the price"}
+cost           = function(x){450+100*x-3*x^2+0.2*x^3}
+MC             = function(x){100-6*x+0.6*x^2}
+AVC            = function(x){100-3*x+0.2*x^2}
+ATC            = function(x){450/x+100-3*x+0.2*x^2}
+p1             = 160
+p2             = 110
+qstar1         = optimr(16,function(x){(p1-MC(x))^2},method=c("BFGS"))
+qstar1         = qstar1$par
+qstar2         = optimr(16,function(x){(p2-MC(x))^2},method=c("BFGS"))
+qstar2         = qstar2$par
+par(mfrow=c(1,2))
+curve(AVC,from=0,to=25,ylim=c(0,200))
+curve(ATC,add=TRUE)
+curve(MC,add=TRUE)
+segments(0,p1,25,p1)
+points(qstar1,p1)
+points(qstar1,ATC(qstar1))
+curve(AVC,from=0,to=25,ylim=c(0,200))
+curve(ATC,add=TRUE)
+curve(MC,add=TRUE)
+segments(0,p2,25,p2)
+points(qstar2,p2)
+points(qstar2,ATC(qstar2))
+
+```
+
+```{r COMlre,echo=FALSE,fig.cap="Long-Run Equilibrium"}
+supply          = function(q){50+0.232193933543168*q+ss}      
+demand          = function(q){300-0.5*q+ds}       
+MC              = function(q){100-6*q+0.6*q^2}
+AVC             = function(q){100-3*q+0.2*q^2}
+ATC             = function(q){450/q+100-3*q+0.2*q^2}
+ydomain         = c(0,300)
+xdomain_f       = c(0,25)
+xdomain_m       = c(0,600)
+     par(mfrow=c(3,2))
+          rss = function(q){(supply(q)-demand(q))^2}
+          ss  = 0
+          ds  = 0
+          qf0 = optim(par=1,ATC,method="Brent",lower=0,upper=500)
+          qf0 = qf0$par
+          pf0 = ATC(qf0)
+                    qm0 = optim(par=1,rss,method="Brent",lower=0,upper=500)
+          qm0 = qm0$par
+          pm0 = demand(qm0);
+          curve(supply,from=xdomain_m[1],to=xdomain_m[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),ylab="Dollars",xlab="Market Output",
+                main="Panel (a)")
+          curve(demand,from=xdomain_m[1],to=xdomain_m[2],add=TRUE,yaxs="i",xaxs="i")
+               segments(qm0,0,qm0,pm0,lty=2,col="black")
+               segments(0,pm0,qm0,pm0,lty=2,col="black")
+          
+          curve(MC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),ylab="Dollars",xlab="Firm Output",
+                main="Panel (b)")
+          curve(ATC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),add=TRUE,col="blue")
+          curve(AVC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),add=TRUE,col="darkgreen")
+               segments(qf0,0,qf0,pm0,lty=2,col="black")
+               segments(0,pm0,qf0,pm0,lty=2,col="black")
+          
+          curve(supply,from=xdomain_m[1],to=xdomain_m[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),ylab="Dollars",xlab="Market Output",
+                main="Panel (c)")
+          curve(demand,from=xdomain_m[1],to=xdomain_m[2],add=TRUE,yaxs="i",xaxs="i")
+               segments(qm0,0,qm0,pm0,lty=2,col="black")
+               segments(0,pm0,qm0,pm0,lty=2,col="black")
+          ss  = 0
+          ds  = 50
+          qm1 = optim(par=1,rss,method="Brent",lower=0,upper=500)
+          qm1 = qm1$par
+          pm1 = demand(qm1);
+          curve(demand,from=xdomain_m[1],to=xdomain_m[2],add=TRUE,yaxs="i",xaxs="i",col="red")
+               segments(qm1,0,qm1,pm1,lty=2,col="red")
+               segments(0,pm1,qm1,pm1,lty=2,col="red")
+          
+          rss = function(q){(pm1-MC(q))^2}
+          qf1 = optim(par=1,rss,method="Brent",lower=0,upper=500)
+          qf1 = qf1$par
+          curve(MC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),ylab="Dollars",xlab="Firm Output",
+                main="Panel (d)")
+          curve(ATC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),add=TRUE,col="blue")
+          curve(AVC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),add=TRUE,col="darkgreen")
+               segments(qf0,0,qf0,pm0,lty=2,col="black")
+               segments(0,pm0,qf0,pm0,lty=2,col="black")
+               segments(qf1,0,qf1,pm1,lty=2,col="red")
+               segments(0,pm1,qf1,pm1,lty=2,col="red")
+               
+          rss = function(q){(supply(q)-demand(q))^2}
+          ss  = 0
+          ds  = 0
+          curve(supply,from=xdomain_m[1],to=xdomain_m[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),ylab="Dollars",xlab="Market Output",
+           main="Panel (e)")
+          curve(demand,from=xdomain_m[1],to=xdomain_m[2],add=TRUE,yaxs="i",xaxs="i")
+               segments(qm0,0,qm0,pm0,lty=2,col="black")
+               segments(0,pm0,qm0,pm0,lty=2,col="black")
+          ss  = -25
+          ds  = 0
+          qm2 = optim(par=1,rss,method="Brent",lower=0,upper=500)
+          qm2 = qm2$par
+          pm2 = demand(qm2)
+          curve(supply,from=xdomain_m[1],to=xdomain_m[2],add=TRUE,yaxs="i",xaxs="i",col="red")
+               segments(qm2,0,qm2,pm2,lty=2,col="red")
+               segments(0,pm2,qm2,pm2,lty=2,col="red")
+          
+          rss = function(q){(pm2-MC(q))^2}
+          qf2 = optim(par=1,rss,method="Brent",lower=0,upper=500)
+          qf2 = qf2$par
+          curve(MC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),ylab="Dollars",xlab="Firm Output",
+                main="Panel (f)")
+          curve(ATC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),add=TRUE,col="blue")
+          curve(AVC,from=xdomain_f[1],to=xdomain_f[2],yaxs="i",xaxs="i",
+                ylim=c(ydomain[1],ydomain[2]),add=TRUE,col="darkgreen")
+               segments(qf0,0,qf0,pm0,lty=2,col="black")
+               segments(0,pm0,qf0,pm0,lty=2,col="black")
+               segments(qf2,0,qf2,pm2,lty=2,col="red")
+               segments(0,pm2,qf2,pm2,lty=2,col="red")
+```
+
+Shifting of the average cost and marginal cost curves occur if the variables costs are affected. If the fixed costs change, only the average cost curve shifts.
+
+## Market Interventions
+
+### Taxes and Subsidies
+The economic incidence of a tax falls disproportionately on those who are less responsive to price changes; i.e., those whose behavioral response to price is more inelastic. In the case of a subsidy, there is an increase in the equilibrium quantity, a decrease in the price by consumers, and an increase in the price received by producers. The incidence of the subsidy is identical to the tax case.
+
+```{r COMtaxes,echo=FALSE,fig.cap="Consumer and producer taxes example (Panels (a) and (b). Effect on tax burden under inelastic demand (Panel (c)) and elastic demand (Panel (d))."}
+a                       = 10
+b                       = 2
+c                       = 2
+d                       = 2
+pd                      = function(q){(a-q)/b-tc}    #demand function: qD=a-b(p+td)
+ps                      = function(q){(q+d)/c+ts}    #supply function: qS=c(p-ts)-d
+pe                      = function(tc,ts){(a-b*tc+c*ts+d)/(c+b)}
+qe                      = function(tc,ts){(a*c-b*d-b*c*(tc+ts))/(b+c)}
+     par(mfrow=c(2,2))
+     tc   = 0
+     ts   = 0
+     curve(pd,from=0,to=10,ylab="Price",xlab="Quantity",main="Panel (a): Consumer Tax (CT)",
+           yaxs="i",xaxs="i",ylim=c(0,5))
+     curve(ps,add=TRUE,yaxs="i",xaxs="i",from=0,to=8)
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts),lty=2)
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2)
+     tc   = 1
+     curve(pd,add=TRUE,col="red",yaxs="i",xaxs="i",from=0,to=10,ylim=c(0,5))
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts)+tc,lty=2,col="red")
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2,col="red")
+          segments(0,pe(tc,ts)+tc,qe(tc,ts),pe(tc,ts)+tc,lty=2,col="red")
+     tc   = 0
+     ts   = 0
+     curve(pd,from=0,to=10,ylab="Price",xlab="Quantity",main="Panel (b): Producer Tax (PT)",
+           yaxs="i",xaxs="i",ylim=c(0,5))
+     curve(ps,add=TRUE,yaxs="i",xaxs="i",from=0,to=8)
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts),lty=2)
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2)
+     ts   = 1
+     curve(ps,add=TRUE,col="red",yaxs="i",xaxs="i",from=0,to=10,ylim=c(0,5))
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts)+tc,lty=2,col="red")
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2,col="red")
+          segments(0,pe(tc,ts)-ts,qe(tc,ts),pe(tc,ts)-ts,lty=2,col="red")
+
+     tc   = 0
+     ts   = 0
+     b    = 1
+     curve(pd,from=0,to=10,ylab="Price",xlab="Quantity",main="Panel (c) PT Inelastic Demand",
+           yaxs="i",xaxs="i",ylim=c(0,5))
+     curve(ps,add=TRUE,yaxs="i",xaxs="i",from=0,to=8)
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts),lty=2)
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2)
+     ts   = 1
+     curve(ps,add=TRUE,col="red",yaxs="i",xaxs="i",from=0,to=10,ylim=c(0,5))
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts)+tc,lty=2,col="red")
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2,col="red")
+          segments(0,pe(tc,ts)-ts,qe(tc,ts),pe(tc,ts)-ts,lty=2,col="red")  
+     
+     tc   = 0
+     ts   = 0
+     b    = 3
+     curve(pd,from=0,to=10,ylab="Price",xlab="Quantity",main="Panel (d) PT Elastic Demand",
+           yaxs="i",xaxs="i",ylim=c(0,5))
+     curve(ps,add=TRUE,yaxs="i",xaxs="i",from=0,to=8)
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts),lty=2)
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2)
+     ts   = 1
+     curve(ps,add=TRUE,col="red",yaxs="i",xaxs="i",from=0,to=10,ylim=c(0,5))
+          segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts)+tc,lty=2,col="red")
+          segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2,col="red")
+          segments(0,pe(tc,ts)-ts,qe(tc,ts),pe(tc,ts)-ts,lty=2,col="red")  
+rm(tc,ts,pd,ps)
+```
+
+Imposing a per-unit tax on either the consumer or the producer results in the same outcome. Assume that the demand is written as
+$$Q^D=10-2 \cdot P$$
+
+and the supply is written as
+$$q^s = 2 \cdot p - 2$$
+Without any taxes, this results in a market equilibrium:
+$$10 - 2 \cdot p = 2 \cdot p - 2\\
+  \Rightarrow p^\ast = 3\\
+  \Rightarrow q^\ast = 4$$
+Now assume that we impose a tax on the producer. The price received by the producer is now $p-t$, i.e., supply is written as $q^s = 2 \cdot (p-t) - 2$. And the resulting market equilibrium
+$$10 - 2 \cdot p = 2 \cdot (p-t) - 2\\
+        \Rightarrow p^\ast = 3+\frac{1}{2}\cdot t\\
+        \Rightarrow q^\ast = 4-t$$
+If $t=1$, the consumer pays $p^d =\$3.50$ and the producer receives $p^s =\$2.50$. The equilibrium quantity is $q^\ast=3$. If the tax is imposed on the consumer, the consumer pays $p+t$ and demand is written as $q^d = 10 - 2 \cdot (p+t)$. The resulting market equilibrium
+$$10 - 2 \cdot (p+t) = 2 \cdot p - 2\\
+        \Rightarrow p^\ast = 3-\frac{t}{2}\\
+        \Rightarrow q^\ast = 4-t$$
+If $t=1$, the consumer pays $p^d =\$3.50$ and the producer receives $p^s =\$2.50$. This is equivalent to the producer tax scenario. The equilibrium quantity is $q^\ast=3$. Consider the equilibrium quantity as a function of the tax rate, i.e., $q^\ast = 4-t$. This function also determine the tax revenue ($l$) for the government as a function of $t$, i.e., $l=t(4-t)$.
+
+### Price Floors and Price Ceilings
+A price floor is a minimum legal price mandated in a particular market, making all trades at prices below the price floor illegal. Non-price rationing in the market under price floors to reduce excess supply. Non-price mechanism to ensure supply equals demand; e.g., exit of producers. Non-price rationing by the government under price floors results in the government purchasing any surplus not sold at the price floor. Examples are the minimum wage or price floors for agricultural commodities. Price ceilings are maximum legal price mandated in a particular market, making all trades at prices above the price ceiling illegal.
+
+```{r COMceilingfloor,echo=FALSE,fig.cap="Consumer and producer taxes example (Panels (a) and (b). Effect on tax burden under inelastic demand (Panel (c)) and elastic demand (Panel (d))."}
+a         = 10
+b         = 2
+c         = 2.5
+d         = 2
+pd        = function(q){(a-q)/b-tc}    #demand function: qD=a-b(p+tc)
+ps        = function(q){(q+d)/c+ts}    #supply function: qS=c(p-ts)-d
+qd        = function(p){a-b*(p+tc)}
+qs        = function(p){c*(p-ts)-d}
+pe        = function(tc,ts){(a-b*tc+c*ts+d)/(c+b)}
+qe        = function(tc,ts){(a*c-b*d-b*c*(tc+ts))/(b+c)}
+tc        = 0
+ts        = 0
+     par(mfrow=c(1,2))
+          curve(pd,from=0,to=10,ylab="Price",xlab="Quantity",main="Price Ceiling",
+                yaxs="i",xaxs="i",ylim=c(0,5))
+               curve(ps,add=TRUE,yaxs="i",xaxs="i",from=0,to=10)
+               #polygon(c(0,3,3.5),c(5,3.5,2),col="grey")
+               segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts),lty=2)
+               segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2)
+               segments(0,2,qs(2),2,col="red")
+               segments(qs(2),0,qs(2),pd(qs(2)),col="red")
+          curve(pd,from=0,to=10,ylab="Price",xlab="Quantity",main="Price Ceiling",
+                yaxs="i",xaxs="i",ylim=c(0,5))
+               curve(ps,add=TRUE,yaxs="i",xaxs="i",from=0,to=10)
+               segments(qe(tc,ts),0,qe(tc,ts),pe(tc,ts),lty=2)
+               segments(0,pe(tc,ts),qe(tc,ts),pe(tc,ts),lty=2)
+               segments(0,3.5,qd(3.5),3.5,col="red")
+               segments(qd(3.5),0,qd(3.5),pd(qd(3.5)),col="red")
+```
+
+
+% Price floors for airlines. https://www.theatlantic.com/business/archive/2013/02/how-airline-ticket-prices-fell-50-in-30-years-and-why-nobody-noticed/273506/
+
+
+## Exercises}
+1.  The following questions ask you to consider the market for Regular Coffee and Fair Trade Coffee. Fair Trade USA defines fair trade as follows: *Fair Trade goods are just that. Fair. From far-away farms to your shopping cart, products that bear our logo come from farmers and workers who are justly compensated. We help farmers in developing countries build sustainable businesses that positively influence their communities.* Suppose that there is an advertising campaign that promotes the purchase of fair trade coffee. Assume that the marketing campaign works and that it influences the demand for fair trade coffee, i.e., consumers change their tastes and some consumers switch to fair trade coffee.
+    a. Draw two supply and demand graphs; one for ``Fair Trade Coffee'' and one for ``Regular Coffee.'' Assume that both markets are in equilibrium before the marketing campaign. Mark the equilibrium price and quantity.
+    b. Show the new equilibrium quantity and price in the graph for the ``Fair Trade Coffee.''
+    c. Illustrate the effects in the market for Regular Coffee. Show the new equilibrium quantity and price in the graph for the Regular Coffee. What conclusions do you draw? How does the zero-economic profit condition affect the market for Regular Coffee?
+
+3. The demand function for pontoon boat rentals on Lake Michigan is written as $Q^D=50-0.2 \cdot P$. The supply curve is $Q^S=0.3 \cdot P$. When answering, be sure to differentiate between the price paid by the consumer and the price received by the producer. For each part, also calculate producer and consumer surplus.
+    a. What are the equilibrium price and equilibrium quantity?
+    b. Because of air and noise pollution, a per-unit tax of \$10 per rental is imposed on consumers. What are the new equilibrium price and equilibrium quantity?
+    c. A state representative from one of the bordering states argues that pontoon boat rental operators only have revenue in the summer and thus, suffer from the tax. Hence, they propose a subsidy of \$6 to the rental operators. What are the new equilibrium price and equilibrium quantity under this scheme? Note that we have a tax on consumers and a subsidy for producers at the same time.
+    d. What if the tax on consumers is reduced to \$4 and the subsidy for rental operators is eliminated? How is this different from the answer in the previous part?
+
+4. Draw a marginal and average total cost curves for a perfectly competitive industry that is in the long-run equilibrium. What is the profit of the firm in the initial situation? The legislator wants to support business and reduced the annual (fixed) business license fee for all firms. What happens to this industry in the short- and long-run? Illustrate in your graph.
+
+5. Take any tourist spot around the world and you will find the same situation: A lot of producers (technically, they are vendors but let us stay with the term producer) selling some cheesy souvenir item. Let us consider this market which is characterized by a lot of producers and a lot of consumers (tourists). Suppose that the place for which you are answering this question is a small town. To put the question in context, consider the folowing excerpt from a Washington Post article titled ``Nothing to see here: Popular European destinations want fewer tourists:''
+
+>Hallstatt may not have the same name-recognition as Venice or Amsterdam. But if you Google Austria, you'll see the village dominates the images that pop up. It looks a lot like Arendelle in Disney's Frozen, with the bell tower of the Lutheran Church standing in for the central tower of Queen Elsa's castle. A salt-mining town dating from the late Bronze Age, and a UNESCO World Heritage site since 1997, Hallstatt has become especially popular among travelers from Asia. The hype began with a 2006 South Korean TV series, ``Spring Waltz,'' that was partially shot in Hallstatt. Six years later, the China Minmetals mining company opened a life-size replica of Hallstatt in the southern Chinese province of Guangdong. The company even mimicked Hallstatt's central church, although the Chinese version contains a banquet hall. Residents of the real Hallstatt, who hadn't been consulted on the project, were stunned when they learned of it. Now, filmmakers, journalists and tourists alike come to Hallstatt in droves. The town, with a population of about 800, drew 1 million visitors last year.
+
+    a. Assume that this market is initially in its long-run equilibrium. Draw this initial situation in two, interconnected graphs. One the left side, you have the market and on the right side, you have one individual, representative producer.
+    b. A TV show brought fame to our small city and suddenly, many more tourists come to the town. What happens to the demand for the souvenir item in the town in the short-run? What happens in the long-run? Use your graph to illustrate the effects.

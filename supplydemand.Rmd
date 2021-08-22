@@ -1,0 +1,270 @@
+# Demand and Supply
+We derived the demand and supply function for a good in the previous two sections on consumer and producer theory. In this chapter, we determine the market equilibrium and analyze how the market equilibrium evolves under shifting supply and demand. If the market is not in equilibrium, we call this a market imbalance. In the case of excess supply, the price is above the equilibrium. In the case of excess demand, the price is below the equilibrium.
+
+## Demand Curve
+The quantity demanded of a good or service is the number of units that all buyers in a market would choose to buy over a given time period, given the constraints that they face. There is a negative relationship between price and quantity demanded as shown in consumer theory. The demand curve is a function of price ($p$), price of substitutes ($p_S$), price of complements ($p_C$), income ($I$), and possibly other factors such as advertising, tastes, taxes, weather, etc. Hence, the demand curve is usually expressed as a function $Q^d=f(p,p_S,p_C,I,\dots)$
+
+Substitutes are goods that are similar to each other and can serve as an alternative for a good. Examples for substitutes are maple syrup, honey, sugar, jam. Complements are goods that are bought together. Examples of complements are pancake mix and maple syrup or cars and tires. 
+
+The demand function is usually represented as a function form. For example the demand for natural gas as a function of price ($P$) and temperature ($T$):
+$$Q^d=200-4 \cdot P-\frac{T}{2}$$ 
+Given the functional form, the demand can then be either represented in a table format or as a graph. For example, given the above demand for natural gas, you can draw the demand if the temperature is say $T=80$ or $T=20$.  
+
+The law of demand states that when the price of a good rises and everything else remaining the same, the quantity demanded of the good  will fall. In economics, "...everything else remains the same..." is called *ceteris paribus*. A change in any variable that affects demand, except for the good's price, causes the demand curve to shift. There is a difference between *change in quantity demanded* and *change in demand*. It is important to differentiate between a shift in demand and a price change. In the case of a price change, we have
+
+- Price decrease $\Rightarrow$ Movement to the right along the curve
+- Price increase $\Rightarrow$ Movement to the left along the curve
+
+Some important factors that make the demand curve shift are:
+
+- **Income or wealth**: An increase (decrease) in income or wealth shifts the demand function to the right (left).
+- **Price of substitutes**: An increase (decrease) in the price of substitutes shifts the demand function to the right (left).
+- **Price of complements**: An increase (decrease) in the price of complements the demand function to the left (right).
+- **Population**: An increase (decrease) in population shifts the demand function to the right (left).
+- **Expected price**: An increase (decrease) in the expected price shifts the demand function to the right (left).
+
+## Supply Curve
+
+
+![U.S. Drought Monitor from August 14, 2012 illustrating the areas affected by intense dryness.](https://droughtmonitor.unl.edu/data/png/20120814/20120814_usdm.png)
+
+The quantity supplied is the number of units of a good that all sellers in the market choose to sell over some time period, given the constraints that they face. The quantity supplied maximizes producer profits. The supply function can be expressed as $Q^s=f(p,p_r,w,T,\dots)$.
+
+Quantity supplied ($Q^s$) is a function of output price ($p$), price of inputs ($r$), wages ($w$), technology ($T$), and possibly other factors such as taxes, subsidies, etc. The law of supply states that when the price of a good rises and everything else remains the same, the quantity of the good supplied will rise. In case of a price change, we have
+
+- Price decrease $\Rightarrow$ Movement to the left along the curve
+- Price increase $\Rightarrow$ Movement to the right along the curve
+
+Table \ref{table:SupplyCurveShift} summarizes the effect on supply for some important factors.
+
+Factor                  | Right shift   | Left Shift 
+:----                   |:---:          |:---: 
+Price of input          | $\downarrow$  | $\uparrow$ 
+Price of alternatives   | $\downarrow$  | $\uparrow$ 
+Number of firms         | $\uparrow$    | $\downarrow$ 
+Expected price          | $\downarrow$  | $\uparrow$ 
+            
+## Market Equilibrium
+A market is a group of buyers and sellers with the potential to trade with each other. The equilibrium price is determined by the intersection of the demand and supply curves. It is the price at which the quantity demanded equals the quantity supplied. Figure \ref{fig:SND_shifts} provides example of changes in market equilibrium such as (1) shift in demand, e.g., demand due to biofuels, (2) shift in supply, e.g., fertilizer price, and (3) shift in demand and supply, e.g., biofuels and fertilizer price.
+
+```{r SNDshifts,echo=FALSE,fig.cap="Shifts in demand and supply"}
+supply      = function(x){50/3+x/1.75+ss}      # ss = supply shify
+demand      = function(x){200-x/2.25+ds}       # ds = demand shift
+equilibrium = function(x){(supply(x)-demand(x))^2}
+par(mfrow=c(1,3))
+  ds = 0
+  ss = 0
+  q0 = optim(200,equilibrium,method=c("Brent"),lower=0,upper=500)
+  q0 = q0$par
+  p0 = demand(q0)
+  curve(supply,from=0,to=500,ylab="Price",xlab="Quantity",main="Shift in Demand",
+        yaxs="i",xaxs="i")
+  curve(demand,add=TRUE)
+  ds = 50
+  q1 = optim(200,equilibrium,method=c("Brent"),lower=0,upper=500)
+  q1 = q1$par
+  p1 = demand(q1)
+  curve(demand,add=TRUE,col="red")
+  segments(q0,0,q0,p0,lty=2)
+  segments(0,p0,q0,p0,lty=2)
+  segments(q1,0,q1,p1,lty=2,col="red")
+  segments(0,p1,q1,p1,lty=2,col="red")     
+#--------------------------------------------------------------------------------------------------
+  ds = 0
+  ss = 0
+  q0 = optim(200,equilibrium,method=c("Brent"),lower=0,upper=500)
+  q0 = q0$par
+  p0 = demand(q0)
+  curve(supply,from=0,to=500,ylab="Price",xlab="Quantity",main="Shift in Supply",
+        yaxs="i",xaxs="i")
+  curve(demand,add=TRUE)
+  ss = 75
+  q1 = optim(200,equilibrium,method=c("Brent"),lower=0,upper=500)
+  q1 = q1$par
+  p1 = demand(q1)
+  curve(supply,add=TRUE,col="red")
+  segments(q0,0,q0,p0,lty=2)
+  segments(0,p0,q0,p0,lty=2)
+  segments(q1,0,q1,p1,lty=2,col="red")
+  segments(0,p1,q1,p1,lty=2,col="red")
+#--------------------------------------------------------------------------------------------------
+  ds = 0
+  ss = 0
+  q0 = optim(200,equilibrium,method=c("Brent"),lower=0,upper=500)
+  q0 = q0$par
+  p0 = demand(q0)
+  curve(supply,from=0,to=500,ylab="Price",xlab="Quantity",
+        main="Shift in Supply and Demand",yaxs="i",xaxs="i")
+  curve(demand,add=TRUE)
+  ds = 50
+  ss = 75
+  q1 = optim(200,equilibrium,method=c("Brent"),lower=0,upper=500)
+  q1 = q1$par
+  p1 = demand(q1)
+  curve(supply,add=TRUE,col="red")
+  curve(demand,add=TRUE,col="red")
+  segments(q0,0,q0,p0,lty=2)
+  segments(0,p0,q0,p0,lty=2)
+  segments(q1,0,q1,p1,lty=2,col="red")
+  segments(0,p1,q1,p1,lty=2,col="red")  
+rm(ds,p0,p1,q0,q1,ss,demand,equilibrium,supply)
+```
+
+Simultaneous shift of demand and supply leads to ambiguous effect on price and quantity. If both curves shift, the effect of quantity and price is ambiguous. To determine the exact effect, we need mathematics.
+
+|                     | Demand $\uparrow$        | Demand $\circ$             | Demand $\downarrow$ 
+|:--------------------|:------------------------:|:--------------------------:|:------------------------------:
+| Supply $\uparrow$   | P?,Q $\uparrow$          | P$\downarrow$,Q $\uparrow$ | P$\downarrow$,Q ? 
+| Supply $\circ$      | P$\uparrow$,Q $\uparrow$ |      & P $\circ$,Q $\circ$ | P$\downarrow$,Q $\downarrow$
+| Supply $\downarrow$ | P$\uparrow$,Q ?          | P$\uparrow$,Q $\downarrow$ | P?,Q $\downarrow$
+
+
+In 2012, a severe drought hit farmers and cropland in the United States.\footnote{\emph{The Economist} has at least two articles on this subject titled ``The 2012 drought will dent farm profits and push up food prices'' (July 21st, 2012) and ``Supply shocks: Feeling a drought'' (August 14th, 2012) which summarizes the effects on agricultural markets.} Figure \ref{fig:SND_drought} illustrates the areas affected by the drought and the intensity. As mentioned in the article, the world price of corn increases by 30\% because the U.S. is responsible for 52.5\% of world corn exports.
+
+### Examples
+\noindent \emph{Numerical Example}\\
+Demand as a function of income, i.e., $q^d = f(p,I)$:
+    \begin{equation*}
+        q^d = 300-2p+4I
+    \end{equation*}
+Supply as a function of the price
+    \begin{equation*}
+        q^s = 3 p - 50
+    \end{equation*}
+What is the market equilibrium if the income level is $I=25$? What if $I=50$?\\
+
+
+
+\noindent \emph{Demand for U.S. Wheat}\\
+Initial situation in 1998:
+    \begin{gather*}
+        q^d = 3244-283 \cdot p\\
+        q^s = 1944 + 207 \cdot p\\
+        p = 2.65
+    \end{gather*}
+At the end of 1998, Indonesia and Brazil open their market for U.S. wheat, i.e., 200 million bushels of additional demand
+    \begin{gather*}
+        q^d = 3444-283 \cdot p\\
+        p =3.06
+    \end{gather*}
+
+## Elasticity
+Elasticity measures the percentage change in one variable ($y$) divided by the percentage change in some other variable ($x$).
+$$\epsilon = \frac{\% \Delta \text{Dependent variable}}{\% \Delta \text{Independent variable}}$$
+```{r SNDelasticity,echo=FALSE,fig.cap="Panel (a): Determination of elasticity for a linear demand function. Panel (b): Relationship between elasticity and total revenue"}
+ par(mfrow=c(1,2))
+   demand         = function(x){4-0.5*x}
+   curve(demand,from=0,to=8,ylab="Price",xlab="Quantity",yaxs="i",xaxs="i",main="Panel (a)")
+   segments(2,0,2,3,lty=2)
+   segments(0,3,2,3,lty=2)
+   segments(4,0,4,2,lty=2,col="red")
+   segments(0,2,4,2,lty=2,col="red")
+   segments(6,0,6,1,lty=2,col="blue")
+   segments(0,1,6,1,lty=2,col="blue") 
+#--------------------------------------------------------------------------------------------------
+   demand         = function(x){10-2*x}
+   revenue        = function(x){x*(10-2*x)} 
+   elasticity     = function(x){0.5*(10-2*x)/x} 
+   curve(demand,from=0,to=5,ylim=c(0,14),yaxs="i",xaxs="i",
+         ylab="Price, Elasticity, and Total Revenue",xlab="Quantity",main="Panel (b)")
+   curve(revenue,from=0,to=5,add=TRUE,col="blue")
+   curve(elasticity,add=TRUE,col="red")
+   points(2.5,1,col="red")
+rm(demand,elasticity,revenue)
+```
+
+*Own-price elasticity* is the change in quantity demanded of good $i$ with respect to the price of good $i$:
+$$\epsilon_P = \frac{\% \Delta Q_i}{\% \Delta P_i} = \frac{P_i}{Q_i} \frac{\Delta Q_i}{\Delta P_i}$$
+For example, if the own-price elasticity of a good is $-0.6$, then if the price of that good increases by 1\%, the quantity demanded for the good will decrease by $-0.6 \cdot 1\% = -0.6\%$. The elasticity works for small percentage changes in the price. Given the elasticity of $-0.6$, if the price of that good increases by 3\%, the quantity demanded for the good will decrease by $-0.6 \cdot 3\% = -1.8\%$. Note that the elasticity for a linear demand function is not constant. For example, assume that $Q=8-2 \cdot P$. In the case of a linear demand function, we have
+$$\text{constant} = \frac{\Delta Q_i}{\Delta P_i}$$
+What is the elasticity at $p=4$, $p=3$, $p=2$, $p=1$, and $p=0$ in Panel (a) of the figure above? Demand can be either elastic, inelastic, or unit elastic.
+
+- Demand is elastic if the percentage change in quantity is greater than the percentage change in price.
+- Demand is inelastic if the percentage change in quantity is less than the percentage change in price.
+- Demand is unit elastic if the percentage change in quantity is equal to the percentage change in price.
+
+Besides the own-price elasticity, we also have the income elasticity and cross-price elasticity. *Income elasticity* is the change in quantity demanded of good $i$ with respect to income:
+$$\epsilon_I = \frac{\% \Delta Q_i}{\% \Delta I} = \frac{I}{Q} \frac{\Delta Q}{\Delta I}$$
+And the *cross-price elasticity* is the change in quantity demanded of good $i$ with respect to price of good $j$:
+$$\epsilon_C = \frac{\% \Delta Q_i}{\% \Delta P_j} = \frac{P_j}{Q_i} \frac{\Delta Q_i}{\Delta P_j}$$
+There are also come special cases of elasticity depicted in Figure.
+```{r SNDspecial,echo=FALSE,fig.cap=""}
+     par(mfrow=c(1,3))
+          demand         = function(x){10*x^(-1)}
+          curve(demand,from=0,to=8,ylab="Price",xlab="Quantity",
+                yaxs="i",xaxs="i",main="Isoelastic",yaxs="i",xaxs="i",ylim=c(0,16))
+          plot(x=NULL, y=NULL,xlim=c(0,8),ylim=c(0,16),yaxs="i",xaxs="i",
+               main="Perfectly Inelastic",ylab="Price",xlab="Quantity")
+          segments(4,0,4,15)
+          demand         = function(x){8+x*0}
+          curve(demand,from=0,to=8,ylab="Price",xlab="Quantity",yaxs="i",xaxs="i",
+                main="Perfectly Elastic",yaxs="i",xaxs="i",ylim=c(0,16))
+rm(demand)
+```
+
+
+% Explain the relationship between elasticity and revenue using a graph with the demand function and the area in terms of revenue change.
+
+## Consumer and Producer Surplus
+Consider a demand function of the form $Q=10-P$ and a supply function of the form $Q=P-2$.
+
+```{r SNDwelfare,echo=FALSE,fig.cap="The sum of consumer surplus and producer surplus is called social welfare."}
+fundemand       = function(Q){10-Q}
+funsupply       = function(Q){2+Q}
+par(mfrow=c(1,3))
+        curve(fundemand,from=0,to=10,ylab="Price",xlab="Quantity",yaxs="i",xaxs="i",
+              main="Consumer Surplus (CS)",yaxs="i",xaxs="i",ylim=c(0,10))
+                segments(0,6,4,6)
+                segments(4,0,4,6)
+                polygon(c(0,0,4),c(10,6,6),col="darkseagreen")
+                text(1.25,7,"Consumer \n Surplus")
+                text(2,3,"Consumer \n Expenditure")
+        curve(funsupply,from=0,to=10,ylab="Price",xlab="Quantity",yaxs="i",xaxs="i",
+              main="Producer Surplus (PS)",yaxs="i",xaxs="i",ylim=c(0,10))
+                segments(4,0,4,6)
+                polygon(c(0,0,4),c(6,1,6),col="deepskyblue")
+                text(1.25,5,"Producer \n Surplus")
+                text(2,1,"Total Variable Cost")                        
+        curve(fundemand,from=0,to=10,ylab="Price",xlab="Quantity",yaxs="i",xaxs="i",
+              main="Social Welfare",yaxs="i",xaxs="i",ylim=c(0,10))
+        curve(funsupply,add=TRUE)
+                polygon(c(0,0,4),c(10,6,6),col="darkseagreen")
+                polygon(c(0,0,4),c(6,1,6),col="deepskyblue")
+                text(1.25,7,"Consumer \n Surplus")
+                text(1.25,5,"Producer \n Surplus")               
+```
+
+### Policy Examples
+There are some interesting applications of elasticities to public and economic policy. Consider for example services such as public transportation or the U.S. Postal Service. Very often the discussion centers around whether a price increase results in an increase or decrease in revenue. An argument can be made for both cases. Thus, it is important to know if prices are in the elastic or inelastic section of the demand. Income elasticity places a role in determining the future evolution of demand given income projections.
+
+The sign of the cross-price elasticity determines whether two goods are substitutes or complements.
+
+- $\epsilon_C <0 \Rightarrow$ complements
+- $\epsilon_C >0 \Rightarrow$ substitutes
+
+This can have important implications in anti-trust cases where the market power of a firm needs to be determined. Companies who have had troubles in the past are Office Depot and Staples (test in 40 cities), Alcoa (aluminum market), DuPont (cellophane), or Continental Can (acquiring a glass manufacturer) to name a few.
+
+In a 2005 article,\footnote{``To Reduce the Cost of Teenage Temptation, Why Not Just Raise the Price of Sin?'' by David Leonhardt in the New York Times, 25 July 2005} the New York Times lists examples how an increase in the price of cigarette and alcohol taxes reduces the consumption of those goods by teenagers. Those consumers have a much higher elasticity with respet to consumption than adults. The article states that
+
+> In just about every state that increased beer taxes in recent years, teenage drinking soon dropped. The same happened in the early 1990's when Arizona, Maryland, New Jersey and a handful of other states passed zero-tolerance laws, which suspend the licenses of under-21 drivers who have any trace of alcohol in their blood. In states that waited until the late 90's to adopt zero tolerance, like Colorado, Indiana and South Carolina, the decline generally did not happen until after the law was in place. Teenagers, it turns out, are highly rational creatures in some ways. Budweisers and Marlboros are discretionary items, and their customers treat them as such.
+
+## Exercises
+
+1. The demand for books is $Q^D = 81-P$ and the supply of books is $Q^S = 8 \cdot P$. What is the equilibrium quantity and price?
+
+2. The demand for gasoline in the U.S. is very inelastic. Why do you think that is the case? Assume that it is -0.2. If gasoline prices decrease by 3\%, by how many percent does the quantity demanded change?
+
+3. The demand function for ice cream is $Q=T-5 \cdot P-40$ where $Q$, $P$, and $T$ represent the quantity, price, and temperature, respectively.
+    a. Draw the demand curve for $T=80$.
+    b.  In your graph, show what happens if the temperature drops to 70. Does the demand curve shift or are we moving along the demand function?
+    c. The price of ice cream decreases from \$4 to \$3 without a change in temperature ($T=80$). In your graph, show how this affects the quantity demanded. Does the demand curve shift or are we moving along the demand function?
+
+4. During the COVID-19 pandemic, a (non-economist) friend of mine was getting gasoline and noticed many nozzles had bags over them since the gas station was low on supply despite low prices. Fearing the beginning of societal collapse, he sent me a text message because he did not understand how prices and supply could be low simultaneously. Draw a demand and supply graph starting with the pre-COVID equilibrium price and quantity. Then, show what happens if people change their driving behavior towards fewer trips. How would you have explained the situation to my friend? (It later turned out that the gas station simply forgot to put the restock order in with corporate.)
+
+5. The following is an extract of an article title [Supply shocks: Feeling a drought](https://www.economist.com/free-exchange/2012/08/14/feeling-a-drought) from the British news magazine The Economist. Read the paragraph and answer the question below.
+
+>Much of America's agricultural heartland is in the grips of extreme to exceptional drought. It is becoming increasingly clear that this drought will take a significant toll on some of the nation's principal food crops, especially corn, wheat, and soybeans. As a result, food prices are soaring - the price of corn rose 23\% in July - and those food price increases are beginning to make their way into official inflation figures. This morning, the Bureau of Labour Statistics released its July producer price index. Headline prices for finished goods rose 0.3\% for the month, above expectations. The internals of the report show a sharp division between food price trends and the movement of prices for most other goods. Finished core prices rose a strong 0.4\% to 0.5\% for finished foods. But core prices for intermediate and crude goods actually fell in July, while intermediate and crude food indexes soared. Prices for crude food stuffs rose by 5.2\% in July alone. The impact of the drought on production is quite clearly a supply shock; productive capacity has actually been diminished and prices have risen as a result. Other things equal, the economy will grow a bit less than expected before the scope of the drought became clear and inflation will be a bit higher.
+
+Corn is a significant input to the production of meat because a high proportion of livestock feed uses corn. I want you to draw two supply and demand graphs (i.e., two markets): One for corn and one for meat. Illustrate the effects of the drought on the market for corn and how this translates into the market for meat.
+
+6. Concerned about the high consumption of illegal, highly addictive drugs in the state, the governor solicits ideas to address the problem. State Representative Carson, a hardliner on drugs, suggests that the police should focus on reducing the number of drug dealers in the state. Representative Carter suggests an education campaign to inform potential consumers (e.g., high school students) about the adverse effects of using addictive drugs. To answer the question, assume that both proposals work in reality and have the desired effects. Using two supply and demand graphs for the drug market (i.e., one for each representative),, illustrate the effects of the two proposals. Assume that the market for drugs is initially in equilibrium. Then proceed to show the effects of the policy proposals. Based on your analysis, which policy would you recommend? Why?

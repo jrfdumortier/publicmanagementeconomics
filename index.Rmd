@@ -1,8 +1,9 @@
 --- 
 title: "Public Management Economics"
 author: "Jerome Dumortier"
-date: "`r Sys.Date()`"
+date: "21 August 2021"
 site: bookdown::bookdown_site
 ---
 
 # Preface
+This book serves as an introduction to economics for public managers. It explains theoretical concepts and provides applied examples from a wide variety of topics such as environmental policy, taxation, or nonprofit management. Each chapter has a set of exercises to practice the covered concepts. The last chapter also provides case studies which require some more in depth analysis than the exercises. Needless to say, this book will be continuously updated which is one of the advantages of publishing it on GitHub. Some chapters also include YouTube videos and the link to those is included in the respective sections.

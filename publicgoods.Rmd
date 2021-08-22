@@ -1,0 +1,135 @@
+# Public Goods
+Public goods can be consumed by more than one individual at the same time, e.g., national defense, police officers in a city (up to a certain extent). A good is \emph{rival} if it cannot be consumed by more than one individual at a time. It is excludable if non-paying consumers can be excluded from consumption. Our primary focus so far has been on pure private goods - goods that are both rival and excludable. The Tragedy of the Commons arises when rival goods are made non-excludable through common ownership. Public goods are both non-rival and non-excludable; e.g. national defense, lighthouse. Club goods are non-rival but excludable; e.g. public swimming pools.
+    \begin{table}
+        \begin{center}
+            \begin{tabular}{ccc}\toprule
+                                    & Rival         & Non-Rival \\ \midrule
+                  Excludable        & Private Good  & Club Good \\
+                  Non-Excludable    & Common Good   & Public Good \\ \bottomrule
+            \end{tabular}
+            \caption{Categorization of goods}
+        \end{center}
+    \end{table}
+Common goods lead to the ``Tragedy of the Commons'', e.g., swimming pool as a club good, free rider problem. Suppose that two future roommates need to decided whether to bring a TV to the dormitory. The value of a TV for each player is \$100 and the cost of a TV is \$150.
+\begin{table}
+    \begin{center}
+        \begin{tabular}{llcc} \toprule
+                & & \multicolumn{2}{c}{Player B}\\ \cmidrule(r){3-4}
+                &               & Buy       & Don't buy \\ \hline
+        Player A  & Buy         & -50, -50  & -50, 100 \\
+                  & Don't buy   & 100,-50   & 0, 0 \\ \bottomrule
+        \end{tabular}
+    \end{center}
+    \caption{Bringing a TV}
+\end{table}
+
+\subsection{Provision of Public Goods}
+Suppose that the benefit of a public good $q$ can be represented as follows:
+    \begin{align*}
+        U_A(q)  &=10q-q^2 \\
+                &=10(q_A+q_B) -(q_A+q_B)^2\\
+        U_B(q)  &=10q-\frac{q^2}{2} \\
+                &=10(q_A+q_B) -\frac{(q_A+q_B)^2}{2}
+    \end{align*}
+The cost of acquiring the good is $C(q)=8(q_A+q_B)$. So the total benefit to society can be written as
+    \begin{equation*}
+        B_S(q_A,q_B) = 20(q_A+q_B) -1.5(q_A+q_B)^2-8(q_A+q_B)
+    \end{equation*}
+Solving the first-order conditions leads to $20 -3(q_A+q_B)=8$. Thus, societal benefit is maximized if $q_T=4$. So if $MB_a=10-2q$, $MB_b=10-q$, and $MC=8$, then we have
+        \begin{gather*}
+            MB_a = MC \quad \Rightarrow \quad q = 1\\
+            MB_b = MC \quad \Rightarrow \quad q = 2
+        \end{gather*}
+But since individual $A$ has already purchased 1 unit, individual $B$ will free ride and they will end up with 2 units.
+
+\subsection{Common Resource: Fisheries and Population Dynamics}
+Let $f(X)$ denote the net growth rate, i.e., births minus deaths excluding harvest, of a fish species. The total population is denoted with $X$ and the maximum fish population is denoted with $k$ and is often referred to as the carrying capacity with unsustainable quantity after this amount. Before the peak, fish rapidly grow and there are plenty of food and space for the species. After the peak, depletion of the fish by the environment, food scarcity and less space for species.
+
+Assume that harvest is a result of effort (boats) and the fish population, i.e., $H = G(X,E)$, with $X$ representing fish population and $E$ representing effort, i.e, boats, equipment, nets, bait, and so on. The more effort a fisherman expends, the higher the harvest. The higher the fish population, the more the fishermen catch. This means that there can be the same harvest rate but different levels of fish population and effort. In the steady state, the harvest rate equals net birth rate of the fish, i.e., $H = f(X)$. Furthermore, assume that the price of fish is $p$ and that the cost of effort is $c$. Thus the profit equation can be written as
+     \begin{equation*}
+          \pi = p \times h - c \times E = p \times G(E,X) - c \times E
+     \end{equation*}
+With an open access resource, profits are driven to zero resulting in low harvest and fish population.
+
+\subsection{Asymmetric Information, Adverse Selection, and Moral Hazard}
+The asymmetric information problem that causes higher cost customer to ``adversely select'' into the market or, alternatively, that causes low quality suppliers to adversely select into the market. Moral hazard refers to the tendency to change behavior after entering a contract, especially a contract which reduces risk.
+Possible prevention of adverse selection is to eliminate the choice of informed people, e.g., providing insurance to everyone or by mandating that everyone buy insurance. Avoiding or preventing adverse selection can be achieved via signalling and/or screening.
+        \begin{table}
+            \begin{center}
+                \begin{tabular}{lcc} \toprule
+                  Market            & Signaling     & Screening \\ \hline
+                  Life insurance    & Non-smoker    & Health exam \\
+                  Used cars         & Carfax        & Mechanic \\
+                  Labor market      & Eduction      & Interview \\
+                  Credit market     & Credit score  & ? \\ \bottomrule
+                \end{tabular}
+            \end{center}
+        \end{table}
+
+Assume that the demand for car insurance can be written as $q=20-2 \cdot p$ or $p=10-q/2$. Further, the marginal cost associated with a safe driver is $MC_s=2$ and the marginal cost associated with an unsafe driver is $MC_u=6$. Without asymmetric information and in a perfectly competitive market, we have marginal cost pricing, that is
+     \begin{align*}
+          2 &= 10 - \frac{q}{2} \quad \Rightarrow \text{$q=16$ and $p=2$}\\
+          6 &= 10 - \frac{q}{2} \quad \Rightarrow \text{$q=8$ and $p=6$}
+     \end{align*}
+
+Calculating the consumer surplus from this pricing policy, we can see that $CS_s=\$ 128$ and $CS_u =\$32$ leading to a total surplus of \$160. If the insurance company has no way of telling whether a driver falls in the category ``safe'' or ``unsafe,'' it has to charge a uniform price. Assuming an equal amount of safe and unsafe drivers, the company sets the price at \%4. We can show that this leads to a surplus of \$144 which is lower.
+
+%==============================================================================================================================
+%\begin{frame}{Market for Lemons}
+%    Problem
+%        \begin{itemize}
+%            \item Inability of buyers to judge a product's quality before purchasing it
+%            \item Low-quality products (lemons) may drive high-quality products out of the market
+%        \end{itemize}
+%    Many potential buyers for used cars.
+%        \begin{itemize}
+%            \item Willingness to pay for lemon: \$1,000
+%            \item Willingness to pay for high quality car: \$2,000
+%        \end{itemize}
+%    Market: 1,000 owners of lemons and 1,000 owners of good cars
+%        \begin{itemize}
+%            \item Reservation price of owners of lemons: \$750
+%            \item Reservation price of owners of high-quality used cars: $v < \$2,000$.
+%        \end{itemize}
+%\end{frame}
+%==============================================================================================================================
+%\begin{frame}{Asymmetric Information and Market Efficiency}
+%    Absence of asymmetric information:
+%        \begin{itemize}
+%            \item No market inefficiency
+%%        \end{itemize}
+ %   Neither buyers nor sellers know the quality of the car:
+ %       \begin{itemize}
+ %           \item No market inefficiency
+ %       \end{itemize}
+ %   Asymmetric information between buyer and seller
+ %       \begin{itemize}
+ %           \item Equilibrium depends on $v$
+ %           \item Possibility of inefficiency
+ %       \end{itemize}
+ %   Many stores selling the same good:
+ %       \begin{itemize}
+ %           \item Full information about prices $\Rightarrow$ same price charged by all stores
+ %           \item Limited information about prices $\Rightarrow$ possibility of different prices
+ %       \end{itemize}
+%\end{frame}
+
+\subsection{Exercises}
+    \begin{enumerate}
+        \item Consider the following table. Does this project meet the criteria of Pareto efficiency? Kaldor-Hicks efficiency? Would it pass a majority vote?
+            \begin{table}[h!]
+                \begin{center}
+                    \begin{tabular}{crr}\toprule
+                    Individual Resident & Individual Benefit & Cost Share   \\ \midrule
+                    A                   & \$4,500            & \$3,000      \\
+                    B                   & \$1,000            & \$3,000      \\
+                    C                   & \$2,500            & \$3,000      \\
+                    D                   & \$4,500            & \$3,000      \\
+                    E                   & \$1,500            & \$3,000      \\ \midrule
+                    Total Benefit       & \$14,000           & \$15,000     \\ \bottomrule
+                    \end{tabular}
+                \end{center}
+            \end{table}
+        \item Three neighbors vote on installing a streetlight. If they vote ``yes,'' each neighbor has to pay \$100. They value the streetlight at \$200, \$150, and \$50, respectively. Does this project meet the criteria of Pareto efficiency? Kaldo-Hicks efficiency? Would it pass a majority vote?
+    \end{enumerate}
+

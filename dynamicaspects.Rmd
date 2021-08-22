@@ -1,0 +1,123 @@
+# Game Theory
+
+\subsection{Resource Extraction}
+\begin{equation}
+    \frac{P_{t+1}-c}{P_t-c}=1+r
+\end{equation}
+The resource is left in the ground if $(P_{t+1}-c)(P_t-c)>1+r$ and is taken out if $(P_{t+1}-c)(P_t-c)<1+r$
+
+
+
+\subsection{Intertemporal Decision Making}
+Intertemporal decision making involves the question of how much to consume in time period $t$, i.e., $c_t$. For now, assume two time periods $t \in \{1,2\}$. Given incomes $m_1$ and $m_2$ and given consumption prices $p_1$ and $p_2$, what is the most preferred intertemporal consumption bundle ($c_1$,$c_2$)? To answer this question, we need to know:
+    \begin{itemize}
+        \item Intertemporal budget constraint
+        \item Intertemporal consumption preferences
+    \end{itemize}
+
+\subsection{No Price Effects}
+Assume for now that $p_1 = p_2 = \$1$ and that there is neither borrowing nor saving:
+    \begin{itemize}
+        \item Consumption bundle: $c_1 = m_1$ and $c_2 = m_2$
+    \end{itemize}
+Intertemporal budget constraint:
+    \begin{itemize}
+        \item No consumption in period 1 ($c_1 = 0$): Assume that the interest rate is $r$ and that the consumer does not consume in period $t=1$. The savings of the consumer will be $s=m_1$. The available income for consumption in the second period is now $c_2 = m_2+(1+r) m_1$
+        \item No consumption in period 2 ($c_2 = 0$): The consumer has to pay back the borrowing from period 1 in period 2:
+            \begin{equation*}
+                b_1 (1+r) = m_2 \quad \Leftrightarrow \quad b_1 = \frac{m_2}{1+r}
+            \end{equation*}
+            So the largest possible consumption level $c_1$ is
+            \begin{equation*}
+                c_1 = m_1 + \frac{m_2}{1+r}
+            \end{equation*}
+    \end{itemize}
+Suppose that $c_1$ units are consumed in period 1. This costs $c_1$ and leaves $s = m_1- c_1$ saved. Period 2 consumption will then be
+    \begin{equation*}
+        c_2 = m_2+(1+r)(m_1-c_1)
+    \end{equation*}
+which can be re-written as
+    \begin{equation*}
+        c_2 = \underbrace{m_2 + (1+r) m_1}_{\text{Intercept}} \underbrace{-(1+r)}_{\text{Slope}} c_1
+    \end{equation*}
+So the intertemporal budget constraint can be written as ``future-valued''
+    \begin{equation*}
+        (1+r) c_1 + c_2 = (1+r) m_1 + m_2
+    \end{equation*}
+or as ``present-valued''
+    \begin{equation*}
+        c_1+\frac{c_2}{1+r} = m_1+\frac{m_2}{1+r}
+    \end{equation*}
+
+\subsection{Price Effects}
+Let us relax the assumption of $p_1 = p_2 = \$ 1 $. The maximum possible consumption in period 2 is
+    \begin{equation*}
+        c_2 =\frac{m_2+(1+r) m_1}{p_2}
+    \end{equation*}
+Similar, the maximum possible consumption in period 1 is
+    \begin{equation*}
+        c_1 = \frac{m_1+m_2/(1+r)}{p_1}
+    \end{equation*}
+If $c_1$ units are consumed in period 1 then the consumer spends $p_1  c_1$ in period 1, leaving $m_1 - p_1 c_1$ saved in period 1. The available income in period 2 will then be $m_2+(1+r) (m_1 - p_1  c_1)$ and thus
+    \begin{equation*}
+        p_2 c_2 = m_2 + (1+r) (m_1-p_1 c_1)
+    \end{equation*}
+So the intertemporal budget constraint including the prices can be written as ``future-valued''
+    \begin{equation*}
+        (1+r) p_1 c_1 + p_2 c_2 = (1+r) m_1 + m_2
+    \end{equation*}
+or as ``present-valued''
+    \begin{equation*}
+        p_1 c_1+\frac{p_2}{1+r} c_2 = m_1+\frac{m_2}{1+r}
+    \end{equation*}
+So the slope of the intertemporal budget constraint is
+    \begin{equation*}
+        \text{Slope} = -(1+r) \frac{p_1}{p_2}
+    \end{equation*}
+
+\subsection{Inflation}
+\noindent Define the inflation rate as $\pi$ such that $p_1 (1+\pi) = p_2$. So we can write
+    \begin{equation*}
+        p_1 c_1+\frac{p_1 (1+\pi) c_2}{1+r} = m_1+\frac{m_2}{1+r}
+    \end{equation*}
+With inflation, the slope of the budget constraint can be written as
+    \begin{equation*}
+        1+\rho = \frac{1+r}{1+\pi}
+    \end{equation*}
+where $\rho$ represents the real interest rate.
+
+\subsection{Choice Problem}
+The consumer has preferences represented as follows:
+    \begin{equation*}
+        U(c_1,c_2) = u(c_1) + \beta u(c_2)
+    \end{equation*}
+To determine the effects of a change in the interest rate on consumers, we have to differentiate between an increase/decrease of the interest rate and whether the consumer is initially a lender/saver or borrower. An increase in the interest rate is a change in the price of consumption in period 1 relative to period 2. An increase in the interest rate is equivalent to an increase in the price of first period consumption. At a higher interest rate, you give up more second period consumption in order to have a unit of first period consumption. So the substitution effect says the consumer should consume less and save more in the first period if the interest rate increases.
+    \begin{itemize}
+        \item \textbf{Initial lender/saver and increase in interest rate}. Increasing the interest rate tilts the budget line to make it steeper. An initial lender remains a lender. There are two effects:
+                \begin{itemize}
+                    \item Income effect: If a lender/saver, then the higher interest rate increase income for a given amount of saving. The effect of the interest rate increase for an initial lender is to raise the value of the consumer’s initial savings because the consumer earns a higher return on this savings. The reduces first period consumption.
+                    \item Substitution effect: The interest rate $\rho$ is the relative price of consumption in period 1 to consumption in period 2, i.e., $c_1$ becomes more expensive relative to $c_2$. This increases $c_2$ and reduces $c_1$.
+                \end{itemize}
+            For a lender/saver, an increase in $\rho$ increases $c_2$ and may increase or decrease $c_1$.
+        \item \textbf{Initial lender/saver and decrease in interest rate}. A lender might or might not become a
+            borrower.
+        \item \textbf{Initial borrower and increase in interest rate.} A borrower might or might not become a lender. For a consumer who is an initial borrower, the income effect goes in the same direction as the substitution effect, i.e., a higher interest rate means less …first period consumption. The interest rate increase makes borrowing more expensive, so the consumer is poorer and chooses less …first period consumption. There are two effects:
+                \begin{itemize}
+                    \item Income effect: If borrower, then the income effect is negative for $c_1$ and $c_2$.
+                    \item Substitution effect: Gross interest rate $1+r$ is relative price of consumption in period 1 to consumption in period 2: $c_1$ becomes more expensive relative to $c_2$: This increases $c_2$ and reduces $c_1$.
+                \end{itemize}
+            For a borrower an increase in $\rho$ reduces $c_1$ and may increase or decrease $c_2$:
+        \item \textbf{Initial borrower and decrease in interest rate.}  In this case analogous reasoning shows that if the consumer is initially a borrower, and the interest rate declines, the consumer must remain a borrower; becoming a lender would violate revealed preference. There are two effects:
+    \end{itemize}
+There is an ambiguous effect of an interest rate increase on $c_1$, $s_1$ for an initial saver/lender.
+
+Unambiguous Effect of an Interest Rate Increase for an Initial Borrower Thus the effect of an interest rate increase for an initial borrower is to reduce first period consumption and increase savings. The overall effect of the interest rate on savings is thus ambiguous, assuming the economy has some borrowers and some lenders.
+
+\subsection{Life Cycle Hypothesis}
+Individuals want a smooth consumption profile over their life. Labor income varies substantially over a lifetime, starting out low, increasing until retirement, with no labor income after retirement. The life-cycle hypothesis says that by saving (and borrowing) individuals turn a very non-smooth labor income profile into a very smooth consumption profile. Main predictions: current consumption depends on total lifetime income and given initial wealth. Saving should follow a very pronounced life-cycle pattern with borrowing in the early periods of
+an economic life, significant saving in the high earning years from 35-50 and reducing savings in retirement years. One empirical puzzle: older household do not reduce saving to the extent predicted by the theory. Several explanations
+    \begin{itemize}
+        \item Individuals are altruistic and want to leave bequests to their children.
+        \item Uncertainty with respect to length of life and health status.
+    \end{itemize}
+Permanent income hypothesis.

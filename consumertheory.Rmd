@@ -1,1 +1,418 @@
 # Consumer Theory
+Consumer theory models individual decision making and consumer behavior. The goal of consumer theory is to derive the demand function. There are three components to consumer theory:
+
+1. The **budget constraint** is the income constraint faced by the consumer given prices and income.
+2. **Consumer preferences** are expressed using utility functions and indifference curves. Note that the indifference curves represent the contour lines of the utility function. Your preferences are independent of your income.
+3. **Consumer choice** results from the combination of the budget constraint and consumer preferences. What are the optimal choices made by the consumer given preferences and constraints? How do those optimal choices change given a change in prices and/or policies?
+
+It is important to understand that consumer preferences are independent of the prices and income. You can prefer a Bentley over a Toyota despite the fact that you cannot afford a Bentley. It is the consumer choice that determines what you buy based on your preferences and your budget.
+
+## Budget Constraint
+A budget constraint represents all combinations of products that can be purchased for a fixed amount. All our examples in this section will be based on two goods, e.g., $x$ and $y$. Of course, there are many more goods out there but two goods is all that is necessary to explain the main concepts. In this case, the budget constraint is written as:
+$$B = P_x \cdot Q_x + P_y \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{B}{P_y}-\frac{P_x}{P_y} \cdot Q_x$$
+A change in income results in a shift of the budget line but the slope remains the same. If prices change, the budget line rotates and the slope changes. To illustrate those concepts, consider the following situations:
+
+- Situation 1: $B=100$, $P_x =10$, and $P_G = 5$
+    $$100 = 10 \cdot Q_x + 5 \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{100-10 \cdot Q_x}{5} = 20 - 2 \cdot Q_x$$
+- Situation 2: $B=150$, $p_S =10$, and $p_G = 5$
+    $$150 = 10 \cdot Q_x + 5 \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{150-10 \cdot Q_x}{5} = 30 - 2 \cdot Q_x$$
+- Situation 3: $B=100$, $P_x =10$, and $P_G = 10$
+    $$100 = 10 \cdot Q_x + 10 \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{100-10 \cdot Q_x}{10} = 10 - Q_x$$
+
+Those changes are represented in the figure below.
+
+```{r CONbc,echo=FALSE,fig.cap="Changes in the budget constraint due to changes in income and price. If the income changes, the budget constraint shifts parallel as depicted in Panel (a). A change in price results in a different slope as depicted in Panel (b)."}
+bc = function(x,B,px,py){B/py-px/py*x}
+par(mfrow=c(1,2))
+  curve(bc(x,100,10,5),from=0,to=15,ylab="Quantity of y",xlab="Quantity of x",
+        main="(a) Increase in Income",ylim=c(0,30),yaxs="i",xaxs="i",col="blue")  
+  curve(bc(x,150,10,5),from=0,to=15,ylab="Quantity of y",xlab="Quantity of x",
+        main="(a) Increase in Income",ylim=c(0,30),yaxs="i",xaxs="i",col="red",add=TRUE)  
+  legend("topright",legend=c("B=100","B=150"),fill=c("blue","red"))
+  curve(bc(x,100,10,5),from=0,to=15,ylab="Quantity of y",xlab="Quantity of x",
+        main="(b) Change in Price",ylim=c(0,30),yaxs="i",xaxs="i",col="blue")  
+  curve(bc(x,100,10,10),from=0,to=15,ylim=c(0,30),yaxs="i",xaxs="i",col="red",add=TRUE)  
+  legend("topright",legend=c("Price of y: $5","Price of y: $10"),fill=c("blue","red"))     
+rm(bc)
+```
+
+A budget constraint is linear only if there is no price change over the range. If there are restrictions on what can be bought, e.g., food stamps or quantity discounts, the budget constraint is not linear anymore. To illustrate this point, draw the budget constraints for the following situations:
+
+1. $M = 100$, $P_y=2$, and $P_x =4$
+2. $M = 100$, $P_y=2$, and $P_x =4$ if less than 10 units are bought and $P_x=3$ for units after 10.
+3. $M = 100$, $P_y=2$, and $P_x =4$ if less than 10 units are bought and $P_x=3$ on all units if more than 10 are bought.
+
+## Consumer Preferences
+Before moving to consumer preference, consider below a 3-D representation of Mount Saint Helens in Panel (a). In consumer theory, the height of the mountain will represent the utility and the contour lines will represent the indifference curves.
+
+```{r CONmshgs,echo=FALSE,fig.cap="(a) Three-dimensional representation of Mount Saint Helens and contour lines. (b) Graphical representation of utility derived from various bundles of goods and services"}
+data("volcano")
+temputility = as.matrix(utility)
+par(mfrow=c(1,2))
+    persp3D(z=volcano,contour=list(side=c("zmax","z")),zlim=c(90,300),phi=30,theta=20,d=10,
+            box=FALSE,main="(a) Mount Saint Helens")
+    persp3D(z=temputility,contour=list(side=c("zmax","z")),zlim=c(0, 150),phi=30,theta=20,d=20,
+            box=TRUE,xlab="Apples",ylab="Milk",zlab="Utility",yaxs="i",xaxs="i",zaxs="i",
+            main="(b) Utility from Milk and Apples")
+rm(volcano)
+```
+Consumer theory makes the following assumptions about preferences:
+
+- **Completeness**: Given two consumption bundles *A* and *B*, the consumer can make one of the following comparisons: (1) *A* is preferred to *B*, (2) *B* is preferred to *A*, or (3) *A* is indifferent to *B*.
+- **Transitivity**: Given three consumption bundles *A*, *B*, and *C* and if a consumer prefers *A* to *B* and *B* to *C*, then the consumer also prefers *A* to *C*. For example, if a consumers prefers a BMW to a Toyota and a Toyota to a Chevrolet, then the consumer also prefers to BMW to Chevrolet.
+- **Non-satiation**: More is better than less, i.e., utility does not decrease if more goods are consumed by the consumer.
+- **Diminishing marginal utility**: The more is consumed of a good, the additional utility gained is smaller than for the previous unit.
+
+### Utility Functions
+These assumptions in the previous section lead us to the concept of utility. Utility is the satisfaction a consumer gets from consuming a good or undertaking an activity. Utility can be either ordinal or cardinal. Ordinal utility is only concerned about the rank ordering of preferences, e.g., *A* is better than *B*. Cardinal utility measures the intensity of preferences, e.g., *A* is twice as good as *B*. In this class, we only care about ordinal utility. Note that we cannot make interpersonal comparisons of utility. At the end of this chapter, we present a method to make comparisons between consumers. Also, utility is independent of income and does not depend on the price of the product!
+
+The change in utility from one more unit consumed is called the marginal utility. Marginal utility diminishes as you consume more of a good (the fifth ice cream cone is not as desirable as the first one). This is called the law of diminishing marginal utility. As long as the marginal utility is positive, total utility will increase.
+
+```{r CONumu,echo=FALSE,fig.cap="Univariate utility function and corresponding marginal utility"}
+A         = 10
+b         = 0.5
+fun_util  = function(x){A*x^b}
+mu        = function(x){A*b*x^(b-1)}
+par(mfrow=c(1,2))
+  curve(fun_util,from=0,to=10,ylab="Utility of x",xlab="Quantity of x",
+        main="Utility",ylim=c(0,35),yaxs="i",xaxs="i")  
+  curve(mu,from=0,to=10,ylab="Marginal Utility of x",xlab="Quantity of x",
+        main="Marginal Utility",ylim=c(0,35),yaxs="i",xaxs="i")  
+rm(mu,A,b)
+```
+
+Note that the assumption of non-satiation which was presented previously comes into play here. Since economics is about allocating scarce resources, i.e., asking what choices people make when faced with limited resources, looking at utility for a single good is not enough. We want to compare utility for different combinations of two or more goods. Consider the following table.
+
+|      |    |    |     |     |     | Apples |     |     |     |     |
+|:----:|:--:|:--:|:---:|:---:|:---:|:------:|:---:|:---:|:---:|:---:|
+| Milk | 1  | 2  | 3   | 4   | 5   | 6      | 7   | 8   | 9   | 10  |
+| 1    | 25 | 36 | 46  | 55  | 63  | 70     | 76  | 81  | 85  | 88  |
+| 2    | 37 | 48 | 58  | 67  | 75  | 82     | 88  | 93  | 97  | 100 |
+| 3    | 47 | 58 | 68  | 77  | 85  | 92     | 98  | 103 | 107 | 110 |
+| 4    | 55 | 66 | 76  | 85  | 93  | 100    | 106 | 111 | 115 | 118 |
+| 5    | 62 | 73 | 83  | 92  | 100 | 107    | 113 | 118 | 122 | 125 |
+| 6    | 68 | 79 | 89  | 98  | 106 | 113    | 119 | 124 | 128 | 131 |
+| 7    | 73 | 84 | 94  | 103 | 111 | 118    | 124 | 129 | 133 | 136 |
+| 8    | 77 | 88 | 98  | 107 | 115 | 122    | 128 | 133 | 137 | 140 |
+| 9    | 79 | 90 | 100 | 109 | 117 | 124    | 130 | 135 | 139 | 142 |
+| 10   | 80 | 91 | 101 | 110 | 118 | 125    | 131 | 136 | 140 | 143 |
+
+
+
+Indifference curves are all combinations of two goods that make the consumer equally well off. Those indifference curves can be represented using an indifference map. A point on a higher indifference curve is preferred to any point on a lower curve. Suppose a utility function of the form
+$$U = x^{0.75} \cdot y^{0.25}$$
+where $U$ represents the utility and $x$ and $y$ represent the two goods. Solve the utility function for $y$. You should get
+$$y=\frac{U^4}{x^3}$$
+This is a function of the form $y=f(x,U)$. To get a particular indifference curve for a given level of utility, we fix $U$. If you fix $\bar{U}$ to say 2, you get the indifference curve because you have a function in $x$ and $y$ only. There are several important properties associated with indifference curves:
+
+- Indifference curves do not intersect.
+- Indifference curves slope downward.
+- Indifference curves bend inward (are convex to the origin).
+
+Let us consider an example in the 2-good space. We will be able to identify 3 regions: (1) Not preferred, (2) Preferred, and (3) Potentially indifferent.
+
+## Consumer Choice
+Consumer maximize their utility subject to the budget constraint they face. Note that the slope of the budget constraint is
+$$\frac{\Delta q_y}{\Delta q_x} = -\frac{p_x}{p_y}$$
+The marginal rate of substitution (MRS) is the slope of the indifference curve:
+$$MRS_{x,y} = -\frac{\Delta q_y}{\Delta q_x} \bigg \vert_{\Delta U = 0}$$
+So the optimality condition, i.e., optimal choice is
+$$MRS_{x,y} = \frac{p_x}{p_y}$$
+
+## Derivation of the Demand Curve
+Remember that the goal of utility theory is to derive the demand function of a product. The figure below illustrates the derivation of the demand function for good $x$ for two examples of utility functions that are used frequently in economics: The Constant Elasticity of Substitution (CES) and the Cobb-Douglas utility functions. If we start out with the optimal choice given initial prices for both goods and the optimal choice (the point where the indifference curve is tangent to the budget constraint), we have the consumption of $x$ for a particular price $p_x$. If we start to increase the price, the original consumption bundle will to be achievable anymore and the consumer has to choose a new consumption point given the new price for $p_x$. This gives us a second point of the demand curve. If we continue this process, we can trace out the entire demand function for $x$ for all prices.
+
+```{r CONutilitytodemand,echo=FALSE,fig.cap="Derivation of the demand curve"}
+M         = 100
+py        = 20
+rho       = 0.4
+r         = rho/(rho-1)
+U         = function(x,y){(x^rho + y^rho)^(1/rho)}
+bc        = function(x,px){M/py-px/py*x}          
+indif     = function(x,u){(u^rho-x^rho)^(1/rho)}   
+xd        = function(px,py){px^(r-1)*M/(px^r+py^r)}
+yd        = function(px,py){py^(r-1)*M/(px^r+py^r)}
+#--------------------------------------------------------------------------------------------------
+px1       = 10
+x1        = xd(px1,py)
+y1        = yd(px1,py)
+u1        = U(x1,y1)
+#--------------------------------------------------------------------------------------------------
+px2       = 15;
+x2        = xd(px2,py)
+y2        = yd(px2,py)
+u2        = U(x2,y2)
+#--------------------------------------------------------------------------------------------------
+px3       = 20
+x3        = xd(px3,py)
+y3        = yd(px3,py)
+u3        = U(x3,y3)
+#--------------------------------------------------------------------------------------------------
+ par(mfrow=c(1,2))
+      curve(bc(x,px1),from=0,to=10,ylab="Quantity of y",xlab="Quantity of x",
+            main="CES Function",ylim=c(0,5),yaxs="i",xaxs="i",col="black")
+      curve(indif(x,u1),from=0.5*x1,to=1.5*x1,col="black",add=TRUE)
+           segments(x1,0,x1,y1,lty=2,col="black")
+           segments(0,y1,x1,y1,lty=2,col="black")
+      curve(bc(x,px2),from=0,to=10,ylim=c(0,5),yaxs="i",xaxs="i",col="blue",add=TRUE)
+      curve(indif(x,u2),from=0.5*x2,to=1.5*x2,col="blue",add=TRUE)
+           segments(x2,0,x2,y2,lty=2,col="blue")
+           segments(0,y2,x2,y2,lty=2,col="blue")
+      curve(bc(x,px3),from=0,to=10,ylim=c(0,5),yaxs="i",xaxs="i",col="red",add=TRUE)
+      curve(indif(x,u3),from=0.5*x3,to=1.5*x3,col="red",add=TRUE)  
+           segments(x3,0,x3,y3,lty=2,col="red")
+           segments(0,y3,x3,y3,lty=2,col="red")          
+#--------------------------------------------------------------------------------------------------
+M         = 100
+a         = 0.4
+b         = 0.7
+U         = function(x,y){x^a*y^b}               
+bc        = function(x,px){M/py-px/py*x}          
+indif     = function(x,U){(U/x^a)^(1/b)}         
+xd        = function(px,py){(a/(a+b))*M/px}
+yd        = function(px,py){(b/(a+b))*M/py}
+#--------------------------------------------------------------------------------------------------
+px1             = 10
+x1        = xd(px1,py)
+y1        = yd(px1,py)
+u1        = U(x1,y1)
+#--------------------------------------------------------------------------------------------------
+px2       = 15;
+x2        = xd(px2,py)
+y2        = yd(px2,py)
+u2        = U(x2,y2)
+#--------------------------------------------------------------------------------------------------
+px3                 = 20
+x3        = xd(px3,py)
+y3        = yd(px3,py)
+u3        = U(x3,y3)
+#--------------------------------------------------------------------------------------------------
+curve(bc(x,px1),from=0,to=10,ylab="Quantity of y",xlab="Quantity of x",
+     main="Cobb-Douglas Function",ylim=c(0,5),yaxs="i",xaxs="i",col="black")
+curve(indif(x,u1),from=0.5*x1,to=1.5*x1,col="black",add=TRUE)
+    segments(x1,0,x1,y1,lty=2,col="black")
+    segments(0,y1,x1,y1,lty=2,col="black")
+curve(bc(x,px2),from=0,to=10,ylim=c(0,5),yaxs="i",xaxs="i",col="blue",add=TRUE)
+curve(indif(x,u2),from=0.5*x2,to=1.5*x2,col="blue",add=TRUE)
+    segments(x2,0,x2,y2,lty=2,col="blue")
+    segments(0,y2,x2,y2,lty=2,col="blue")
+curve(bc(x,px3),from=0,to=10,ylim=c(0,5),yaxs="i",xaxs="i",col="red",add=TRUE)
+curve(indif(x,u3),from=0.5*x3,to=1.5*x3,col="red",add=TRUE)  
+    segments(x3,0,x3,y3,lty=2,col="red")
+    segments(0,y3,x3,y3,lty=2,col="red")  
+rm(a,b,M,px1,px2,px3,py,r,rho,u1,u2,u3,x1,x2,x3,y1,y2,y3,indif,U,xd,yd)
+```
+
+To obtain the market demand for a good, the individual demand functions have to be added horizontally. For example, consider three consumers with the following demand functions: $Q_1 = 10-2 \cdot P$, $Q_2 = 24-3 \cdot P$, and $Q_3 = 15-P$. The inverse demand functions can be written as:
+$$P = 5-\frac{Q_1}{2}\\
+  P = 8-\frac{Q_2}{3}\\
+  P = 15-Q_3$$
+The inverse demand functions are valid $Q_1 \in [0,10]$, $Q_2 \in [0,24]$, and $Q_3 \in [0,15]$.
+
+
+```{r CONmarketdemand,echo=FALSE,fig.cap="Derivation of the market demand curve given three individual demand functions."}
+funQ1 = function(Q){5-Q/2}
+funQ2 = function(Q){8-Q/3}
+funQ3 = function(Q){15-Q}
+funmd = function(P){max(0,10-2*P)+max(0,24-3*P)+max(0,15-P)}
+Q     = seq(0,funmd(0),0.5)
+P     = matrix(0,length(Q),1)
+for(i in 1:(length(Q)-1)){
+        exmd            = function(p){funmd(p)-Q[i]}
+        pmd             = lsqnonlin(exmd,x0=0)
+        P[i,1]          = pmd$x}
+curve(funQ1,from=0,to=10,xlim=c(0,49),ylim=c(0,15),col="blue",main="Aggregate Demand",
+      ylab="Price",xlab="Quantity",yaxs="i",xaxs="i")
+curve(funQ2,from=0,to=24,add=TRUE,col="darkgreen")
+curve(funQ3,from=0,to=15,add=TRUE,col="red")
+lines(Q,P,lty=1)
+legend("topright",legend=c("Consumer 1","Consumer 2","Consumer 3","Market Demand"),
+       fill=c("blue","darkgreen","red","black"))
+```
+
+## Examples
+
+### Theoretical Examples
+**Individual Choice of switching to food delivery service**: Pamela uses a food delivery service which sends you the ingredients for meals and she just needs to combine and cook them at home for a nice meal. Currently, she purchases this services 20 times a month. Her income is \$1,000 per month and the meals cost \$20 per meal. All other goods cost \$10 per unit. A new online service offers similar meals but charges a flat fee of \$200 per month plus \$10 per meal. This package lets her consume the same amount of food. However, because the slope of the budget constraint is different, the initial choice is not optimal anymore. By reallocating her consumption, she can get on a higher indifference curve. Panel ``Food Delivery'' in Figure \ref{fig:CON_fixedprice_tax}.
+
+```{r CONfixedpricetax,echo=FALSE,fig.cap="Theoretical examples about individual choice. Panel (a) demonstrates the switch from a per-unit purchasing system to a scheme which has a fixed cost and a lower per-unit price for subsequent purchases. Panel (b) contrasts the difference between a lump-sum tax and a per-unit tax."}
+a         = 0.4
+b         = 1-a
+py        = 10
+U         = function(x,y){x^a*y^b}               
+bc        = function(M,x,px){M/py-px/py*x}          
+indif     = function(x,U){(U/x^a)^(1/b)}         
+xd        = function(px,py,M){(a/(a+b))*M/px}
+yd        = function(px,py,M){(b/(a+b))*M/py}
+#--------------------------------------------------------------------------------------------------
+M1        = 1000
+px1       = 20
+x1        = xd(px1,py,M1)
+y1        = yd(px1,py,M1)
+u1        = U(x1,y1)
+#--------------------------------------------------------------------------------------------------
+M2        = 800
+px2       = 10;
+x2        = xd(px2,py,M2)
+y2        = yd(px2,py,M2)
+u2        = U(x2,y2)
+#--------------------------------------------------------------------------------------------------
+curve(bc(M1,x,px1),from=0,to=80,ylab="Other Goods",xlab="Boxes with Ingredients",
+  main="Food Delivery",ylim=c(0,100),yaxs="i",xaxs="i",col="black")
+curve(indif(x,u1),from=0.5*x1,to=1.5*x1,col="black",add=TRUE)
+ segments(x1,0,x1,y1,lty=2,col="black")
+ segments(0,y1,x1,y1,lty=2,col="black")
+curve(bc(M2,x,px2),from=0,to=80,ylim=c(0,100),yaxs="i",xaxs="i",col="blue",add=TRUE)
+curve(indif(x,u2),from=0.5*x2,to=1.5*x2,col="blue",add=TRUE)
+ segments(x2,0,x2,y2,lty=2,col="blue")
+ segments(0,y2,x2,y2,lty=2,col="blue")
+```
+
+**Policy Example of a Lump-Sum Tax versus a Per-Unit Tax**: A per-unit tax is the institution of an excise tax on some (but not all) goods a consumer purchases. A lump-sum tax is the collection of a single sum, independent of the consumer's choices. Assume the following notation: $p_x$ and $p_y$ as the price of goods $x$ and $y$, $M$ as the income, $t$ as the per-unit tax, $T$ as the lump-sum tax. Table \ref{table:lumpsumtax} and panel ``Lump-Sum vs. Per-Unit Tax' in Figure \ref{fig:CON_fixedprice_tax} represent this problem. The graph in figure \ref{fig:CON_fixedprice_tax} is based on the following parameters: $M = 100$ (income), $P_x = 3$, $P_y = 2$, $t = 3$ (per unit tax), and the utility function is written as $U(x,y) = Q_x^a \cdot Q_y^{1-a}$  with $a=0.4$.\\
+
+```{r CONtax,echo=FALSE,fig.cap=""}
+M         = 100
+a         = 0.4
+px        = 3
+py        = 2
+U         = function(x,y){x^a*y^(1-a)}
+bc        = function(x,M,T,px,py,t){(M-T)/py-(px+t)/py*x}
+indif     = function(x,U){(U/x^a)^(1/(1-a))}    
+xd        = function(px,M,t,T){a*(M-T)/(px+t)}
+yd        = function(py,M,t,T){(1-a)*(M-T)/py}
+#--------------------------------------------------------------------------------------------------
+t1        = 0
+T1        = 0
+x1        = xd(px,M,t1,T1)
+y1        = yd(py,M,t1,T1)
+u1        = U(x1,y1)          
+#--------------------------------------------------------------------------------------------------
+t2        = 3
+T2        = 0
+x2        = xd(px,M,t2,T2)
+y2        = yd(py,M,t2,T2)
+u2        = U(x2,y2)
+#--------------------------------------------------------------------------------------------------
+T3        = x2*t2
+t3        = 0
+x3        = xd(px,M,t3,T3)
+y3        = yd(py,M,t3,T3)
+u3        = U(x3,y3)
+#--------------------------------------------------------------------------------------------------
+curve(bc(x,M,T1,px,py,t1),from=0,to=35,ylab="Quantity of y",xlab="Quantity of x",
+     main="Lump-Sum vs. Per-Unit Tax",ylim=c(0,50),yaxs="i",
+     xaxs="i",col="black")
+curve(indif(x,u1),from=0.5*x1,to=1.5*x1,col="black",add=TRUE)
+    segments(x1,0,x1,y1,lty=2,col="black")
+    segments(0,y1,x1,y1,lty=2,col="black")
+curve(bc(x,M,T2,px,py,t2),from=0,to=35,ylim=c(0,50),yaxs="i",xaxs="i",col="blue",add=TRUE)
+curve(indif(x,u2),from=0.5*x2,to=1.5*x2,col="blue",add=TRUE)
+    segments(x2,0,x2,y2,lty=2,col="blue")
+    segments(0,y2,x2,y2,lty=2,col="blue")
+curve(bc(x,M,T3,px,py,t3),from=0,to=35,ylim=c(0,50),yaxs="i",xaxs="i",col="red",add=TRUE)
+curve(indif(x,u3),from=0.5*x3,to=1.5*x3,col="red",add=TRUE)  
+    segments(x3,0,x3,y3,lty=2,col="red")
+    segments(0,y3,x3,y3,lty=2,col="red") 
+rm(bc,a,b,M,M1,M2,px,px1,px2,py,T1,t1,T2,t2,T3,t3,u1,u2,u3,x1,x2,x3,y1,y2,y3,indif,
+   U,xd,yd,pmd,i,Q,exmd,funmd,funQ1,funQ2,funQ3)
+```
+
+|           | Budget line                           | Choice               
+|-----------|---------------------------------------|-------------------------
+Original    | $P_x \cdot Q_x + P_y \cdot Q_y = M$   | ($x_1^\star,y_1^\star$)   
+Per-unit    | $(P_x + t) \cdot Q_x + P_y Q_y = M$   | ($x_2^\star,y_2^\star$)   
+Lump-sum    | $P_x \cdot Q_x + P_y \cdot Q_y = M-T$ | ($x_3^\star,y_3^\star$)  
+
+
+**Subsidy for Low-Income Housing**: Suppose you have to decide how to subsidize low-income housing. Assume that the family has an income of \$1000 and that the price of ``other goods'' is \$1. There are two subsidy plans: (1) a dollar-for-dollar subsidy or (2) a lump-sum payment. The initial consumption on housing is \$500 (\$250 from personal income and \$250 subsidy from government). How does this differ from food stamps?
+
+### Policy Examples
+In economics, we assume that all consumers are rational agents who have all the information they need to make informed decisions. This may not always be true even in every-day situations as illustrated in the first three examples. On the other hand, the law of diminishing marginal utility may have some practical implications as demonstrated in the last example below.
+
+**Consumer Rationality**: [Burson et al. (2009)](https://doi.org/10.1111/j.1467-9280.2009.02394.x) demonstrate how people reverse their preferences if faced with numbers that are scaled differently. In their experiment, they have respondents choose a cell phone plan. Under condition 1, 31\% favor A and 53\% favor B. Under condition 2, 69\% favor A and 23\% favor B. Note that both plans are identical (e.g., $\$32 \cdot 12 = \$384$) and people are simply attracted to a smaller number. If you listen to or watch advertisement, you always here "it's only \$1 a day" and never "it's only \$365 per year."
+
+|         | Condition 1           |             | Condition 2            |                |
+|:-------:|:---------------------:|:-----------:|:----------------------:|:--------------:|
+| Option  | Dropped Calls per 100 | \$ per Year | Dropped Calls per 1000 | \$ per Month   |
+| A       |  4.2                  | \$384       |  42                    | \$32           |
+| B       |  6.5                  | \$324       |  65                    | \$27           |
+
+
+**MPG Illusion**: As a second example, suppose that three people drive 10,000 miles per year \citep{Larrick:2008}. The fuel economy of the current cars are 10 MPG for person A, 16.5 MPG for person B, and 33 MPG for person C. They all trade-in their current cars for new cars that get 11, 20, and 50 MPG for A, B, and C, respectively. Who saves the most gas after the trade-in assuming that their driving habits do not change? See Figure \ref{fig:CON_mpg} for a graphical representation of the relationship between MPG and gasoline consumption. Table \ref{table:mpgillusion}) compares using MPG to using gallons per mile. \\
+
+```{r CONmpg,echo=FALSE,fig.cap="MPG Illusion: Gallons of gasoline consumed based on driving 10,000 miles per year."}
+milesdriven    = 10000
+gallons        = function(x){milesdriven/x}
+     curve(gallons,from=0,to=50,ylab="Gallons per 10,000 Miles",xlab="Miles per Gallon",
+           ylim=c(0,2500),yaxs="i",xaxs="i")  
+     graphics.off()
+rm(milesdriven,gallons)
+```
+
+| MPG               | 10   | 11  | 12.5 | 14  | 16.5 | 20  | 25  | 33  | 50  |
+|:------------------|:----:|:---:|:----:|:---:|:----:|:---:|:---:|:---:|:---:|
+| gal. /10000 miles | 1000 | 900 | 800  | 700 | 600  | 500 | 400 | 300 | 200 |
+
+**Marginal Utility and Malnourishment**
+A paper by [Jensen and Miller (2010)](https://www.nber.org/papers/w16555) which was also cover in an article by The Economist titled [People's spending choices are a good way to assess levels of hunger](https://www.economist.com/finance-and-economics/2011/03/24/stomach-staples) questions the usefulness of a fixed calorie threshold to quantify undernourishment. Their argument is based on the observation that in some countries, caloric intake decreases while real income increases. Instead of measuring the number of calories consumed, researchers and policy makers should turn to measure the amount of staples such as rice and millet consumed. Both goods are low cost sources of calories and thus, people consuming a large share of their total calories from those foods are likely to be malnourished. Consuming those foods results in a significant increase in utility very quickly and very cheaply. The authors in the article use the term staple calorie share as a measure of undernourishment.
+
+**Automatic Bill Payment and Electricity Consumption**
+[Sexton (2015)](https://doi.org/10.1162/REST_a_00465) shows that enrollment in automatic bill payment (ABP) increases residential and commercial electricity consumption by up to 4.0\% and 8.1\% respectively. The result is attributed to the saying out of sight, out of mind.
+
+## Exercises
+For all questions, assume that quantities are perfectly divisible, i.e., purchasing 2.5 textbooks is possible.
+
+1. *Veal for a Vegetarian*: Draw the indifference curves of a vegetarian for veal and spinach.
+
+2. *Muesli*: Sunny is a spoiled kid and forces her daddy to add a tablespoon of nuts for each tablespoon of fruits to her [Muesli](https://en.wikipedia.org/wiki/Muesli). The price of nuts and fruit per tablespoon is \$0.10 and \$0.20, respectively. He allocates a total of \$3 for her entire breakfast. Draw her indifference curves for nuts and fruits. How many tablespoons are used for her breakfast each morning?
+
+3. *Revealed Preferences*: To better understand preferences, researchers often present respondents with different price and income situations and ask them to choose between various consumption bundles (see \citet{Grebitus:2016} for an example). Consider the following two situations:
+    - Situation 1: Income is \$100 and prices are $p_x=\$10$ and $p_y=\$20$. In this situation, the respondent has the choice between two bundles: Either bundle $A$ with $Q^A_x=2$ and $Q^A_y=4$ or bundle $B$ with $Q^B_x=4$ and $Q^B_y=3$. The consumer picks bundle $A$.
+    - Situation 2: Income is \$80 and prices are $p_x=\$20$ and $p_y=\$10$. In this situation, the respondent has the choice between two bundles: Either bundle $C$ with $Q^C_x=1$ and $Q^C_y=6$ or bundle $A$ with $Q^A_x=2$ and $Q^A_y=4$. The consumer picks bundle $C$.
+
+    Rank the consumer's preferences for bundles $A$, $B$, and $C$ from highest to lowest preference. Next, assume there is a fourth bundle $D$ with $Q^D_x=5$ and $Q^D_y=5$. How does bundle $D$ compare in terms of preference ordering compared to the other three bundles. Do you have all the information you need to determine bundle's $D$ place in the ranking?
+
+4. *Textbook Gift Voucher*: Tom is in college and receives \$500 from his parents each semester to spend on textbooks and other goods. The price of books is \$20 and the price of other goods is \$10. Assume that the number of textbooks is a choice. In the initial situation, Tom purchases six text books and the rest is spend on other goods. Draw Tom's budget constraint and the indifference curve indicating the optimal choice. To ensure that Tom spends sufficient amounts of money on textbooks, his parents replace the cash payment of \$500 with a bookstore gift certificate of \$300 and \$300 in cash. Draw the budget constraint under the new regime. Is Tom better off? On a new graph, draw a situation under which he is better off with a cash payment from his parents of \$600 than the \$300 cash/\$300 gift certificate split.
+
+5. *Obesity in Pawnee*: Because of rampant obesity in Pawnee, the city government decides to tax candy. In Figure \ref{fig:CON_pawnee}, you have the original budget constraint with the optimal choice in the absence of any tax. The income of the consumer is \$100, the price of candy is \$2 per unit, and the price of other goods is \$1 per unit. Without the tax, consumers buy 20 units of candy and 60 units of other goods. With the tax of \$2 per unit, the consumer buys 10 units of candy and 60 units of other goods. How much does the city government collect in taxes? Assume that political pressure forces the city government to return the amount of the tax collected to the consumer in form of a lump-sum payment at the end of the year. Draw the new budget constraint given the lump-sum payment using the figure provided. Is the consumer as happy as in the case with neither tax nor subsidy. Interpret. See Figure  for a template.
+
+```{r CONpawnee,echo=FALSE,fig.cap="Obesity in Pawnee"}
+M                        = 100
+a                        = 0.4
+px                       = 2
+py                       = 1
+U                        = function(x,y){x^a*y^(1-a)}                   
+bc                       = function(x,M,T,px,py,t){(M-T)/py-(px+t)/py*x}  
+indif                    = function(x,U){(U/x^a)^(1/(1-a))}           
+xd                       = function(px,M,t,T){a*(M-T)/(px+t)}
+yd                       = function(py,M,t,T){(1-a)*(M-T)/py}
+     t                   = 0
+     T                   = 0
+     x0                  = xd(px,M,t,T)
+     y0                  = yd(py,M,t,T)
+     u0                  = U(x0,y0)
+     curve(bc(x,M,T,px,py,t),from=0,to=M/px,ylab="Other Goods",xlab="Candy",ylim=c(0,120),
+           yaxs="i",xaxs="i",col="black")
+     curve(indif(x,u0),from=0.5*x0,to=1.5*x0,add=TRUE,yaxs="i",xaxs="i",col="black")
+     t                   = 2
+     T                   = 0
+     x1                  = xd(px,M,t,T)
+     y1                  = yd(py,M,t,T)
+     u1                  = U(x1,y1)
+     t_rev1              = t*x1
+     curve(bc(x,M,T,px,py,t),from=0,to=M/px,add=TRUE,yaxs="i",xaxs="i",col="black")
+     curve(indif(x,u1),from=0.5*x1,to=1.5*x1,add=TRUE,yaxs="i",xaxs="i",col="black")
+rm(a,M,px,py,T,t,t_rev1,u0,u1,x0,x1,y0,y1,bc,indif,U,xd,yd)
+```
+
+6. *Per-Diem Meal and Hotel Rates*: Suppose you work for a company which subsidizes your traveling with \$1,000 per month. However, you cannot exceed \$600 for hotel and \$400 for meals. Assume that everywhere you travel, the price for one night in a hotel is \$100 and the price of one meal is \$20. Assume that you always exhaust your budget for traveling. Draw the budget constraint for this problem with hotel on the horizontal axis and meals on the vertical axis. Explain to your boss why you would (most likely) be better off with \$1,000 but no restrictions on spending. Draw the relevant indifference curves.
+
+7. *Church Roof*: Philip is a rich atheist but has a soft spot for the leaking roof of his hometown church. The church currently spends \$2,000 on the roof and \$8,000 on other activities.
+    a. Draw the budget constraint for his hometown church with roof repairs on the horizontal axis and other activities on the vertical axis. Assuming utility maximization of the church, draw the indifference curve corresponding to the current situation.
+    b. Philip offers the church a \$1,000 grant with the constraint that the money can only go towards roof repairs. Put differently, it cannot be used for other activities. Will the amount of money spent on roof repairs increase by exactly \$1,000 or will it change by a different amount. Justify your answers.
+
+8. *Gasoline in Iran*: The Iranian government has ]provided substantial subsides on gasoline](https://www.economist.com/middle-east-and-africa/2011/06/23/economic-jihad) to its citizens in past decades. After international sanctions were imposed on the country due to its suspect nuclear program, those subsidies where not sustainable in the long-run from a financial perspective. Thus Iran eliminated the subsidies but replaced them with a cash transfer to ease the financial burden for its citizens. Assume that gasoline is on the horizontal axis and all other goods are on the vertical axis. The price of other goods does not change throughout the question.
+      a. Draw the initial budget constraint and the optimal consumption bundle. Assume that both goods are initially consumed.
+    b. How does the budget constraint change if the government eliminates subsidies on gasoline and the price of gasoline increase subsequently? Show this effect in the graph.
+    c. Given the new prices, the government provides a subsidy that raises income such that the consumers are as happy as before. Illustrate in your graph.
+    d. Why is this increase in income cheaper than the subsidy on gasoline? Illustrate in your graph.

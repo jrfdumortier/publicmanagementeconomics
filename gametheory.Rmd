@@ -1,0 +1,193 @@
+# Game Theory
+Game theory considers situations where so-called players (people, firms, political parties, animals, etc.) make decisions as strategic reactions to other agents' actions. Examples are reality TV shows with people competing against each other, political parties choosing their position on an issue or during an election, or price strategies of firms in a competitive environment. In addition, almost every sport as well as war is based on game theory. The 1983 movie [WarGames](https://www.imdb.com/title/tt0086567/) is an excellent example of applied game theory. 
+
+In economics, one of the most general problems is outguessing a rival, i.e., a firm seeks to determine its rival's most profitable counter-strategy to its own current policy. Strategic interdependence means that a player's welfare is a function of the own action and the actions of other players. The optimal action of a player depends on expectations of what other players will do. This strategic interdependence among agents is called non-cooperative game theory, i.e., binding agreements among agents are not assumed. For example, interaction of two football teams playing a game is non-cooperative. Cooperation may or may not occur among agents as a result of rational decisions, e.g., trigger strategies. For this class, we assume full information, i.e., players are aware of the payoff structure of games.
+
+Economic models based on game theory are abstractions from strategic interaction of agents. They allow tractable interactions, yield implications, and allow to draw conclusions that can be used to understand real world strategic interactions. Every game has three components: (1) Finite number of players (at least 2) who are the decision makers, (2) set of action for each player, (3) payoffs that can be ranked at least ordinally. Payoff may be in form of a change in (marginal) utility, revenue, profit, or some nonmonetary change in satisfaction.  A player's strategy is the complete contingent plan. If it could be written down, any other agent could follow the plan and duplicate player's actions. Thus, a strategy is a player's course of action involving a set of actions (moves) dependent on actions of other players. A unique equilibrium or a set of equilibria may occur within a set of strategies is called a Nash equilibrium (after mathematician John Nash).Not all games have a Nash equilibrium and some games may have a number of Nash equilibria. In the movie ``A Beautiful Movie'', John Nash's discovery is portrayed to have happened in a bar:
+
+> If we all go for the blonde and block each other, not a single one of us is going to get her. So then we go for her friends, but they will all give us the cold shoulder because no one likes to be second choice. But what if none of us goes for the blonde? We won't get in each other's way and we won't insult the other girls. It's the only way to win.
+
+Note that the movie is wrong about the Nash Equilibrium. The situation described is not a Nash Equilibrium.
+
+We now present several classical simultaneous move games that you can find in almost every economics textbook and illustrate different concepts associated with game theory. The best-known game is the \emph{Prisoner's Dilemma}. The payoff table for the two players is represented as:
+
+|              |         | Player B        ||
+|:-------------|:--------|:-------:|:------:|
+|              |         | Confess | Deny   |
+| **Player A** | Deny    |    1,1  | 20,0   |
+|              | Confess |   0,20  | 5,5    |
+
+In the prisoner's dilemma game, there is one Nash Equilibrium. Note that it is not the optimal outcome. Every Nash Equilibrium is characterized as a state where no player has the incentive to deviate. In a game, there can be multiple Nash Equilibria. Consider the following game \emph{Stag Hunt}:
+
+|              |         | Player B        ||
+|:-------------|:--------|:-------:|:------:|
+|              |         | Confess | Deny   |
+| **Player A** | Deny    |    1,1  | 20,0   |
+|              | Confess |   0,20  | 5,5    |
+    
+A dominant strategy is a strategy that is preferred to another no matter what other players do. When all players have a dominant strategy, an equilibrium of dominant strategies exists that is determined without a player having to consider behavior of other players. Consider the game \emph{Up or Down}:
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{llcc} \toprule
+                    & & \multicolumn{2}{c}{Player B}\\ \cmidrule(r){3-4}
+                    &           & up     & down \\ \hline
+            Player A  & up    & 10,10      & 7,7 \\
+                      & down & 7,7     & 5,5 \\ \bottomrule
+            \end{tabular}
+        \end{center}
+        \caption{Up or Down}
+    \end{table}
+It is also possible to have a game with no Nash Equilibrium. \emph{Rock, Paper, Scissors} is an example for such a game:
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{llccc} \toprule
+            & & \multicolumn{3}{c}{Player 2}\\ \cmidrule(r){3-5}
+                        &   & R     & P     & S \\ \hline
+            Player 1    & R & d,d   & l,w   & w,l \\
+                        & P & w,l   & d,d   & l,w \\
+                        & S & l,w   & w,l   & d,d  \\ \bottomrule
+            \end{tabular}
+        \end{center}
+        \caption{Rock, Paper, Scissors}
+    \end{table}
+If there is no Nash Equilibrium with a pure strategy, we can resort to a mixed strategy. If you think about how you play rock, paper, scissors, you can imagine what a mixed strategy does: randomize your actions. Consider the \emph{Matching Pennies} game as an example for a mixed strategy:
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{llcc} \toprule
+                    & & \multicolumn{2}{c}{Player 2}\\ \cmidrule(r){3-4}
+                    &           & Head ($\lambda$)     & Tail ($1-\lambda$) \\ \hline
+            Player 1  & Head ($\rho$)    & 1, -1      & -1, 1 \\
+                      & Tail ($1-\rho$)    & -1, 1     & 1, -1 \\ \bottomrule
+            \end{tabular}
+        \end{center}
+        \caption{Matching Pennies}
+    \end{table}
+Let us now turn to games that are more specific to economics. Consider a cartel with two firms. Both firms have to decide whether to cheat or comply with the cartel agreement:
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{llcc} \toprule
+                    & & \multicolumn{2}{c}{Player B}\\ \cmidrule(r){3-4}
+                    &               & Don't Cheat   & Cheat \\ \hline
+            Player A  & Don't Cheat & 50,50         & 45,54 \\
+                      & Cheat       & 54,45         & 48,48 \\ \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{table}
+Also in the cartel setting, we can have a situation where a mixed strategy is necessary. Consider as a hypothetical example ``Coca-Cola vs. Pepsi'':
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{llcc} \toprule
+                    & & \multicolumn{2}{c}{Coca-Cola}\\ \cmidrule(r){3-4}
+                    &           & Head ($\lambda$)     & Tail ($1-\lambda$) \\ \hline
+            Pepsi  & Head ($\rho$)    & 12,13      & 9,16 \\
+                      & Tail ($1-\rho$)    & 14,10     & 6,8 \\ \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{table}
+The mixed strategy equilibrium for Pepsi can be written as:
+    \begin{equation*}
+        13 \cdot \rho + 10 \cdot (1-\rho) = 16 \cdot \rho + 8 \cdot (1-\rho)
+    \end{equation*}
+The mixed strategy equilibrium for Coca-Cola can be written as:
+    \begin{equation*}
+        12 \cdot \lambda + 9 \cdot (1-\lambda) = 14 \cdot \lambda + 6 \cdot (1-\lambda)
+    \end{equation*}
+
+Beach location game
+    \begin{figure}[h!]
+        \begin{center}
+            \includegraphics[width=6in]{GAT_beachlocation.pdf}
+        \end{center}
+    \end{figure}
+
+
+\subsection{Repeated Games}
+We have seen that in the single shot prisoner's dilemma there is no Nash Equilibrium. It is possible to identify an optimal strategy for an infinitely repeated game. This is called a trigger strategy. In the first round, player $A$ cooperates and does not confess. In every round after, if player $B$ cooperated on previous round, $A$ cooperates. If $B$ defected on previous round, $A$ then defects. Strategy does very well because it offers an immediate punishment for defection and has a forgiving strategy. An application is the carrot-and-stick strategy that underlies most attempts at raising children. Consider the following game between Pepsi and Coca-Cola. Note that one-time win from a low price is 5 and the loss in repeated games is 4 (discount rate becomes important).
+    \begin{table}[h!]
+        \begin{center}
+            \begin{tabular}{llcc} \toprule
+                    & & \multicolumn{2}{c}{Coca-Cola}\\ \cmidrule(r){3-4}
+                    &           & high     & low \\ \hline
+            Pepsi  & high    & 12,12      & 6,17 \\
+                      & low   & 17,6     & 8,8 \\ \bottomrule
+            \end{tabular}
+        \end{center}
+    \end{table}
+
+\subsection{Sequential Games}
+In a sequential, or dynamic, game, one player knows other player's choice before she has to make a choice (perfect information). A monopolist can determine consumer demand prior to producing an output, or a buyer knows sticker price on a new automobile before making an offer. Use a technique called backward induction to determine a sub-game perfect Nash equilibrium, by working backward toward the root in a game tree. Once game is understood through backward induction, players play it forward. To apply backward induction, first determine optimal actions at last decision nodes that result in terminal nodes. Then determine optimal actions at next-to-last decision nodes, assuming that optimal actions will follow at next decision nodes. Backward induction implicitly assumes that a player's strategy will consist of optimal actions at every node in game tree.
+%    \begin{figure}[h!]
+%        \begin{center}
+%            \includegraphics[width=3in]{TTTGameTree}
+%        \end{center}
+%    \end{figure}
+
+\subsection{Preemption Games}
+Firms who act first have an advantage lead to preemption games. Strategic pre-commitments can affect future payoffs. For example, a firm adopting a relatively large production capacity in a new market can saturate the market and make it difficult for ensuing firms to enter. The ability to seize a market first depends on market's contestability. Governments concerned with ability of firms to saturate a market and forestall entry of other firms have attempted to place restrictions on such behavior.
+
+Consider a game of entry deterrence
+
+
+%Soccer
+%https://www.youtube.com/watch?v=p9QuQBrPTE8
+%4:50
+%
+%Nash Movie
+%https://www.youtube.com/watch?v=CemLiSI5ox8
+%
+%Dilbert
+%https://www.youtube.com/watch?v=ED9gaAb2BEw
+%
+%Cartoon
+%https://www.youtube.com/watch?v=t9Lo2fgxWHw
+
+% beach location game
+\subsection{Exercises}
+Note that in all the questions, the term ``Nash Equilibrium'' is used but it also refers to the plural, i.e., ``Nash Equilibria.''
+    \begin{enumerate}
+        \item Two competing companies, $A$ and $B$, must decide on their advertising strategies for the coming year. The actions available to each firm are ``maintain current advertising'' or ''increase advertising.'' This situation including the payoffs are depicted in the matrix below. In a single shot game, what is the Nash Equilibrium. In a repeated game, describe a trigger strategy and the resulting Nash Equilibrium.
+                \begin{table}[h]
+                    \begin{center}
+                        \begin{tabular}{llcc} \toprule
+                        & & \multicolumn{2}{c}{Firm B}\\ \cmidrule(r){3-4}
+                        & & Increase Adv. & Maintain Adv. \\ \hline
+                        Firm A & Increase Adv. & 27, 27 & 50, 12 \\
+                          & Maintain Adv. & 12, 50 & 45, 45 \\ \bottomrule
+                        \end{tabular}
+                    \end{center}
+                \end{table}
+%        \item YUM! Brands, Inc., based in Louisville, Kentucky, offers a diverse portfolio of ``family style'' restaurant concepts that do not serve alcoholic beverages, including: KFC, Pizza Hut, and Taco Bell, among others. AFC Enterprises, Inc., based in Atlanta, Georgia, is a big competitor. AFC offers spicy fried chicken under popular Popeyes Chicken \& Biscuits brand. Suppose YUM! and AFC are contemplating entry into the rapidly-growing Austin, Texas, market. Both companies are considering three alternative restaurant formats to focus their efforts on one of three popular meal times: ``Breakfast'', ``Lunch'', or ``Dinner''. The potential number of meals served per month for these three restaurant formats are 25,000 (breakfast), 62,500 (lunch), and 37,500 (dinner). If the two restaurant chains choose the same format, they will split the market for that format equally. If the two restaurant chains choose different formats, each will get the total potential market for that format. Assume that profit payoff are proportionate to the number of meals served, so the meals served numbers can suffice as inputs to the payoff matrix. The first number in the payoff matrix is the number of meals served by YUM! Brands; the second number is the number of meals served by AFC Enterprises. Find the Nash equilibria in this problem. Does the presence of multiple Nash equilibria pose coordination problems in arriving at a point of Nash equilibrium? Explain.
+%                \begin{table}[h!]
+%                    \begin{center}
+%                        \begin{tabular}{llccc} \toprule
+%                        & & \multicolumn{3}{c}{AFC Enterprises}\\ \cmidrule(r){3-5}
+%                                    &           & Breakfast         & Lunch             & Dinner \\ \hline
+%                        YUM! Brands & Breakfast & 12,500; 12,500    & 25,000; 62,500    & 25,000; 37,500 \\
+%                                    & Lunch     & 62,500; 25,000    & 31,250; 31,250    & 62,500; 37,500 \\
+%                                    & Dinner    & 37,500; 25,000    & 37,500; 62,500    & 18,750: 18,750  \\ \bottomrule
+%                        \end{tabular}
+%                    \end{center}
+%                \end{table}
+        \item Perhaps you have been in this situation before. You (and many others) witness an accident or a crime and you have to decided whether to call 911 yourself or rely on some of the other witnesses call 911. The problem is that you usually do not know whether an emergency call was made or not.  Suppose an event is witnessed by two people and the cost of making an emergency call is $c>0$. Both people get a benefit of $x$ from the event being reported to first responders and $x>c$. A payoff of zero is received if the event goes unreported. Draw the payoff matrix and determine the Nash Equilibrium. This is a simultaneous move game. What is the Nash equilibrium if there are more than two people?
+        \item A friend of mine (actually, more than just one) comes regularly late to get togethers. It annoys them when they have to come on time. If I know that they come late on a regular basis, should I adjust my timing as well? Consider the following payoff matrix and find the Nash Equilibrium:
+                \begin{table}[h]
+                    \begin{center}
+                        \begin{tabular}{llcc} \toprule
+                                & & \multicolumn{2}{c}{My friend}\\ \cmidrule(r){3-4}
+                                & & Be Punctual & Always Late \\ \hline
+                         Me     & Be Punctual & 100, 80 & 10, 90 \\
+                                & Always Late & 80, 80 & 90, 90 \\ \bottomrule
+                        \end{tabular}
+                    \end{center}
+                \end{table}
+%        \item The Stag Hunt game is based on a story told by Jean Jacques Rousseau in his book \emph{Discourses on the Origin and Foundation of Inequality Among Men} (1754). The story goes something like this: Two hunters set out to kill a stag. One has agreed to drive the stag through the forest, and the other to post at a place where the stag must pass. If both faithfully perform their assigned stag-hunting tasks, they will surely kill the stag and each will get an equal share of this large animal. During the course of the hunt, each hunter has an opportunity to abandon the stag hunt and to pursue a hare. If a hunter pursues the hare instead of the stag he is certain to catch the hare and the stag is certain to escape. Each hunter would rather share half of a stag than have a hare to himself. The matrix below shows payoffs in a stag hunt game. If both hunters hunt stag, each gets a payoff of 4. If both hunt hare, each gets 3. If one hunts stag and the other hunts hare, the stag hunter gets 0 and the hare hunter gets 3.
+%                \begin{enumerate}
+%                    \item Draw the payoff matrix.
+%                    \item If you are sure that the other hunter will hunt stag, what is the best thing for you to do?
+%                    \item If you are sure that the other hunter will hunt hare, what is the best thing for you to do?
+%                    \item Does either hunter have a dominant strategy in this game? If so, what is it? If not explain why not.
+%                    \item This game has two pure strategy Nash equilibria. What are they?
+%                    \item Is one Nash equilibrium better for both hunters than the other? If so, which is the better equilibrium?
+%                \end{enumerate}
+        \item There is a public goods game in experimental economics. Each player initially has \$20 and then secretly selects whether to contribute the amount to a public pool or not. If the player does not contribute, they simply get the \$20. If the money is contributed, the amount in the public pool is multiplied by 1.5 and divided equally by the number of players and returned. The game represents a situation where the contribution to a public good (e.g., education or infrastructure) increases the payoff for everyone in society. For example, if both players contribute, they get back $(\$40 \cdot 1.5)/2=\$30$. Draw the payoff matrix and identify the Nash Equilibrium strategies.
+    \end{enumerate}

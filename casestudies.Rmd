@@ -1,0 +1,127 @@
+# Case Studies
+The following case studies offer insight into economic applications that you may face while working for the government, industry, or a nonprofit. The case studies presented are abstract representations of reality and usually, many more aspects are involved. For many policy issues, there is usually no clear-cut answer. For some of the case studies, you will need to include a table in your policy brief and useful templates are included in the Excel file [Tables for Case Studies]. The sheets in the Excel file correspond to the following case studies:
+
+- **NONPROFIT**: Profit Maximization for a Nonprofit
+- **PARKS**: Parks and Recreation
+- **ENVIRONMENT**: Environmental Policy
+- **TAXATION**: Fuel Taxation and Low-Income Families
+
+## Profit Maximization for a Nonprofit
+Farm-to-Table 4 All is a nonprofit 501(c)(3) organization providing healthy food choices in low income neighborhoods. Dena, Eric, and Cullen are its founders and current directors and believe that nutritious food choices are part of a healthy lifestyle. They have three restaurant locations: North, East, and South. At all three locations and each day, those restaurants serve meals including a small appetizer and a dessert. The non-profit has received an endowment of \$1,000,000 from a local corporation under the constraint that meal prices cannot exceed \$9 per meal. Since there are fixed costs and the marginal cost per meal is \$7, Farm-to-Table 4 All has to rely on donations besides the food service provision and the endowment revenue.
+
+Besides providing good food, their main long-run objectives is to not run a deficit. Although nonprofit organizations do not disburse profits, they are subject to the same economic constraints than private firms. A loss over multiple years will ultimately lead to the demise of the organization. Since none of the three founders are economists (or have any basic understanding of economics at all), they asked you to help them with some of their decisions. Out of the goodness of your heart, you have decided to offer your consulting services for free. Farm-to-Table 4 All derives its revenue from three sources (engaging in all three of them is mandatory): (1) Food service provision, (2) donations, and (3) endowment.
+
+- *Food Service Provision*: Over the last months, Farm-to-Table 4 All determined that the inverse demand for its services can be written as follows for the three locations (where $Q$ is the quantity of meals demanded per month and $P$ is the price per meal):
+  - North: $Q=2000-120 \cdot P$
+  - East: $Q=1200-175 \cdot P$
+  - South: $Q=1750-100 \cdot P$
+Of course, the quantity demanded cannot be negative. All employees are volunteers and Farm-to-Table 4 All only has to pay the rent which is \$1,000, \$1,500, and \$1,250 per month for the North, East, and South location, respectively. Note that they are able to price discriminate based on location. What this means is that they can charge different prices at different location.
+- *Donations from foundations, individuals, and/or industry*: Donation amount $D$ rise with the number of workers $L$ hired that specialize in fundraising. The amount of donations is given by the function $D=90000 \cdot L^{0.6}$. Each worker is paid an annual wage of \$40,000.
+- *Endowment*: As aforementioned, they have received an endowment of \$1,000,000. The endowment is invested in safe bonds and yields a return ranging from 1\% to 5\% depending on the macroeconomic environment. Because the returns are uncertain, the directors would like to do all your calculations for the possible range of returns in increments of 1\%.
+
+The directors of Farm-to-Table 4 All need advise on how much fundraising to engage in and what price to charge for their meals. They want to keep the meal pricing simple and just want to know the meal pricing strategies using integer dollar amounts. They also know that any strategy which results in any loss is unacceptable. Also, the principal of the endowment can never be touched. The directors want you to answer the following questions (based on one year):
+
+1. How much to charge per meal at the three locations. Those pricing strategies should include the objective of maximizing the surplus/profit which can go into the endowment as well as maximizing the number of people served.
+2. How many people to hire for the fundraising activity.
+
+Be careful in differentiating between the monthly and yearly information above. This case study should be answered in yearly terms. The returns from the endowment are independent of the pricing strategy and the number of fundraisers hired. The number of fundraisers is independent of the pricing strategy and the endowment. The number of workers that will maximize the surplus from fundraising will be between one and eight. It is also suggested to construct a tables as follows:
+
+## Parks and Recreation
+You are a management consultant who has been contracted by the Department of Natural Resources (DNR) in SPEAstate. The DNR usually does not get involved with local issues like those explained in the following brief, but the issues of whether or not to open public outdoor recreation facilities is becoming a highly contested issue in the state. You have committed to providing the DNR with a brief report that analyzes the economic issues related the public facilities in two cities: SPEAton and SPEAville. Both cities are medium-sized and have approximately 200,000 residents.
+
+SPEAton has already opened an outdoor recreation area on 10 acres of land. The city acquired the land for \$500,000. It cost an additional \$500,000 to improve the land, which included clearing away trash, construction of parking facilities, and installation of baseball diamonds, basketball courts, and bike pathways. SPEAton borrowed the funds for land acquisition and improvement. The city borrowed the funds at 0\% interest and needs to pay them back over 20 years, i.e. \$50,000 total per year. The park covers 10 acres of land and is abutted by three interstate highways and bounded by an industrial zone. The current admission fee is \$0.50.
+
+SPEAville is considering a similar project. City officials believe they can buy the land for the proposed project for \$500,000 and make the necessary improvements for \$500,000. They also plan to borrow the funds for land acquisition and improvement for the same conditions, i.e., payback of \$50,000 per year for 20 years. Like the existing SPEAton park, the SPEAville project site is on 10 acres and bounded by a few interstate highways and an industrial zone.
+
+Based on related data of parks across the nation, an economist has completed a study that provides user demand at various prices for a medium-sized city of approximately 200,000 residents. The demand function is written as $Q=140,000-100,000 \cdot P$. For example, if the admission price is \$0.50, the resulting yearly demand would be 90,000. In addition to construction and land acquisition, operating costs are estimated at \$0.30 per user at both facilities. The two facilities are five hours apart so they would not be competing attractions.
+
+Like any public issue, investment of resources in a recreational facility has opponents and proponents. In SPEAton, the opponents argue that buying land from a private, out-of-state, owner has taken the \$10,500 that was collected through property taxes off property tax roles (public land is exempt from property tax, i.e., no tax is collected on that land). They argue that the land should be sold. In fact, they know that the previous owner has offered to purchase the property back for \$600,000, assuming that the land will be zoned for commercial use (the zoning designation prior to the city's acquisition). The city would receive \$30,000 yearly for 20 years ($\$30,000 \cdot 20 = \$600,000$). Reassessment of the property reflecting the higher market value would raise the annual tax revenues to \$12,600. Although the merits of selling the parcel are disputed, all available information suggests that the sales price estimate presented by the opponents of the park is reliable, as is the estimate of the impact of returning the parcel to the tax roles. Proponents of the project reject the opponents' argument. They reject selling the land and argue that the city would make the best use possible of the land by providing recreational facilities. They further argue that the city should focus on reducing the fee from \$0.50 per person to \$0.20 per person.
+
+The debate in SPEAville is centered around building the park or not. The land is currently zoned as commercial land and the property tax revenue is \$10,500. A current reassessment confirmed this value. Other than that, the same demand, cost, and revenue calculations as in SPEAton apply. In addition, because the facilities are well served by existing roadways and public transit and because recreational trips tend to be off-peak the expanded use is not expected to add significantly to congestion or pollution in the area.
+
+The two towns are only considering admission fees ranging from \$0 to \$1.40. The Department of Natural Resources has been clear on the issues they want you to address which are the following:
+
+- What is the quantity demanded and the consumer surplus for three admission fees: (1) Current fee, (2) No fee, and (3) Optimal fee?
+- Calculate the accounting profit resulting from admission revenue, operating cost, and loan repayment.
+- What is the total economics benefit if consumer surplus is taken into account?
+- Based on these estimates of benefits and costs, do you recommend that the sell the facility in SPEAton?  If so, why? If not, at what admission fee should the park be operated?
+- Assuming that no significant impacts would result from the project other than the direct impacts of additional recreational use, what are the quantity demanded, the consumer surplus, and the accounting and total economic benefit associated with the project in SPEAville?
+- Based on an assessment of total benefits  and total costs to city residents, should SPEAville build a recreational facility? Explain  why this answer is the same or different from the answer to whether SPEAton should  operate a recreational facility?
+- What types of costs and benefits  were omitted  in the analysis  for both SPEAton and SPEAville?  What this imply about the use of costs and benefits for decision making?
+
+Because you feel a little overwhelmed, you quickly send an email to your SPEA-V 517 instructor. You ask him for a little assistance in putting this report together. Here are the responses:
+
+- You are given demand function to do the calculations. Remember that the consumer surplus is the area above the price and below the demand function. The choke price is \$1.40. So the formula for the consumer surplus as a function of quantity and price is:
+$$CS = (1.4-P) \cdot \frac{Q}{2}$$
+For both cities, you should compare the cost and benefits with and without a park. You should set up an Excel spreadsheet similar to table found in the sheet NONPROFIT.
+            
+- Calculate the total economic benefits with the park and without the park for both cities. 
+- The land improvement cost for SPEAton are sunk cost and cannot be recovered. They have done the improvements and hence, they have to pay back the loan of \$50,000 and get the \$30,000 from the previous owner. You have to take the difference. In general, think about the flow of money with and without the park and keep in mind that we have consumer surplus.
+
+For SPEAville, the issues are slightly different compared to SPEAton because they have not build the park and thus, the loan repayments will be absent.
+
+You also had a colleague help you by doing a literature review of cost-benefit analysis of recreational facilities in a medium-sized city. They put together a few important points (see below). You do not need to address the literature review in your analysis. However, it might be helpful for answering the final question of interest to DNR.
+
+- Green space in an urban area is considered an amenity. Several researchers have found that it increases nearby property values.
+- Urban attractions, like recreational facilities, have been found to increase sales at local business establishments.
+- Crime can increase surrounding new amenities in an urban area.
+- Some argue that increased sales to nearby establishments is simply a shift from other establishments in the local area.
+- Obesity is a problem the state of SPEAstate.
+- Recreational facilities are often used as ways to clean up abandoned areas.
+- Industrial sites can sometimes produce negative externalities to neighboring properties.
+- Traffic congestion can result from urban attractions.
+- Some researchers have found that nearness to recreation facilities increases physical activities of some residents.
+- Crime is sometimes a problem on vacant parcels of an urban area.
+- Youth in organized recreational programs are more likely to not create social disturbances than youth who do not participate in organized recreation programs.
+- Industrial and commercial parcels produce more tax revenue and require less tax revenue than residential parcels.
+
+## Environmental Policy
+You are a policy analyst for the Department of Natural Resources (DNR) in SPEAstate. The two largest firms in SPEAstate are SPEAoil (oil refinery) and SPEApaper (paper mill). Both firms are located at a river and discharge the identical pollutant into the river. The DNR would like to increase the water quality because recreational activities downstream are sometimes restricted due to a high concentration of pollutants. The DNR considers three possible policies: (1) command and control, (2) pollution tax, and (3) cap-and-trade.
+
+Currently, the total quantity of pollutants discharged into the river by both firms is 170 tons per year. SPEAoil and SPEApaper contribute 90 and 80 tons, respectively. Each firm has one pipe discharging the pollutant into the river and hence, the DNR can determine exactly how much pollution is coming from each firm. The goal of the DNR is to limit total pollution to 130 tons per year. For all policy scenarios, the DNR is interested in the quantity of pollution and abatement for each firm and in total. In addition, they want to know the cost to each firm, the revenue to the government (if any) and the societal cost of the policies. To reduce pollution, SPEAoil and SPEApaper can install abatement technology. If $a_o$ and $a_p$ are the quantities abated by SPEAoil and SPEApaper, respectively, then the total cost and marginal costs can be written as: $TC(a_o) = 4 \cdot a_o^2$, $TC(a_p) = 3 \cdot a_p^2$, $MC(a_o) = 8 \cdot a_o$, and $MC(a_p) = 6 \cdot a_p$.\\
+
+- Command-and-Control Policy: The DNR limits the total pollution discharged to 130 tons and imposes separate emission standard for each firm. The emission standard allows each firm to pollute proportional to its current pollution.
+- Emission Tax I: The second policy option taxes each ton of pollutant at \$120. Hence, each firm can chose to invest in abatement or can pay the tax on emissions. Calculate each firm's abatement and total cost associated with this policy. How much money will the government collect? Does the DNR achieve the target pollution level? The amount spent by the firm is composed of the abatement amount and the tax payment. A table of the following form is recommended:
+- Cap-and-Trade
+Under the cap-and-trade option, the DNR allocates 65 emission permits to each firm. The emission permit gives the firm the right to pollute. For example, if a firm owns 65 permits, it has the right to discharge 65 tons of pollutant. If it discharges more, a very expensive fine is imposed. After the permit allocation, the DNR then allows the firms to sell and buy the permits to each other. How many permits will each firm buy and sell? Note that the total cost to firms includes the expense/revenue from buying/selling the permits. What is the permit price?\\
+- Emission Tax II: 
+Revisit the emission tax scenario but with a modified tax rate, i.e., assume the DNR would set the tax rate to the permit price found under the Cap-and-Trade scenario. Compare the cost to the firms of the tax and the cap-and-trade system. What are your conclusions?
+
+## Ride Sharing in Your Hometown
+You are the mayor of one of the largest cities in the Midwest. Your term is not going well due to rising crime, social injustice, and a crumbling infrastructure. You are now facing an additional problem related to transportation in your city. A start-up ride-sharing company called Unter started to operate in your city. Their business model is simple. You download an app to your phone and you can be either (1) a driver offering rides to customers or (2) a customer ordering rides to a particular destination. The app knows the location of the customer who orders a ride and sends the closest driver to pick them up. Needless to say, the local taxi drivers are in uproar. Unter also uses what is called "surge pricing" which means that they raise the price when demand is high. "Surge pricing" is not used by taxis and cab drivers argue that the surge pricing is unfair to consumers. You vaguely remember from your economics class the concepts of consumer surplus, producer surplus, and deadweight loss. You come to the conclusion, that you may want to look at this from an economic perspective. At the end of your analysis, you should be able to answer the following basic questions (among others):
+
+- Should Unter be allowed to operate in your city from a societal welfare perspective?
+- Should Unter be allowed to use "surge pricing" in the case of high demand?
+
+You have to answer those questions and provide context and explanations to your administration. You have the following information. The regular demand for rides (either cabs or Unter) is written as:
+
+$$Q=3250-500 \cdot P$$
+The "peak" (also known as "surge") demand function is written as:
+$$Q=4750-500 \cdot P$$
+
+Unter and the cab companies operating in your city are using a similar vehicle fleet. So the marginal cost function can be written as:
+$$MC=0.5+0.001 \cdot Q$$
+Currently, the number of cabs operating in your city is fixed at 1500. In reality, cities distribute so-called medallions to taxi drivers. There is a limited number of medallions and thus, the number of taxis is limited by the number of medallions distributed. Also, cabs are not allowed to change their price based on demand. The price they must use is the equilibrium price under normal demand.
+
+Prepare a policy brief which examines the two broad questions mentioned above but with more in-depth analysis. Calculate the consumer surplus, producer surplus under all possible situations. That is, with or without Unter, with or without surge pricing for cabs and/or Unter, etc. Be as thorough as possible.
+
+## Fuel Taxation and Low-Income Families
+You are the governor of a Midwestern state and concerned about the poor condition of roads. The state's fuel tax has not be adjusted for more than 20 years and thus, inflation has eroded away the purchasing power. You want to raise the gasoline tax by 20\% but face critics who claim that an already regressive tax will make the situation for low-income people even worse. Thus, you consider raising the gas tax while implementing a tax credit to low-income people. However, the tax credit must be financed somehow because the increase in gas tax goes to roads and not the tax credit. So you are a little bit in a dilemma. Before you start design a tax proposal, let us look at the current residents, their preferences, and taxes in your state.
+
+There are ten residents in your state. Think about those ten residents to be representative for each of the income deciles as presented in the [Consumer Expenditure Survey Deciles of Income before Taxes](https://www.bls.gov/cex/tables.htm). Their utility functions can be represented by a Cobb-Douglas function:
+    \begin{equation*}
+        U(x_G,x_A) = x_G^{\alpha} \cdot x_A^{\beta}
+    \end{equation*}
+where $x_G$ and $x_A$ are the physical quantities of gasoline and all other goods, respectively. The values of the preference parameters $\alpha$ and $\beta$ are listed in Table \ref{table:CSTaxation}. The demand functions resulting from the Cobb-Douglas utility function are written as:
+    \begin{align*}
+        x_G &= \frac{\alpha}{\alpha + \beta} \cdot \frac{m}{p_G}\\
+        x_A &= \frac{\beta}{\alpha + \beta} \cdot \frac{m}{p_A}\\
+    \end{align*}
+where $m$ represents the income of the consumer and prices for gasoline and other goods are denoted as $p_G$ and $p_A$, respectively. The current gasoline wholesale price (i.e., price without tax) is \$2.30. The current tax rate on gasoline is \$0.20 per gallon. The wholesale price on other goods is \$1.00 and the sales tax is 6\%. Note that there is no sales tax on gasoline. The current income tax rate is flat at 3\% independent of income.
+
+- Current Situation: Unchanged income and gasoline tax.
+- 20\% Gasoline Tax Increase: The gasoline tax increases by 20\% and the other taxes are unchanged.
+- 20\% Gasoline Tax Increase, Tax Credit, and Flat Income Tax Increase: In this scenario, residents earning less than \$40,000 before taxes receive a tax credit of \$200. To finance the tax credit, the income tax which is currently at 3\% is raised uniformly.
+- 20\% Gasoline Tax Increase, Tax Credit, and Tiered Income Tax Increase: In this scenario, residents earning less than \$40,000 before taxes receive a tax credit of \$200. To finance the tax credit, the income tax rate which is raised for residents earning more than \$40,000.
+
+The sales and income tax go into the General Fund. That means that both taxes serve as substitutes for each other. The gas tax goes into the Highway and Road Fund. Money between the General Fund and the Highway and Road Fund are not exchangeable, i.e., there is no cross-subsidization.

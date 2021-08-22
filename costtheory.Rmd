@@ -1,0 +1,141 @@
+# Cost Theory
+Recall from the previous section the differentiation between the short-run and the long-run in production. The short-run is a time period during which at least one of the firm's inputs is fixed. Fixed inputs cannot be adjusted as output changes in the short-run. The short-run production function is written as $Q=f(\bar{K},L)$. The long-run is a time horizon long enough for a firm to vary all of its inputs depending on changes in output quantities and/or input prices.
+
+Consider the example of Southwest Airlines compared to other major carriers. Southwest only operates one type of airplane, i.e., Boeing 737. Other carriers use a wide variety of airplane models. The advantage of using only one airplane model is reduced cost in training and operation. The disadvantage is no flexibility when it comes to serving routes with smaller or larger airplanes depending on demand. In our context, the number and types of airplanes as an input in the production process of transportation is fixed. You can only adjust the number of flights (e.g., lowering or increasing the number of flight personnel) in the short-run.
+
+## Accounting versus Economic Cost
+Before relating production cost to production functions, let us first consider the difference between economic profit and accounting profit. Consider Al who owns a shoe store. In a given year, he sells shoes valued at \$250,000 and the cost to purchase those shoes at the wholesale level is \$200,000. From an accounting perspective, the store makes an accounting profit of \$50,000. Now suppose that Al could instead be working in a shoe store at the mall making \$60,000. This salary is considered the opportunity cost of owing his own store. Thus, the economic profit is the accounting profit minus the opportunity cost, i.e., \$50,000-\$60,000=-\$10,000. If the salary for the position at the mall was only \$40,000 then he would make a positive economic profit of \$10,000.
+
+## Relationship between Production and Cost
+Assume the following production function using workers $L$ and capital $K$ as inputs:
+$$Q = 10 \cdot \sqrt{K \cdot L}$$
+The price of capital is $r=1$ and the wage is $w=2$. Assume $K = 9$ in the short-run and thus, the production function becomes:
+$$Q = 30 \cdot \sqrt{L}$$
+Solving for $L$ and plugging the result into the cost equation, i.e., $C=w \cdot L + r \cdot K$, results in the following total cost function:
+$$C(Q) = \frac{Q^2}{450}+9$$
+In reality, it is much easier to observe the cost of a firm and how it relates to output than to observe the production function. Keeping in mind that there is a direct relationship (so-called duality in microeconomic theory) between the production technology and the total cost function.
+
+```{r CSTproductiontocost,echo=FALSE,fig.cap="Moving from the Production Function to Total Cost Function. Panel (a) depicts the production function. Panel (b) shows the corresponding cost function with a fixed cost of 9 due the $K$ being fix in the short-run."}
+profun                  = function(L){30*sqrt(L)}
+costfun                 = function(Q){Q^2/450+9}
+par(mfrow=c(1,2))
+  curve(profun,from=0,to=40,yaxs="i",xaxs="i",main="(a) Production Function",xlab="L",ylab="Output")
+  curve(costfun,from=0,to=200,yaxs="i",xaxs="i",main="(b) Cost Function",xlab="Output",ylab="$",ylim=c(0,100))
+rm(costfun,profun)
+```
+
+The relationship is also shown in the table assuming $Q = 10 \cdot \sqrt{K \cdot L}$ and $r=1$, $w=2$, and $\bar{K}=9$ below.
+
+| worker  |  output  |  TC  |
+|---------|----------|------|
+|  0      |  0       |  9   |
+|  1      |  30      |  11  |
+|  4      |  60      |  17  |
+|  9      |  90      |  27  |
+|  16     |  120     |  41  |
+|  25     |  150     |  59  |
+
+## Total Cost Function, Average and Marginal Cost Functions
+The total cost function of a firm can be decomposed into to parts: fixed cost and variable cost. Fixed costs are independent of output and need to be paid even if the firm does not produce anything, i.e., $Q=0$. For example, if you have rented space for your coffee shop, then rent is due even if you are not selling any coffee. The same is true if you are an airline and all your planes are grounded due to a pandemic, then you still have to pay the interest for the financing of your planes. As opposed to fixed cost, variable cost vary with output. The variable cost of a coffee shop would be coffee beans and milk. If your output is zero then your variable costs are zero as well. Hence we can define total cost ($TC$) as total fixed cost ($TFC$) plus total variable cost ($TVC$). Given the definition of total, fixed, and variable costs, we have the following cost relations:
+
+- Average Fixed Cost (AFC): $$AFC=\frac{TFC}{Q}$$
+- Average Variable Cost (AVC): $$AVC=\frac{TVC}{Q}$$
+- Average Cost (AC): $$AC=\frac{TC}{Q}=AFC+AVC$$
+- Marginal Cost (MC): $$MC= \frac{\Delta TC}{\Delta Q}$$
+
+Consider a total cost function of the following form:
+$$C(Q)=450+100 \cdot Q-3 \cdot Q^2+0.2 \cdot Q^3$$
+The fixed cost for this cost function is \$450. The resulting cost functions are presented in the table below:
+
+| Output  |  TC     |  MC     |  TFC  |  TVC    |  AC     |  AFC    |  AVC   |
+|:-------:|:-------:|:-------:|:-----:|:-------:|:-------:|:-------:|:-------|
+|  0      |  450.0  |  NA     |  450  |  0.0    |  NA     |  NA     |  NA    |
+|  1      |  547.2  |  94.6   |  450  |  97.2   |  547.2  |  450.0  |  97.2  |
+|  2      |  639.6  |  189.2  |  450  |  189.6  |  319.8  |  225.0  |  94.8  |
+|  3      |  728.4  |  283.8  |  450  |  278.4  |  242.8  |  150.0  |  92.8  |
+|  4      |  814.8  |  378.4  |  450  |  364.8  |  203.7  |  112.5  |  91.2  |
+|  5      |  900.0  |  473.0  |  450  |  450.0  |  180.0  |  90.0   |  90.0  |
+
+One of the most important concepts in economics is marginal cost. The marginal cost is the additional cost from an additional unit of output. This is illustrated by $\Delta TC/\Delta Q$ where $\Delta$ represents ``change in.'' Marginal costs plays an important role in deriving the supply function of the firm (see figure below).
+
+```{r CSTacandmc,echo=FALSE,fig.cap="Derivation of the supply function. Panel (a) represents the total cost function. Panel (b) shows the average and marginal costs associated with the total cost function.",fig.height=12,fig.width=6}
+TC        = function(x){450+100*x-3*x^2+0.2*x^3}
+MC        = function(x){100-6*x+0.6*x^2}
+ATC       = function(x){(450+100*x-3*x^2+0.2*x^3)/x}
+AVC       = function(x){(100*x-3*x^2+0.2*x^3)/x}
+par(mfrow=c(2,1))
+  curve(TC,from=0,to=25,ylab="Total Cost",xlab="Output",main="(a) Total Cost Function",
+        yaxs="i",xaxs="i",ylim=c(0,5000))  
+  curve(MC,from=0,to=25,ylim=c(0,200),ylab="Dollars",xlab="Output",
+        main="(b) Average Cost and Marginal Cost",yaxs="i",xaxs="i")
+  curve(ATC,add=TRUE,col="red",from=0,to=25)
+  curve(AVC,add=TRUE,col="blue",from=0,to=25)
+  legend("bottomright",
+         legend=c("Marginal Cost (MC)","Average Total Cost","Average Variable Cost"),
+         fill=c("black","red","blue"))
+rm(ATC,AVC,MC,TC)
+```
+
+## Profit Maximization and Cost Functions
+The cost function can be used to derive the profit maximizing quantity. The total revenue ($TR$) of a firm is written as $TR=P \cdot Q$ and thus, the profit can be written as follows:
+$$\pi = P \cdot Q-450-100 \cdot Q +3 \cdot Q^2-0.2 \cdot Q^3$$
+What is the profit maximizing quantity if $P=160$? $P=160$? $P=110$? $P=86$?
+
+## Policy Examples
+In this chapter, we have seen that marginal cost plays an important role in determining the supply function. In this section, we are looking at two examples in which marginal cost play an important role.
+
+**Philanthropic Giving**: [Gneezy et al. (2010)](https://doi.org/10.1126/science.1186744) conducted a field experiment in a large amusement park in which roller coaster riders were able to purchase photo after their ride. They used a $2 \times 2$ design matrix, i.e., (1) purchasing the photo at \$12.95 or pay-what-you-want (PWYW) and (2) no charitable giving or 50\% goes to charity. In the control group (i.e., the status quo sales policy by the amusement park), riders paid \$12.95 for the photo and total revenue was \$1,823. With 50\% going to charity, photo revenue was \$2,331. With PWYW and charity, photo revenue was \$6224.22. the lost revenue was achieved with PWYW at \$2175.80. The marginal cost of printing the photo is probably very close to zero for the amusement park company. Thus, the profit margin per photo can be relatively high.
+
+**Marginal Cost and Oil Extraction**: The marginal cost of oil extraction depends on the type of oil (e.g., onshore versus offshore) and geographical location. Illustrations of the marginal cost of oil extraction can be found in [Bank of Canada](https://www.bankofcanada.ca/2015/01/mpr-2015-01-21/) and [Arezki et al. (2017)](https://www.imf.org/en/Publications/WP/Issues/2017/01/27/Oil-Prices-and-the-Global-Economy-44594).
+
+## Exercises
+
+1. *Cost Function Components*: A firm's total cost function is given by the equation $TC = 4000 + 5 \cdot q + 10 \cdot q^2$. Write an expression for each of the following cost concepts: (1) Total Fixed Cost, (2) Average Fixed Cost, (3) Total Variable Cost, (4) Average Variable Cost, and (5) Average Total Cost.
+
+2. Consider the figure below and assume that the current price is at 150. In the graph, show the profit maximizing quantity produced and present the profit in the graph.
+
+```{r CSTprofitmaximization,echo=FALSE}
+MC        = function(x){100-6*x+0.6*x^2}
+ATC       = function(x){(450+100*x-3*x^2+0.2*x^3)/x}
+AVC       = function(x){(100*x-3*x^2+0.2*x^3)/x}
+curve(MC,from=0,to=25,ylim=c(0,200),ylab="(in Dollar)",xlab="Output",
+      main="Average Cost and Marginal Cost",yaxs="i",xaxs="i")
+curve(ATC,add=TRUE,col="red",from=0,to=25)
+curve(AVC,add=TRUE,col="blue",from=0,to=25)
+legend("bottomright",
+  legend=c("Marginal Cost (MC)","Average Total Cost","Average Variable Cost"),
+  fill=c("black","red","blue"))
+rm(ATC,AVC,MC)
+```
+
+3. This question will make you show the connection between the production function and the cost function. It will also visualize the marginal and average product of labor. The homework must be done in Excel. Be sure to use the functionalities available in Excel to make your life easy. Especially the use of "\$" to keep referencing a particular cell. Except for the input of labor and/or capital columns, every other column should be based on a function starting with "=". For your Excel file, make sure that the sheets, tables, and graphs look neat and presentable. The polynomial production function first rises at an increasing rate and then increases at a decreasing rate. That is, the marginal product of labor is first increasing due to specialization and then decreasing. The function you will be looking at is written as:
+$$Q = a \cdot L + b \cdot L^2 +c \cdot L^3$$
+where *Q* represents the output quantity and *L* represents the labor input. The parameters of the function are *a*, *b*, and *c*. In our case, we will define $a=10$, $b=20$, and $c=-0.6$. Open an empty Excel spreadsheet and name the sheet *Poly Function*.
+    a. Write ``a='' in cell A1, ``b='' in cell A2, and ``c='' in cell A3.
+    b. Put the values of 10, 20, and -0.6 in cells B1, B2, and B3, respectively.
+    c. Assume that the wage $w$ is 10 per unit of L and that the fixed costs are 100. Put "w=" and "FC=" in cells C1 and C2, respectively. Put 10 and 100 in cells D1 and D2, respectively.
+   
+    Put the following labels in cells A4 through G4: $L$, $Q$, $MPL$, $APL$, $FC$, $VC$, and $TC$. Those columns represent the units of labor, the output quantity, the marginal product of labor, the average product of labor, the fixed costs, the variable cost, and the total cost.
+    a. Put 0 in cells A5, 0.25 in cell A6,... until you reach 20 in cell A85 (Once you have the first two values, simply mark both and drag them down until cell A85.). Now, you have all the information you need to fill out the columns for $Q$, $MPL$, $APL$, $FC$, $VC$, and $TC$.
+    b.  In three new sheets, I want you to graph your results. Graph the production function in the first sheet. Graph the average product and marginal product of labor in the second sheet. And lastly, draw the cost function in the last sheet. Be careful with the cost function, it should not be a linear line! Use the scatter plot function of Excel.
+
+4. A Cobb-Douglas production function is used very often in economics because its functional form is very flexible. In general it is written as follows:
+$$Q = A \cdot K^\alpha \cdot L^\beta$$
+Create a new sheet called *Cobb Douglas* and type in the following information regarding parameters:
+    - A1 to A4: *K Fixed*, *alpha*, *beta*, *A*.
+    - B1 to B4: 9, 0.5 0.3, 10
+    - C1 to C2: *w*, *r*
+    - D1 to D2: 0.5, 0.2
+  
+    In cells A5 through H5, put the following labels: *Q*, *Kfixed*, *L*, *Q*, *MPL*, *APL*, *FC*, *VC*, and *TC.*
+    a. Ranging from 0 to 10 in increments of 0.1, put the units of labor in cells C6 through C106. Then fill in the remaining columns.
+    b. In three new sheets, I want you to graph your results. Graph the production function in the first sheet. Graph the average product and marginal product of labor in the second sheet. And lastly, draw the cost function in the last sheet. Be careful with the cost function, it should not be a linear line! Make sure you use the scatter plot function of Excel.
+
+5. *Multi-Plant Production*: In class, we have considered producing with one production facility only. Our analysis and results (e.g., price equals marginal cost) is easily extendable to multiple production facilities. Assume that you are a producer who has two production plants. You incur no fixed cost for running both plants and only face variable costs. The total cost for the plant 1 ($TC_1$) and 2 ($TC_2$) are $TC_1(Q_1) = 2 \cdot Q_1^3$ and $TC_2(Q_2) = Q_2^2$. The marginal cost is written as $MC_1 = 6 \cdot Q_1^2$ and $MC_2 = 2 \cdot Q_2$. In Excel, write *Q* in cell A1 and write $0,0.1,\dots,5$ in cells A2 to A52 (do not enter those numbers manually but make sure to just drag the little square down). Name cells B1 through E1 as *TC1*, *TC2*, *MC1*, *MC2*. Use the provided functions to fill out cells B2 through E52. Next, graph the two total cost functions in the same chart and name the sheet TC. Do the same for the marginal cost functions. Based on the functions and charts provided, what is your total production if the price is \$6? Do you produce in one plant or both plants? Provide an intuitive explanation for your answer? What is your revenue? What is your total cost?
+
+6. *Supply Function Derivation*: This problem recreates the derivation of the supply function using Excel. It is a good opportunity to strengthen the understanding of the concepts associated with total cost, average total cost, average variable cost, and marginal cost. The total cost is given by the following equation: $$450+100 \cdot Q-3 \cdot Q^2+0.2 \cdot Q^3$$
+    a. Pick an empty Excel sheet and type *Price* in cell A1. For now, put the number 160 in cell B1. Name the cells A2 to H2 as follows: *q*, *Cost*, *Marginal Cost (MC)*, *Average Total Cost (ATC)*, *Average Variable Cost (AVC)*, *Revenue*, *Profit*, *Price*. Fill in the production quantities in cells A3 to A28 ranging from 0 to 25 in increments of 1.
+    b. Fill in the marginal cost, average total cost, average variable cost, revenue, profit, and price columns. Make the make the revenue, profit, and price columns a function of cell B1.
+    c. Once you have filled out the table, I want you to create three new sheets: (1) Sheet *Profit*: A graph that displays the profit as a function of the quantity produced, (2) Sheet *Cost and Revenue*: A graph that displays cost and revenue as a function of quantity, and (3) Sheet *MC and AC*: A graph that displays MC, ATC, AVC, and price.
+
+    Once you have done this, you can play around with the price by changing cell B1, i.e., the price, and see how profit and output decisions change.

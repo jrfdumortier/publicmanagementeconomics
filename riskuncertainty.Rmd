@@ -1,0 +1,185 @@
+# Risk and Uncertainty
+So far, we considered decisions based on the assumption that there is no uncertainty. In reality, we are surrounded by uncertainty such as changes in prices, income, and so on. Good (or bad) stuff happens. Some examples of risks that affect you are retirement funds (e.g., mutual fund, stock market, etc.), gasoline (energy) prices, accidents (e.g., home, car, health, etc.), or sub-prime mortgages. Most decisions are based on expectations about the future. Many economic questions and issues are associated with risk: How do people make decisions under uncertainty? Is there a market (and hence, a price) for risk? Can we reduce risk?
+
+Before starting to analyze risk, let us first look at how money changes value over time. The first concept introduced is called \emph{net present value}. The net present value (NPV) analysis is based on the idea that a dollar today is different from a dollar tomorrow. Suppose I gave  you the choice of giving you \$1,000 either today or in a year from now. You would certainly take the money today and not wait a year. The reason for this is that you can take the money know, put it in a bank account, and receive the \$1,000 plus interest in a year from now. For example, assume that the interest rate is 2\% per year. If you make a bank deposit of \$1,000 today ($t=0$), then the value of the bank account in one year will be $V_1 = \$1,000 \cdot (1.02) = \$1,020$. The bank account value in two years ($t=2$) will be $V_2 = \$1,000 \cdot (1.02)\cdot (1.02) = \$1,040.40$. The general equation (compound interest) for the bank account value is $n$ years given an interest rate of $r$ is:
+    \begin{equation*}
+        V_n = \$1,000 \cdot (1+r)^n
+    \end{equation*}
+The opposite of compound interest is discounting. Assume a stream of income of \$100 at the end of each year over the next three years.
+    \begin{equation*}
+        NPV = \frac{100}{1+r} + \frac{100}{(1+r)^2} + \frac{100}{(1+r)^3}
+    \end{equation*}
+Assuming that you receive \$100 at the end of the following three years with an interest rate of 2\%, then the NPV of that stream is \$288.39. Put differently, if you deposit \$283.39 today, you can withdraw exactly \$100 at the end of years 1, 2, and 3. The net present value formula of a stream of $X_t$ per year $t$:
+    \begin{equation*}
+        NPV = \sum_{t=1}^T \frac{X_t}{(1+r)^t}
+    \end{equation*}
+Net present value calculations are often used in investment decisions by firms but also in court cases relating to wrongful death. In particular, if a person dies while still working, families can seek compensations in the amount of the net present value of earnings. For example, assume that a person who was supposed to retire at age 65 dies in a car accident at age 60. That person was earning \$50,000 at the time of death and the expected growth rate ($g$) of the earnings were 2\% per year. Note that the person could have also died of other causes between the age of 60 and 65 and thus, we need to account for that probability ($d$). To do so, we can consult ``Life Tables'' compiled by the Centers for Disease Control and Prevention (CDC).\footnote{\url{https://www.cdc.gov/nchs/products/life_tables.htm}} The 2014 table reveal the probabilities of dying displayed in Table \ref{table:lifetable}.
+\begin{table}
+    \begin{center}
+        \begin{tabular}{lrrrrr}\toprule
+        Age         & 60-61     & 61-62    & 62-63    & 63-64    & 64-65 \\ \midrule
+        $d_t$       & 0.008959  & 0.009606 & 0.010288 & 0.010995 & 0.011735 \\ \bottomrule
+        \end{tabular}
+        \caption{Life table for the total population: United States, 2014. The probability of dying is represented by $d_t$}
+        \label{table:lifetable}
+    \end{center}
+\end{table}
+Hence, if we assume the person would have received \$50,000 this year and over the next five years, we can use the following equation to calculate the net present value of earnings given a discount rate of 5\%.
+    \begin{equation*}
+        NPV = \$50,000 + \sum_{t=1}^5 \frac{\$50,000 \cdot (1+g)^t \cdot (1-d_t)}{(1+0.05)^t}
+    \end{equation*}
+Hence, the net present value of earnings is \$277,013.36. Note that the perpetual stream of $X$ dollars
+    \begin{equation*}
+        NPV = \frac{X}{r}
+    \end{equation*}
+This means that the present value of an infinite stream of money is finite.
+
+\begin{figure}
+    \begin{center}
+        \includegraphics[width=6in]{RSK_expectedutility.pdf}
+    \end{center}
+\end{figure}
+
+
+\subsection{Assets}
+Assets are either a provision of flow of services over time such as consumption services from housing or a car, or financial assets that provide a monetary flow over time, e.g., stocks, mutual funds. Assets differ in terms of liquidity, e.g., house versus treasury bills, risk, consumption returns, and tax characteristics. In the absence of uncertainty, all assets should have identical returns. Otherwise, only the asset with the highest return would be purchased.
+
+Suppose that we have two assets $A$ and $B$. Asset $A$ has a current price $p_0$ and future price $p_1$. Asset $B$ has a current price $p_0$ and interest rate $r$. This can be expressed as
+    \begin{itemize}
+        \item A: $p_0 \rightarrow p_1$
+        \item B: $p_0 \rightarrow (1+r) \cdot p_0$
+    \end{itemize}
+Further assume that your total investment is \$1. Then the necessary investment is
+    \begin{equation*}
+        p_0 \cdot x = 1 \Leftrightarrow x = \frac{1}{p_0}
+    \end{equation*}
+For example $p_0 = \$2$ and $p_1 = \$2.50$. The future value of \$ 1 is
+  \begin{equation*}
+      FV = p_1 \cdot x = \frac{p_1}{p_0}
+  \end{equation*}
+The equilibrium condition:
+  \begin{equation*}
+      1+r=\frac{p_1}{p_0}  \quad \Leftrightarrow \quad p_0 = \frac{p_1}{1+r}
+  \end{equation*}
+Sometimes this called the no-arbitrage condition. Those concepts may seem overly theoretical and thus, let us examine a real world example that illustrates this concept: Cutting down a tree. Suppose that you have a tree and you need to decide when to cut down the tree. Suppose that the volume $F(t)$ is a function of time $t$ and is written as
+    \begin{equation*}
+        F(t) = 40t + 3.1t^2 - 0.016t^3
+    \end{equation*}
+So the optimal forest harvest time:
+  \begin{equation*}
+      r = \frac{F(t+1)-F(t)}{F(t)}
+  \end{equation*}
+This means that the optimal harvest time is when the growth rate is equal to the interest rate.
+    \begin{table}[b]
+        \centering
+            \begin{tabular}{lccccccccccccc}\toprule
+            t &  10  &  20  &  30 &  40 &  50 &  60 &  70 &  80 &  90 &  100  \\ \midrule
+            F(t) &  0.7 &  1.9 &  3.6 &  5.5 &  7.8 &  10.1 &  12.5 &  14.8 &  17.0 &  19.0 \\ \bottomrule
+            \end{tabular}
+            \caption{Growth of a tree in thousand cubic feet.}
+    \end{table}
+
+\subsection{Uncertainty}
+Suppose that I propose to you a game and you have to pick one of the following options:
+    \begin{enumerate}
+        \item Receiving \$100.
+        \item Flipping a coin and receiving \$200 if the result is heads and \$0 if the result is tails.
+        \item Die roll and receiving \$400 for 1, \$70 for 2, \$55 for 3, \$40 for 4, \$25 for 5, and \$10 for 6.
+    \end{enumerate}
+You will notice that the expected outcome is \$100 in each case but you certainly have a preference for which option you pick. However, the variances are 0, 10,000, and 18,375. We will soon see that uncertain outcomes are worth less in terms of utility than certain outcomes (like receiving \$100) even when the expected payoffs are identical. A prime example to illustrate this concept is called the St. Petersburg Paradox. The game is simple: Flip a coin and I will pay you \$2$^n$ where $n$ is the number of flips until heads. So the expected payoff is
+    \begin{equation*}
+        \text{Expected Payoff} = \frac{1}{2} \cdot \$2 + \frac{1}{4} \cdot \$4 + \frac{1}{8} \cdot \$8 + \cdots = \infty
+    \end{equation*}
+
+An actuarially fair game is where the cost of entry equals the expected payoff. That is $E(X) = \mathrm{Pr}_{win} \cdot \pi_{win} + \mathrm{Pr}_{lose} \cdot \pi_{lose} = 0$.
+
+As a rule, uncertain prospects are worth less in utility terms than certain ones even when the expected payoffs are the same.
+%\begin{table}
+%            \begin{center}
+%                \begin{tabular}{lcrr} \toprule
+%                & & \multicolumn{2}{c}{Profits}\\ \cmidrule(r){3-4}
+%                State of the Economy    & Probability   & Project A & Project B \\ \midrule
+%                Recession               & 40\%          & 4000      & 0         \\
+%                Normal                  & 35\%          & 5000      & 5000      \\
+%                Boom                    & 25\%          & 1000      & 8000      \\ \bottomrule
+%                \end{tabular}
+%                \caption{Project investment return based on the state of the economy}
+%                \table{table:investmentreturn}
+%            \end{center}
+%        \end{table}
+A probability distribution refers to a list of outcomes and probabilities associated with those outcomes. The sum of the probabilities across all outcomes is always 1. Consider a project investment as outlined in table \ref{table:investmentreturn}. To achieve some quantification of risk associated with those projects, we need to calculate the expected value and the variance. The expected value is calculated as follows:
+        \begin{equation*}
+            E(\pi)  = \sum_i \pi_i p_i
+        \end{equation*}
+and thus, the expected values of projects A and B are
+        \begin{align*}
+            E(\pi_A) &=  0.4 \cdot 4000 + 0.35 \cdot 5000 + 0.25 \cdot 1000 = 3600 \\
+            E(\pi_A) &=  0.4 \cdot 0 + 0.35 \cdot 5000 + 0.25 \cdot 8000 = 3750
+        \end{align*}
+The variance is calculated as:
+   \begin{equation*}
+       Var(\pi) = \sum \left[ \pi_i - E(\pi) \right]^2 \cdot p_i
+   \end{equation*}
+For projects A and B, we have
+    \begin{align*}
+            Var(\pi_A) = 2,440,000      & \Leftrightarrow \sigma_A = 1560\\
+            Var(\pi_A) = 10,687,500     & \Leftrightarrow \sigma_B = 3269
+    \end{align*}
+
+\subsubsection{Expected Utility}
+The expected utility is the sum of the utilities associated with all possible outcomes, weighted by the probability that each outcome will occur. From Jensen's inequality, we have
+   \begin{itemize}
+       \item $E(U(w)) = U(E(w)) \Rightarrow$ Risk neutral
+       \item $E(U(w)) < U(E(w)) \Rightarrow$ Risk averse
+   \end{itemize}
+The risk premium is the maximum amount of money a risk averse person will pay to avoid taking a risk. Note that this is an extremely important concept. For example, the risk premium leads to higher interest rates for consumers or companies with a low credit rating.
+
+
+To illustrate the concept of expected utility, assume that we have a risk averse individual and two possible outcomes: (1) Getting \$1 with a probability of 60\%, and (2) Getting \$8 with a probability of 40\%. The expected value of wealth is
+   \begin{equation*}
+       E(w) = 0.6 \cdot \$1 + 0.4 \cdot \$8 = \$3.80
+   \end{equation*}
+And the expected utility is:
+   \begin{equation*}
+       E(U) = 0.6 \cdot u(\$1) + 0.4 \cdot u(\$8)
+   \end{equation*}
+We also have $u(\$3.8)$. Note that $u(\$3.8) > 0.6 \cdot u(\$1) + 0.4 \cdot u(\$8)$
+
+\subsubsection{Risk Diversification}
+    Two investment possibilities:
+        \begin{enumerate}
+            \item Raincoat company: $p_0 = \$10$ and $p_1 = \$5$ if sunny or $p_1 = \$20$ if rainy
+            \item Sunglasses company: $p_0 = \$10$ and $p_1 = \$20$ if sunny or $p_1 = \$10$ if rainy
+        \end{enumerate}
+    Diversification
+        \begin{itemize}
+            \item 50-50 diversification $\Rightarrow$ \$125
+        \end{itemize}
+There are gains from diversification as long as assets are not perfectly correlated. You can think about the stock market, futures market, mutual funds, or football QBs.
+
+\subsubsection{Insurance Market}
+    \begin{figure}
+        \begin{center}
+            \includegraphics[width=5in]{RSK_riskpooling.pdf}
+        \end{center}
+        \caption{Example of risk pooling for an insurance company. The probability of a fire is 1\%.}
+        \label{fig:RSK_riskpooling}
+    \end{figure}
+
+If people are risk averse then why do insurance companies exist. The key here is that insurance companies can engage in what is called risk pooling. To illustrate the concept, suppose that you are flipping a coin and must predict the share of tails. The expected value of the share of heads (or tails) is $E(H)=E(T)=0.5$. The variance of $n$ coin tosses is written as
+    \begin{equation*}
+        \mathrm{Var}(n) = \frac{p \cdot (1-p)}{n} \Rightarrow \frac{0.5 \cdot 0.5}{n}
+    \end{equation*}
+Thus we have $\mathrm{Var}(1) = 0.5$, $\mathrm{Var}(10) = 0.025$, $\mathrm{Var}(1000) = 0.00025$, and so on. Think about how difficult it is to predict the correct share of heads from a single coin toss but high prediction precision from several thousand coin tosses. For an insurance company, the same concept applies. Given many policy holders, there is almost perfect predictability of the number (or share) of claims in a year. Note that the key assumption here is independence of events/claims. Assume that the probability of a house fire is 1\%. Figure \ref{fig:RSK_riskpooling} shows a simulation of claims depending on hos many people are insured. The simulation is conducted as follows:
+        \begin{enumerate}
+            \item Simulate the damage of $n$ homeowners
+            \item Calculate the share
+            \item Repeat 1,000 times
+            \item Generate histogram
+        \end{enumerate}
+% Law of large numbers, actuarily fair insruance premium = premium=p \cdot A where p is the probability of a claim and A is the payout.
+
+\subsection{Exercises}
+    \begin{enumerate}
+        \item The utility function of an individual is written as $U = \sqrt{M}$. The person faces a gamble in which income is \$36 with probability 1/2 and \$100 with probability 1/2. What payoff with certainty is indifferent to this gamble? What is the risk premium associated with this gamble? How much would the individual be willing to pay to avoid taking the risk?
+    \end{enumerate}
