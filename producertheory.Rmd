@@ -1,5 +1,9 @@
 # Producer Theory
-The goal of producer theory is to derive the supply curve. We will first look at production functions and profit maximization. In the subsequent section, we will talk about cost minimization which ultimately leads to the supply function.
+The goal of producer theory is to derive the supply curve. We will first look at production functions and profit maximization. In the subsequent chapter, we will talk about cost minimization which ultimately leads to the supply function. 
+
+There is a YouTube video associated with this chapter:
+
+- [Producer Theory](https://youtu.be/EilB16BfgG0)
 
 ## Production Functions
 Production is the process of combining inputs to make goods and services. A production function indicates the maximum amount of output a firm can produce over some period of time from each combination of inputs. Inputs can be hours of labor, \$ of capital, cubic feet of natural gas, or tons of raw material. There are similarities between consumer theory and producer theory:
@@ -24,7 +28,7 @@ par(mfrow=c(1,2))
 rm(yield)
 ```
 
-## Production in the Short-Run
+## Production in the Short- and Long-Run
 In producer theory, we differentiate between the short-run and the long-run. In the short-run, some inputs cannot be adjusted and they are so-called fixed inputs. Examples of fixed inputs are machinery and factories. We classify fixed input as capital ($K$). The short-run production function is written as $q = f(\bar{K},L)$. The long-run is a time horizon long enough for a firm to vary all of its inputs. Variable inputs can be adjusted up or down as the quantity of output changes. Consider production in the short run with labor ($L$) as the only input. The total product is the maximum quantity of output that can be produced from a given combination of inputs. The marginal product of labor is the additional output produced if one more worker is hired, i.e.,
 $$MPL= \frac{\Delta Q}{\Delta L}$$
 And the average product is defined as the average quantity per worker
@@ -52,7 +56,6 @@ par(mfrow=c(2,1))
 rm(average,marginal,profun)
 ```
 
-## Production in the Long-Run
 The more interesting case is production in the long-run where all inputs are variable. So in this section, we consider the inputs labor ($L$) and capital ($K$). The figure below shows a so-called Cobb-Douglas production function for the case of two inputs.
 
 ```{r PROcobbdouglas,echo=FALSE,fig.cap="Production function with two inputs."}
@@ -124,7 +127,7 @@ $$y =\frac{\pi - w \cdot x}{p} = \frac{\pi}{p} + \frac{w}{p} \cdot x$$
 The profit maximization problem as a function of output is $\pi(q) = R(q) - C(q)$ where $R = p \cdot q$. To find the profit maximizing output, we need the marginal revenue
 $$\frac{\Delta R}{\Delta q} = p$$
 and the marginal cost
-$$\frac{\Delta C}{\Delta q} = MC$$
+$$\frac{\Delta C}{\Delta Q} = MC$$
 Hence, the profit maximization condition is: $MC(q) = MR(q)$. This is true for any market structure. What differs across market structures is marginal revenue.
 
 ```{r PROprofitmax,echo=FALSE,fig.cap="Two different ways of illustrating profit maximization"}
@@ -156,13 +159,13 @@ rm(p,cost,mc,profitzero,revenue,profit,qstar,tangent,a,b,w,profun,Lstar)
 ```
 
 ## Exercises
-1. A farmer uses nitrogen ($N$) as an input to produce corn yield as the output. The production function which relates nitrogen inputs to corn yield is written as $y=f(N)$. With the current management practices, the farmer obtains $y^\star$ bushels of corn with $N^\star = 120$ pounds of nitrogen fertilizer. Given that setup, we have $y^\star < f(120)$. Are the inputs used efficiently? Use a graph to justify your answer.
+1. *Nitrogen Use*:A farmer uses nitrogen ($N$) as an input to produce corn yield as the output. The production function which relates nitrogen inputs to corn yield is written as $y=f(N)$. With the current management practices, the farmer obtains $y^\star$ bushels of corn with $N^\star = 120$ pounds of nitrogen fertilizer. Given that setup, we have $y^\star < f(120)$. Are the inputs used efficiently? Use a graph to justify your answer.
 
-2. The "Malthusian Catastrophe" was the prediction by the English cleric and scholar Thomas Malthus (1766-1834) that population will grow faster than agricultural production. Use the concept of diminishing returns to labor in the short-run to explain his reasoning. Explain why it did not happen. Use a graph to justify your answer.
+2. *Malthus*: The [Malthusian Catastrophe](https://en.wikipedia.org/wiki/Malthusianism) was the prediction by the English cleric and scholar Thomas Malthus (1766-1834) that population will grow faster than agricultural production. Use the concept of diminishing returns to labor in the short-run to explain his reasoning. Explain why it did not happen. Use a graph to justify your answer.
 
-4. The production function of a firm is written as $f(x) = 8 \sqrt{x}$ where $x$ are the units of input. The per-unit output price is \$100 and the per-unit input cost is \$75. Write down the profit only as a function of $x$.
+4. *Profit Function*: The production function of a firm is written as $f(x) = 8 \sqrt{x}$ where $x$ are the units of input. The per-unit output price is \$100 and the per-unit input cost is \$75. Write down the profit only as a function of $x$.
 
-5. Assume an electricity producer that currently uses a mix of natural gas and coal as inputs to produce electricity as depicted in the figure below. In the short-run, the electricity producer can adjust neither coal nor natural gas as the input for electricity production, i.e., both inputs are fixed. The initial input mix of coal and natural gas is depicted in the figure belwoas well as the current isoquant. The output does not change throughout the exercise. 
+5. *Electricity Producer*: Assume an electricity producer that currently uses a mix of natural gas and coal as inputs to produce electricity as depicted in the figure below. In the short-run, the electricity producer can adjust neither coal nor natural gas as the input for electricity production, i.e., both inputs are fixed. The initial input mix of coal and natural gas is depicted in the figure belwoas well as the current isoquant. The output does not change throughout the exercise. 
     - Reproduce the figure and sketch an isocost for the quantity of electricity produced.
     - Assume that in the short-run, the price of coal decreases relative to natural gas. What happens to the isocost line? Is the choice of inputs optimal after the price change? Justify your answer.
     - In the long-run, what will happen to the combination of coal and natural gas used in the production of electricity if the price of coal remains low. Illustrate in your graph.
@@ -181,7 +184,7 @@ x2                  = isoq(x1)
 rm(a,b,A,Q,isoq,x1,x2)
 ```
 
-6. Suppose you are running a copper mine. You can either use machinery or workers to extract the copper. Currently, you are using a 600 horse power train to get the copper out of the mine. You have signed a leasing agreement for that train which you cannot change in the short-run. In the figure below, you will see two isoquant curves and a point indicating the initial (optimal) combination of workers and the train. The input prices remain unchanged throughout the question. Sketch the corresponding isocost line through the initial, optimal point. Assume that the machinery is fixed at 600 horse power and cannot be changed in the short-run. Due to changed demand, you need to expand production to the higher isoquant line. Show the new isocost line? Is it optimal? If yes, why? If no, why not? You are now able to adjust workers and machinery in the long-run while staying on the higher isoquant curve. What is the effect on cost? What is the effect on the optimal input combination. Support your answer in the graph.
+6. *Copper Mine*: Suppose you are running a copper mine. You can either use machinery or workers to extract the copper. Currently, you are using a 600 horse power train to get the copper out of the mine. You have signed a leasing agreement for that train which you cannot change in the short-run. In the figure below, you will see two isoquant curves and a point indicating the initial (optimal) combination of workers and the train. The input prices remain unchanged throughout the question. Sketch the corresponding isocost line through the initial, optimal point. Assume that the machinery is fixed at 600 horse power and cannot be changed in the short-run. Due to changed demand, you need to expand production to the higher isoquant line. Show the new isocost line? Is it optimal? If yes, why? If no, why not? You are now able to adjust workers and machinery in the long-run while staying on the higher isoquant curve. What is the effect on cost? What is the effect on the optimal input combination. Support your answer in the graph.
 
 ```{r PROmining,echo=FALSE}
 pK                      = 3

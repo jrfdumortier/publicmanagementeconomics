@@ -1,5 +1,5 @@
 # Case Studies
-The following case studies offer insight into economic applications that you may face while working for the government, industry, or a nonprofit. The case studies presented are abstract representations of reality and usually, many more aspects are involved. For many policy issues, there is usually no clear-cut answer. For some of the case studies, you will need to include a table in your policy brief and useful templates are included in the Excel file [Tables for Case Studies]. The sheets in the Excel file correspond to the following case studies:
+The following case studies offer insight into economic applications that you may face while working for the government, industry, or a nonprofit. The case studies presented are abstract representations of reality and usually, many more aspects are involved. For many policy issues, there is usually no clear-cut answer. For some of the case studies, you will need to include a table in your policy brief and useful templates are included in the Excel file [Public Management Economics](https://github.com/jrfdumortier/publicmanagementeconomics/raw/master/Public%20Management%20Economics.xlsx). The sheets in the Excel file correspond to the following case studies:
 
 - **NONPROFIT**: Profit Maximization for a Nonprofit
 - **PARKS**: Parks and Recreation

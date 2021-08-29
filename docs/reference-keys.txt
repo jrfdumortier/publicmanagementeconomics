@@ -36,6 +36,7 @@ consumer-theory
 budget-constraint
 consumer-preferences
 utility-functions
+indifference-curves
 consumer-choice
 derivation-of-the-demand-curve
 examples
@@ -44,14 +45,13 @@ policy-examples
 exercises-1
 producer-theory
 production-functions
-production-in-the-short-run
-production-in-the-long-run
+production-in-the-short--and-long-run
 profit-maximization
 exercises-2
 cost-theory
-accounting-versus-economic-cost
+accounting-versus-economic-profit
 relationship-between-production-and-cost
-total-cost-function-average-and-marginal-cost-functions
+total-average-and-marginal-cost-functions
 profit-maximization-and-cost-functions
 policy-examples-1
 exercises-3
@@ -82,6 +82,7 @@ bertrand-cournot-and-stackelberg-models
 collusion
 examples-2
 exercises-6
+game-theory
 case-studies
 profit-maximization-for-a-nonprofit
 parks-and-recreation

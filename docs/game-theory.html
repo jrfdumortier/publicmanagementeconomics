@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.1 Production Functions | Public Management Economics</title>
-  <meta name="description" content="4.1 Production Functions | Public Management Economics" />
+  <title>9 Game Theory | Public Management Economics</title>
+  <meta name="description" content="9 Game Theory | Public Management Economics" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.1 Production Functions | Public Management Economics" />
+  <meta property="og:title" content="9 Game Theory | Public Management Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.1 Production Functions | Public Management Economics" />
+  <meta name="twitter:title" content="9 Game Theory | Public Management Economics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="producer-theory.html"/>
-<link rel="next" href="production-in-the-short--and-long-run.html"/>
+<link rel="prev" href="exercises-6.html"/>
+<link rel="next" href="case-studies.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -168,30 +168,135 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="production-functions" class="section level2">
-<h2><span class="header-section-number">4.1</span> Production Functions</h2>
-<p>Production is the process of combining inputs to make goods and services. A production function indicates the maximum amount of output a firm can produce over some period of time from each combination of inputs. Inputs can be hours of labor, $ of capital, cubic feet of natural gas, or tons of raw material. There are similarities between consumer theory and producer theory:</p>
-<ul>
-<li>Preferences <span class="math inline">\(\Leftrightarrow\)</span> Production technology</li>
-<li>Budget constraint <span class="math inline">\(\Leftrightarrow\)</span> Cost constraints</li>
-<li>Consumption choices <span class="math inline">\(\Leftrightarrow\)</span> Production choices</li>
-<li>Indifference curves and budget lines become isoquants and isocost lines</li>
-</ul>
-<p>Production functions can be thought of in a very broad context, e.g., studying for an exam or running a 100 meter world record (9.58 seconds). Consider Panel (a) “Fertilizer Application” in the figure below. In the graph, we have yield as a function of nitrogen application: <span class="math inline">\(y = f(N)\)</span>. This application could be of interest if you consider the cost associated with water quality and water treatment plants, e.g., Eagle Creek.</p>
-<div class="figure"><span style="display:block;" id="fig:PROferteff"></span>
-<img src="bookdownproj_files/figure-html/PROferteff-1.png" alt="Production functions: Panel (a) on the left shows crop yield as a function of fertilizer application. Panel (b) on the right illustrates the concept of inefficient and unattainable production points." width="672" />
-<p class="caption">
-Figure 4.1: Production functions: Panel (a) on the left shows crop yield as a function of fertilizer application. Panel (b) on the right illustrates the concept of inefficient and unattainable production points.
-</p>
-</div>
+<div id="game-theory" class="section level1">
+<h1><span class="header-section-number">9</span> Game Theory</h1>
+<p>Game theory considers situations where so-called players (people, firms, political parties, animals, etc.) make decisions as strategic reactions to other agents’ actions. Examples are reality TV shows with people competing against each other, political parties choosing their position on an issue or during an election, or price strategies of firms in a competitive environment. In addition, almost every sport as well as war is based on game theory. The 1983 movie <a href="https://www.imdb.com/title/tt0086567/">WarGames</a> is an excellent example of applied game theory.</p>
+<p>In economics, one of the most general problems is outguessing a rival, i.e., a firm seeks to determine its rival’s most profitable counter-strategy to its own current policy. Strategic interdependence means that a player’s welfare is a function of the own action and the actions of other players. The optimal action of a player depends on expectations of what other players will do. This strategic interdependence among agents is called non-cooperative game theory, i.e., binding agreements among agents are not assumed. For example, interaction of two football teams playing a game is non-cooperative. Cooperation may or may not occur among agents as a result of rational decisions, e.g., trigger strategies. For this class, we assume full information, i.e., players are aware of the payoff structure of games.</p>
+<p>Economic models based on game theory are abstractions from strategic interaction of agents. They allow tractable interactions, yield implications, and allow to draw conclusions that can be used to understand real world strategic interactions. Every game has three components: (1) Finite number of players (at least 2) who are the decision makers, (2) set of action for each player, (3) payoffs that can be ranked at least ordinally. Payoff may be in form of a change in (marginal) utility, revenue, profit, or some nonmonetary change in satisfaction. A player’s strategy is the complete contingent plan. If it could be written down, any other agent could follow the plan and duplicate player’s actions. Thus, a strategy is a player’s course of action involving a set of actions (moves) dependent on actions of other players. A unique equilibrium or a set of equilibria may occur within a set of strategies is called a Nash equilibrium (after mathematician John Nash).Not all games have a Nash equilibrium and some games may have a number of Nash equilibria. In the movie ``A Beautiful Movie’’, John Nash’s discovery is portrayed to have happened in a bar:</p>
+<blockquote>
+<p>If we all go for the blonde and block each other, not a single one of us is going to get her. So then we go for her friends, but they will all give us the cold shoulder because no one likes to be second choice. But what if none of us goes for the blonde? We won’t get in each other’s way and we won’t insult the other girls. It’s the only way to win.</p>
+</blockquote>
+<p>Note that the movie is wrong about the Nash Equilibrium. The situation described is not a Nash Equilibrium.</p>
+<p>We now present several classical simultaneous move games that you can find in almost every economics textbook and illustrate different concepts associated with game theory. The best-known game is the . The payoff table for the two players is represented as:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"></th>
+<th align="center">Player B</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="center">Confess</td>
+<td align="center">Deny</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Player A</strong></td>
+<td align="left">Deny</td>
+<td align="center">1,1</td>
+<td align="center">20,0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Confess</td>
+<td align="center">0,20</td>
+<td align="center">5,5</td>
+</tr>
+</tbody>
+</table>
+<p>In the prisoner’s dilemma game, there is one Nash Equilibrium. Note that it is not the optimal outcome. Every Nash Equilibrium is characterized as a state where no player has the incentive to deviate. In a game, there can be multiple Nash Equilibria. Consider the following game :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"></th>
+<th align="center">Player B</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="center">Confess</td>
+<td align="center">Deny</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Player A</strong></td>
+<td align="left">Deny</td>
+<td align="center">1,1</td>
+<td align="center">20,0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Confess</td>
+<td align="center">0,20</td>
+<td align="center">5,5</td>
+</tr>
+</tbody>
+</table>
+A dominant strategy is a strategy that is preferred to another no matter what other players do. When all players have a dominant strategy, an equilibrium of dominant strategies exists that is determined without a player having to consider behavior of other players. Consider the game :
+
+It is also possible to have a game with no Nash Equilibrium.  is an example for such a game:
+
+If there is no Nash Equilibrium with a pure strategy, we can resort to a mixed strategy. If you think about how you play rock, paper, scissors, you can imagine what a mixed strategy does: randomize your actions. Consider the  game as an example for a mixed strategy:
+
+Let us now turn to games that are more specific to economics. Consider a cartel with two firms. Both firms have to decide whether to cheat or comply with the cartel agreement:
+
+Also in the cartel setting, we can have a situation where a mixed strategy is necessary. Consider as a hypothetical example ``Coca-Cola vs. Pepsi’’:
+
+<p>The mixed strategy equilibrium for Pepsi can be written as:
+<span class="math display">\[\begin{equation*}
+        13 \cdot \rho + 10 \cdot (1-\rho) = 16 \cdot \rho + 8 \cdot (1-\rho)
+    \end{equation*}\]</span>
+The mixed strategy equilibrium for Coca-Cola can be written as:
+<span class="math display">\[\begin{equation*}
+        12 \cdot \lambda + 9 \cdot (1-\lambda) = 14 \cdot \lambda + 6 \cdot (1-\lambda)
+    \end{equation*}\]</span></p>
+Beach location game
+
+
+We have seen that in the single shot prisoner’s dilemma there is no Nash Equilibrium. It is possible to identify an optimal strategy for an infinitely repeated game. This is called a trigger strategy. In the first round, player <span class="math inline">\(A\)</span> cooperates and does not confess. In every round after, if player <span class="math inline">\(B\)</span> cooperated on previous round, <span class="math inline">\(A\)</span> cooperates. If <span class="math inline">\(B\)</span> defected on previous round, <span class="math inline">\(A\)</span> then defects. Strategy does very well because it offers an immediate punishment for defection and has a forgiving strategy. An application is the carrot-and-stick strategy that underlies most attempts at raising children. Consider the following game between Pepsi and Coca-Cola. Note that one-time win from a low price is 5 and the loss in repeated games is 4 (discount rate becomes important).
+
+
+<p>In a sequential, or dynamic, game, one player knows other player’s choice before she has to make a choice (perfect information). A monopolist can determine consumer demand prior to producing an output, or a buyer knows sticker price on a new automobile before making an offer. Use a technique called backward induction to determine a sub-game perfect Nash equilibrium, by working backward toward the root in a game tree. Once game is understood through backward induction, players play it forward. To apply backward induction, first determine optimal actions at last decision nodes that result in terminal nodes. Then determine optimal actions at next-to-last decision nodes, assuming that optimal actions will follow at next decision nodes. Backward induction implicitly assumes that a player’s strategy will consist of optimal actions at every node in game tree.
+% \begin{figure}[h!]
+% \begin{center}
+% 
+% \end{center}
+% \end{figure}</p>
+
+<p>Firms who act first have an advantage lead to preemption games. Strategic pre-commitments can affect future payoffs. For example, a firm adopting a relatively large production capacity in a new market can saturate the market and make it difficult for ensuing firms to enter. The ability to seize a market first depends on market’s contestability. Governments concerned with ability of firms to saturate a market and forestall entry of other firms have attempted to place restrictions on such behavior.</p>
+<p>Consider a game of entry deterrence</p>
+<p>%Soccer
+%<a href="https://www.youtube.com/watch?v=p9QuQBrPTE8" class="uri">https://www.youtube.com/watch?v=p9QuQBrPTE8</a>
+%4:50
+%
+%Nash Movie
+%<a href="https://www.youtube.com/watch?v=CemLiSI5ox8" class="uri">https://www.youtube.com/watch?v=CemLiSI5ox8</a>
+%
+%Dilbert
+%<a href="https://www.youtube.com/watch?v=ED9gaAb2BEw" class="uri">https://www.youtube.com/watch?v=ED9gaAb2BEw</a>
+%
+%Cartoon
+%<a href="https://www.youtube.com/watch?v=t9Lo2fgxWHw" class="uri">https://www.youtube.com/watch?v=t9Lo2fgxWHw</a></p>
+% beach location game
+
+Note that in all the questions, the term <code>Nash Equilibrium'' is used but it also refers to the plural, i.e.,</code>Nash Equilibria.’’
+
+
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="producer-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="production-in-the-short--and-long-run.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="exercises-6.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="case-studies.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -223,7 +328,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/producertheory.rmd",
+"link": "https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/gametheory.rmd",
 "text": "Edit"
 },
 "history": {
@@ -231,7 +336,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/producertheory.rmd",
+"link": "https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/gametheory.rmd",
 "text": null
 },
 "download": null,

@@ -3,7 +3,12 @@ Recall from the previous section the differentiation between the short-run and t
 
 Consider the example of Southwest Airlines compared to other major carriers. Southwest only operates one type of airplane, i.e., Boeing 737. Other carriers use a wide variety of airplane models. The advantage of using only one airplane model is reduced cost in training and operation. The disadvantage is no flexibility when it comes to serving routes with smaller or larger airplanes depending on demand. In our context, the number and types of airplanes as an input in the production process of transportation is fixed. You can only adjust the number of flights (e.g., lowering or increasing the number of flight personnel) in the short-run.
 
-## Accounting versus Economic Cost
+There are two YouTube videos associated with this chapter:
+
+- [Accounting versus Economic Profit](https://youtu.be/ctb7xYlTj3A)
+- [Cost Theory](https://youtu.be/gbk74yfAXhw)
+
+## Accounting versus Economic Profit
 Before relating production cost to production functions, let us first consider the difference between economic profit and accounting profit. Consider Al who owns a shoe store. In a given year, he sells shoes valued at \$250,000 and the cost to purchase those shoes at the wholesale level is \$200,000. From an accounting perspective, the store makes an accounting profit of \$50,000. Now suppose that Al could instead be working in a shoe store at the mall making \$60,000. This salary is considered the opportunity cost of owing his own store. Thus, the economic profit is the accounting profit minus the opportunity cost, i.e., \$50,000-\$60,000=-\$10,000. If the salary for the position at the mall was only \$40,000 then he would make a positive economic profit of \$10,000.
 
 ## Relationship between Production and Cost
@@ -35,7 +40,7 @@ The relationship is also shown in the table assuming $Q = 10 \cdot \sqrt{K \cdot
 |  16     |  120     |  41  |
 |  25     |  150     |  59  |
 
-## Total Cost Function, Average and Marginal Cost Functions
+## Total, Average, and Marginal Cost Functions
 The total cost function of a firm can be decomposed into to parts: fixed cost and variable cost. Fixed costs are independent of output and need to be paid even if the firm does not produce anything, i.e., $Q=0$. For example, if you have rented space for your coffee shop, then rent is due even if you are not selling any coffee. The same is true if you are an airline and all your planes are grounded due to a pandemic, then you still have to pay the interest for the financing of your planes. As opposed to fixed cost, variable cost vary with output. The variable cost of a coffee shop would be coffee beans and milk. If your output is zero then your variable costs are zero as well. Hence we can define total cost ($TC$) as total fixed cost ($TFC$) plus total variable cost ($TVC$). Given the definition of total, fixed, and variable costs, we have the following cost relations:
 
 - Average Fixed Cost (AFC): $$AFC=\frac{TFC}{Q}$$
@@ -92,7 +97,7 @@ In this chapter, we have seen that marginal cost plays an important role in dete
 
 1. *Cost Function Components*: A firm's total cost function is given by the equation $TC = 4000 + 5 \cdot q + 10 \cdot q^2$. Write an expression for each of the following cost concepts: (1) Total Fixed Cost, (2) Average Fixed Cost, (3) Total Variable Cost, (4) Average Variable Cost, and (5) Average Total Cost.
 
-2. Consider the figure below and assume that the current price is at 150. In the graph, show the profit maximizing quantity produced and present the profit in the graph.
+2. *Cost Function and Profit*: Consider the figure below and assume that the current price is at 150. In the graph, show the profit maximizing quantity produced and present the profit in the graph.
 
 ```{r CSTprofitmaximization,echo=FALSE}
 MC        = function(x){100-6*x+0.6*x^2}
@@ -108,10 +113,10 @@ legend("bottomright",
 rm(ATC,AVC,MC)
 ```
 
-3. This question will make you show the connection between the production function and the cost function. It will also visualize the marginal and average product of labor. The homework must be done in Excel. Be sure to use the functionalities available in Excel to make your life easy. Especially the use of "\$" to keep referencing a particular cell. Except for the input of labor and/or capital columns, every other column should be based on a function starting with "=". For your Excel file, make sure that the sheets, tables, and graphs look neat and presentable. The polynomial production function first rises at an increasing rate and then increases at a decreasing rate. That is, the marginal product of labor is first increasing due to specialization and then decreasing. The function you will be looking at is written as:
+3. *Production and Cost Function Relationship*: This question will make you show the connection between the production function and the cost function. It will also visualize the marginal and average product of labor. The homework must be done in Excel. Be sure to use the functions available in Excel to make your life easy. Especially the use of "\$" to keep referencing a particular cell. Except for the input of labor and/or capital columns, every other column should be based on a function starting with "=". For your Excel file, make sure that the sheets, tables, and graphs look neat and presentable. The polynomial production function first rises at an increasing rate and then increases at a decreasing rate. That is, the marginal product of labor is first increasing due to specialization and then decreasing. The function you will be looking at is written as:
 $$Q = a \cdot L + b \cdot L^2 +c \cdot L^3$$
 where *Q* represents the output quantity and *L* represents the labor input. The parameters of the function are *a*, *b*, and *c*. In our case, we will define $a=10$, $b=20$, and $c=-0.6$. Open an empty Excel spreadsheet and name the sheet *Poly Function*.
-    a. Write ``a='' in cell A1, ``b='' in cell A2, and ``c='' in cell A3.
+    a. Write "a=" in cell A1, "b=" in cell A2, and "c=" in cell A3.
     b. Put the values of 10, 20, and -0.6 in cells B1, B2, and B3, respectively.
     c. Assume that the wage $w$ is 10 per unit of L and that the fixed costs are 100. Put "w=" and "FC=" in cells C1 and C2, respectively. Put 10 and 100 in cells D1 and D2, respectively.
    
@@ -119,7 +124,7 @@ where *Q* represents the output quantity and *L* represents the labor input. The
     a. Put 0 in cells A5, 0.25 in cell A6,... until you reach 20 in cell A85 (Once you have the first two values, simply mark both and drag them down until cell A85.). Now, you have all the information you need to fill out the columns for $Q$, $MPL$, $APL$, $FC$, $VC$, and $TC$.
     b.  In three new sheets, I want you to graph your results. Graph the production function in the first sheet. Graph the average product and marginal product of labor in the second sheet. And lastly, draw the cost function in the last sheet. Be careful with the cost function, it should not be a linear line! Use the scatter plot function of Excel.
 
-4. A Cobb-Douglas production function is used very often in economics because its functional form is very flexible. In general it is written as follows:
+4. *Cobb-Douglas Production Function*: A Cobb-Douglas production function is used very often in economics because its functional form is very flexible. In general it is written as follows:
 $$Q = A \cdot K^\alpha \cdot L^\beta$$
 Create a new sheet called *Cobb Douglas* and type in the following information regarding parameters:
     - A1 to A4: *K Fixed*, *alpha*, *beta*, *A*.
