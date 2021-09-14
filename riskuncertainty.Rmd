@@ -34,11 +34,21 @@ Hence, the net present value of earnings is \$277,013.36. Note that the perpetua
     \end{equation*}
 This means that the present value of an infinite stream of money is finite.
 
-\begin{figure}
-    \begin{center}
-        \includegraphics[width=6in]{RSK_expectedutility.pdf}
-    \end{center}
-\end{figure}
+```{r}
+payoff    = c(4,25)
+prob      = 0.5
+#--------------------------------------------------------------------------------------------------
+utility   = function(w){w^0.4}
+epayoff   = prob*payoff[1]+(1-prob)*payoff[2]
+eutility  = prob*utility(payoff[1])+(1-prob)*utility(payoff[2])
+#--------------------------------------------------------------------------------------------------
+     curve(utility,from=0,to=30,yaxs="i",xaxs="i",ylab="Wealth",xlab="Utility")
+     segments(payoff[1],0,payoff[1],utility(payoff[1]),lty=2,col="black")
+     segments(payoff[2],0,payoff[2],utility(payoff[2]),lty=2,col="black")
+     segments(payoff[1],utility(payoff[1]),payoff[2],utility(payoff[2]),lty=2,col="black")
+     segments(epayoff,0,epayoff,eutility,lty=2,col="black")
+```
+
 
 
 \subsection{Assets}
@@ -158,13 +168,34 @@ We also have $u(\$3.8)$. Note that $u(\$3.8) > 0.6 \cdot u(\$1) + 0.4 \cdot u(\$
 There are gains from diversification as long as assets are not perfectly correlated. You can think about the stock market, futures market, mutual funds, or football QBs.
 
 \subsubsection{Insurance Market}
-    \begin{figure}
-        \begin{center}
-            \includegraphics[width=5in]{RSK_riskpooling.pdf}
-        \end{center}
-        \caption{Example of risk pooling for an insurance company. The probability of a fire is 1\%.}
-        \label{fig:RSK_riskpooling}
-    \end{figure}
+```{r}
+fireinsurance  = function(ninsur){
+     fire = matrix(0,ndraws,1)
+     for (i in 1:ndraws){
+          fg      = sample(x=c(1,0),size=ninsur,replace=TRUE,prob=c(1/100,99/100))
+          fg      = sum(fg)/ninsur
+          fire[i] = fg}
+     return(fire)}
+#--------------------------------------------------------------------------------------------------
+ndraws                   = 1000
+fire1                    = fireinsurance(1000)
+fire2                    = fireinsurance(10000)
+fire3                    = fireinsurance(25000)
+fire4                    = fireinsurance(100000)
+pdf("RSK_riskpooling.pdf", width=6, height=7)
+     par(mfrow=c(2,2))
+     hist(fire1,xlim=c(0,0.025),ylim=c(0,750),main="1000 People Insured",xlab="",
+          breaks=seq(0,0.03,0.001))
+     hist(fire2,xlim=c(0,0.025),ylim=c(0,750),main="10000 People Insured",xlab="",
+          breaks=seq(0,0.03,0.001))
+     hist(fire3,xlim=c(0,0.025),ylim=c(0,750),main="25000 People Insured",xlab="",
+          breaks=seq(0,0.03,0.001))
+     hist(fire4,xlim=c(0,0.025),ylim=c(0,750),main="100000 People Insured",xlab="",
+          breaks=seq(0,0.03,0.001))
+graphics.off()
+rm(fireinsurance,ndraws,fire1,fire2,fire3,fire4)
+```
+
 
 If people are risk averse then why do insurance companies exist. The key here is that insurance companies can engage in what is called risk pooling. To illustrate the concept, suppose that you are flipping a coin and must predict the share of tails. The expected value of the share of heads (or tails) is $E(H)=E(T)=0.5$. The variance of $n$ coin tosses is written as
     \begin{equation*}

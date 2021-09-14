@@ -9,7 +9,11 @@ Economic models based on game theory are abstractions from strategic interaction
 
 Note that the movie is wrong about the Nash Equilibrium. The situation described is not a Nash Equilibrium.
 
-We now present several classical simultaneous move games that you can find in almost every economics textbook and illustrate different concepts associated with game theory. The best-known game is the \emph{Prisoner's Dilemma}. The payoff table for the two players is represented as:
+## Single Shot Games
+We now present several classical simultaneous move games that you can find in almost every economics textbook and illustrate different concepts associated with game theory.
+
+### Prisoner's Dilemma
+The best-known game is the Prisoner's Dilemma. The payoff table for the two players is represented as:
 
 |              |         | Player B        ||
 |:-------------|:--------|:-------:|:------:|
@@ -17,73 +21,55 @@ We now present several classical simultaneous move games that you can find in al
 | **Player A** | Deny    |    1,1  | 20,0   |
 |              | Confess |   0,20  | 5,5    |
 
-In the prisoner's dilemma game, there is one Nash Equilibrium. Note that it is not the optimal outcome. Every Nash Equilibrium is characterized as a state where no player has the incentive to deviate. In a game, there can be multiple Nash Equilibria. Consider the following game \emph{Stag Hunt}:
+In the prisoner's dilemma game, there is one Nash Equilibrium. Note that it is not the optimal outcome. Every Nash Equilibrium is characterized as a state where no player has the incentive to deviate. In a game, there can be multiple Nash Equilibria. :
+
+### Stag Hunt
+Consider the following game \emph{Stag Hunt}
+
 
 |              |         | Player B        ||
 |:-------------|:--------|:-------:|:------:|
-|              |         | Confess | Deny   |
-| **Player A** | Deny    |    1,1  | 20,0   |
-|              | Confess |   0,20  | 5,5    |
-    
+|              |         | Stag    | Hare   |
+| **Player A** | Stag    |    2,2  | 0,1    |
+|              | Hare    |   1,0   | 1,1    |
+
+### Up or Down
 A dominant strategy is a strategy that is preferred to another no matter what other players do. When all players have a dominant strategy, an equilibrium of dominant strategies exists that is determined without a player having to consider behavior of other players. Consider the game \emph{Up or Down}:
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{llcc} \toprule
-                    & & \multicolumn{2}{c}{Player B}\\ \cmidrule(r){3-4}
-                    &           & up     & down \\ \hline
-            Player A  & up    & 10,10      & 7,7 \\
-                      & down & 7,7     & 5,5 \\ \bottomrule
-            \end{tabular}
-        \end{center}
-        \caption{Up or Down}
-    \end{table}
-It is also possible to have a game with no Nash Equilibrium. \emph{Rock, Paper, Scissors} is an example for such a game:
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{llccc} \toprule
-            & & \multicolumn{3}{c}{Player 2}\\ \cmidrule(r){3-5}
-                        &   & R     & P     & S \\ \hline
-            Player 1    & R & d,d   & l,w   & w,l \\
-                        & P & w,l   & d,d   & l,w \\
-                        & S & l,w   & w,l   & d,d  \\ \bottomrule
-            \end{tabular}
-        \end{center}
-        \caption{Rock, Paper, Scissors}
-    \end{table}
+
+|              |         | Player B        ||
+|:-------------|:--------|:-------:|:------:|
+|              |         | up      | down   |
+| **Player A** | up      |  10,10  | 7,7    |
+|              | down    |   7,7   | 5,5    |
+
+### Rock, Paper, Scissors
+It is also possible to have a game with no Nash Equilibrium. \emph{} is an example for such a game:
+
+|              |   | Player B                 |||
+|:-------------|:--|:---:|:------:|:-------:|
+|              |   | R   | P      | S       
+| **Player A** | R | d,d | l,w    | w,l    
+|              | P | w,l | d,d    | l,w    
+|              | S | l,w | w,l    | d,d    
+
 If there is no Nash Equilibrium with a pure strategy, we can resort to a mixed strategy. If you think about how you play rock, paper, scissors, you can imagine what a mixed strategy does: randomize your actions. Consider the \emph{Matching Pennies} game as an example for a mixed strategy:
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{llcc} \toprule
-                    & & \multicolumn{2}{c}{Player 2}\\ \cmidrule(r){3-4}
-                    &           & Head ($\lambda$)     & Tail ($1-\lambda$) \\ \hline
-            Player 1  & Head ($\rho$)    & 1, -1      & -1, 1 \\
-                      & Tail ($1-\rho$)    & -1, 1     & 1, -1 \\ \bottomrule
-            \end{tabular}
-        \end{center}
-        \caption{Matching Pennies}
-    \end{table}
+   
 Let us now turn to games that are more specific to economics. Consider a cartel with two firms. Both firms have to decide whether to cheat or comply with the cartel agreement:
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{llcc} \toprule
-                    & & \multicolumn{2}{c}{Player B}\\ \cmidrule(r){3-4}
-                    &               & Don't Cheat   & Cheat \\ \hline
-            Player A  & Don't Cheat & 50,50         & 45,54 \\
-                      & Cheat       & 54,45         & 48,48 \\ \bottomrule
-            \end{tabular}
-        \end{center}
-    \end{table}
+
+|              |             | Player B            ||
+|:-------------|:------------|:-----------:|:------:|
+|              |             | Don't cheat | Cheat  |
+| **Player A** | Don't cheat | 50,50       | 45,54  |
+|              | Cheat       | 54,45       | 48,48  |
+
 Also in the cartel setting, we can have a situation where a mixed strategy is necessary. Consider as a hypothetical example ``Coca-Cola vs. Pepsi'':
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{llcc} \toprule
-                    & & \multicolumn{2}{c}{Coca-Cola}\\ \cmidrule(r){3-4}
-                    &           & Head ($\lambda$)     & Tail ($1-\lambda$) \\ \hline
-            Pepsi  & Head ($\rho$)    & 12,13      & 9,16 \\
-                      & Tail ($1-\rho$)    & 14,10     & 6,8 \\ \bottomrule
-            \end{tabular}
-        \end{center}
-    \end{table}
+
+|              |             | Player B            ||
+|:-------------|:------------|:-----------:|:------:|
+|              |             | Don't cheat | Cheat  |
+| **Player A** | Don't cheat | 50,50       | 45,54  |
+|              | Cheat       | 54,45       | 48,48  |
+
 The mixed strategy equilibrium for Pepsi can be written as:
     \begin{equation*}
         13 \cdot \rho + 10 \cdot (1-\rho) = 16 \cdot \rho + 8 \cdot (1-\rho)
@@ -94,33 +80,21 @@ The mixed strategy equilibrium for Coca-Cola can be written as:
     \end{equation*}
 
 Beach location game
-    \begin{figure}[h!]
-        \begin{center}
-            \includegraphics[width=6in]{GAT_beachlocation.pdf}
-        \end{center}
-    \end{figure}
 
 
-\subsection{Repeated Games}
+##Repeated Games
 We have seen that in the single shot prisoner's dilemma there is no Nash Equilibrium. It is possible to identify an optimal strategy for an infinitely repeated game. This is called a trigger strategy. In the first round, player $A$ cooperates and does not confess. In every round after, if player $B$ cooperated on previous round, $A$ cooperates. If $B$ defected on previous round, $A$ then defects. Strategy does very well because it offers an immediate punishment for defection and has a forgiving strategy. An application is the carrot-and-stick strategy that underlies most attempts at raising children. Consider the following game between Pepsi and Coca-Cola. Note that one-time win from a low price is 5 and the loss in repeated games is 4 (discount rate becomes important).
-    \begin{table}[h!]
-        \begin{center}
-            \begin{tabular}{llcc} \toprule
-                    & & \multicolumn{2}{c}{Coca-Cola}\\ \cmidrule(r){3-4}
-                    &           & high     & low \\ \hline
-            Pepsi  & high    & 12,12      & 6,17 \\
-                      & low   & 17,6     & 8,8 \\ \bottomrule
-            \end{tabular}
-        \end{center}
-    \end{table}
+
+|              |             | Player B            ||
+|:-------------|:------------|:-----------:|:------:|
+|              |             | Don't cheat | Cheat  |
+| **Player A** | Don't cheat | 12,12       | 6,17  |
+|              | Cheat       | 17,6        | 8,8  |
 
 \subsection{Sequential Games}
 In a sequential, or dynamic, game, one player knows other player's choice before she has to make a choice (perfect information). A monopolist can determine consumer demand prior to producing an output, or a buyer knows sticker price on a new automobile before making an offer. Use a technique called backward induction to determine a sub-game perfect Nash equilibrium, by working backward toward the root in a game tree. Once game is understood through backward induction, players play it forward. To apply backward induction, first determine optimal actions at last decision nodes that result in terminal nodes. Then determine optimal actions at next-to-last decision nodes, assuming that optimal actions will follow at next decision nodes. Backward induction implicitly assumes that a player's strategy will consist of optimal actions at every node in game tree.
-%    \begin{figure}[h!]
-%        \begin{center}
-%            \includegraphics[width=3in]{TTTGameTree}
-%        \end{center}
-%    \end{figure}
+
+
 
 \subsection{Preemption Games}
 Firms who act first have an advantage lead to preemption games. Strategic pre-commitments can affect future payoffs. For example, a firm adopting a relatively large production capacity in a new market can saturate the market and make it difficult for ensuing firms to enter. The ability to seize a market first depends on market's contestability. Governments concerned with ability of firms to saturate a market and forestall entry of other firms have attempted to place restrictions on such behavior.

@@ -1,18 +1,32 @@
 # Imperfect Competition
-Market power implies that at least one firm can influence the market price with its output decision. Recall that we have price-taking behavior under perfect competition which means that neither an individual consumer nor an individual producer can influence the market price. 
+Market power implies that at least one firm can influence the market price with its output decision. Recall that price-taking behavior in perfect competition means that neither an individual consumer nor an individual producer can influence the market price. Under imperfect competition, there is price-setting behavior and individual producers influence the market price. This section covers imperfect competition from the producer's perspective but it can also occur on the consumer side in which case it is called monopsony (single consumer) or oligopsony (few consumers).  
+
+There is a YouTube video associated with the chapter
+
+- [Imperfect Competition: Monopoly and Oligopoly](https://youtu.be/CK3dcB7lrYI)
 
 ## Monopoly
-A monopoly is an an industry that has only one producer of the product and there no close substitutes. We will see that a monopolist tends to reduce output in order to raise price. However, to increase the quantity sold, a monopolist must lower the price on each unit sold. The monopolist makes money on the additional quantity sold and loses money on the goods that it was already selling, as these are now sold at a lower price. Reasons for a monopoly to exit are usually barriers to entry.
+A monopoly is an industry with only one producer and there are no close substitutes. In general, a monopolist reduces output to raise price. However, to increase the quantity sold, a monopolist must lower the price on each unit sold. Hence, the monopolist makes money on the additional quantity sold but loses money on the quantity that was already selling because there is now a lower price. 
 
-- Economies of scale: One firm can operate at lower average cost than multiple firms and there are decreasing average cost over the entire market range. A natural monopoly can produce for the entire market and/or there may be large sunk cost and/or fixed cost.
-- Legal barriers: Protection of intellectual property (e.g., copyrights, patents), control over a scarce resource, or barriers put in place by firms to discourage entry.
-- Network externalities: Added benefits for all users of a good or service that arise because other people are using it too. Joining a large network is more beneficial than joining a small network. Think about Facebook and LinkedIn.
+There are multiple reasons for a monopoly to exit but those are usually related to barriers to enter the market:
 
-As opposed to perfect competition, there is the possibility of profits in the long-run. Examples of monopolies are Microsoft (to a certain extent), the IUPUI parking system, or De Beers. Groups can also act as a monopolist (cartel) such as OPEC, unions, or United Potato Growers of America. Note that a monopoly can create competition for itself in the case of durable goods monopolies. A durable good does not depreciate once it is on the market. Imagine that you are the owner of the only gold mine on Earth. At the beginning, you have a monopoly. But assuming that gold is never transformed into something else (e.g., like gasoline is burned), there will soon be a second hand gold market which competes with your monopoly. Another example of a durable monopoly that you can all relate to are textbooks.
+- **Economies of scale**: One firm can operate at lower average cost than multiple firms and there are decreasing average cost over the entire market range. A natural monopoly can produce for the entire market and/or there may be large sunk cost and/or fixed cost.
+- **Legal barriers**: Protection of intellectual property (e.g., copyrights, patents), control over a scarce resource, or barriers put in place by firms to discourage entry.
+- **Network externalities**: Added benefits for all users of a good or service that arise because other people are using it too. Joining a large network is more beneficial than joining a small network. Think about Facebook and LinkedIn.
 
+As opposed to perfect competition, there is the possibility of profits in the long-run. It is difficult to find a straightforward example of a monopolist because there are sometimes other aspects (e.g., time and space) to consider as will the following examples illustrate:
 
-### Monopoly Output: Overview
-The monopolist will set marginal revenue equal to marginal cost, i.e., $MR=MC$, in order to find the profit maximizing output quantity. Recall that under perfect competition, we have marginal cost pricing, i.e., $p=MC$. It is important to understand that firm in a perfectly competitive market also sets $MR=MC$ but because the price is determined by the market, the marginal revenue from selling an additional unit is $p$ (Figure \ref{fig:MON_ProfitMax}). The following two example illustrate the monopolist's output decision under (1) constant and (2) increasing marginal cost. Note that a monopolistic market results in a deadweight loss. This is not caused by higher prices for consumers of higher profits for the monopolist but by the underproduction of goods.
+- **Microsoft**: The software company was often considered a monopolist in the market for operating systems which lead to antitrust law cases in the U.S. (*United States of America v. Microsoft Corporation*) and the EU (*Microsoft Corporation v. Commission of the European Communities*)
+- **EssilorLuxottica**: The company is the result of a merger of the French company Essilor and the Italian company Luxottica and controls a large share of the global lens and eyewear market. Known brands are Oakley, Ray-Ban, and many more. Check out their [webpage](https://www.essilorluxottica.com/brands) and see which brands you recognize.
+- **De Beers**: The company controls large parts of the global diamond mining industry. 
+- **IUPUI parking system**: On a smaller scale, IUPUI (and many other universities) has a monopoly on the parking spaces on campus. Note though that there are substitutes such as downtown parking.  
+- **Internet Providers**: Although there are three large internet providers in Indianapolis, there is a spatial separation of the territory they serve. Some residents of Indianapolis have only access to one of the providers which makes it a monopoly in that area despite the fact that it is not a single provider in Indianapolis.
+- **Electricity Transmission**: The electricity transmission network in the U.S. is owned by many companies. But the system works very much like a road and there can be congestion or closed down roads due to accidents or construction. Thus, it can happen that a particular power transmission company can have a monopoly for a very short period of time if it operates the only open line. 
+
+The next sections outline that a monopoly is (in general) inefficient, i.e., reduces societal welfare, which is the reason why countries around the world have antitrust laws. Those laws also apply to groups of producers who act as if they were a monopoly. That is the case of a cartel, e.g., Organization of the Petroleum Exporting Countries (OPEC). There is also the case of a durable good monopoly which is a monopoly creating competition to itself. A durable good does not depreciate once it is on the market. Imagine being the owner of the only gold mine on Earth. At the beginning, this is a monopoly. But given that gold is never really lost, there will soon be a second hand gold market which competes with the initial monopoly. It can be argued that college textbooks create the problem of a durable good monopoly since some of the books do not really depreciate in terms of information presented in them. Thus, textbook publishers are selling new editions to overcome the problem of a durable goods monopoly.
+
+### Overview
+The monopolist sets marginal revenue equal to marginal cost, i.e., *MR=MC*, in order to find the profit maximizing output quantity. Recall that under perfect competition, we have marginal cost pricing, i.e., *p=MC*. It is important to understand that a firm in a perfectly competitive market also sets *MR=MC* but because the price is determined by the market, the marginal revenue from selling an additional unit is *p*. The difference between a perfectly competitive firm and a monopolist is illustrated in the figure below.
 
 ```{r IPCprofitmax,echo=FALSE,fig.cap="Under perfect competition as well as under a monopoly situation, the profit maximizing output quantity is determined where marginal revenue is equal to marginal cost."}
 revenue_mon    = function(x){100*x-2*x^2}
@@ -26,28 +40,25 @@ profit_mon     = profit_mon$par
 profit_com     = optimr(3,function(x){(p-mc(x))^2},method=c("BFGS"))
 profit_com     = profit_com$par
 par(mfrow=c(1,2))
-  curve(revenue_com,from=0,to=50,xlab="output",main="Perfect Competition",yaxs="i",
-        xaxs="i",ylim=c(0,1300))
+  curve(revenue_com,from=0,to=50,xlab="Output",main="Perfect Competition",yaxs="i",xaxs="i",ylim=c(0,1300),ylab="Dollars")
        curve(cost,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="blue")
        segments(profit_com,0,profit_com,revenue_com(profit_com),lty=2,col="black")
-       segments(0,revenue_com(profit_com),profit_com,revenue_com(profit_com),lty=2,
-                col="black")
-       legend("bottomright",legend=c("Revenue","Total Cost"),fill=c("black","blue"),
-              bty="n")
-  curve(revenue_mon,from=0,to=50,xlab="output",main="Monopoly",yaxs="i",xaxs="i",
-        ylim=c(0,1300))
+       segments(0,revenue_com(profit_com),profit_com,revenue_com(profit_com),lty=2,col="black")
+       legend("bottomright",legend=c("Revenue","Total Cost"),fill=c("black","blue"),bty="n")
+  curve(revenue_mon,from=0,to=50,xlab="Output",main="Monopoly",yaxs="i",xaxs="i",ylim=c(0,1300),ylab="Dollars")
        curve(cost,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="blue")
        segments(profit_mon,0,profit_mon,revenue_mon(profit_mon),lty=2,col="black")
-       segments(0,revenue_mon(profit_mon),profit_mon,revenue_mon(profit_mon),lty=2,
-                col="black")
+       segments(0,revenue_mon(profit_mon),profit_mon,revenue_mon(profit_mon),lty=2,col="black")
        legend("bottomright",legend=c("Revenue","Total Cost"),fill=c("black","blue"),bty="n")
 rm(revenue_mon,revenue_com,MR,cost,p,profit_com,profit_mon,mc)
 ```
 
-### Monopoly Output: Constant Marginal Cost
+The next sections illustrate the monopolist's output decision under (1) constant and (2) increasing marginal cost. Note that a monopolistic market results in a deadweight loss. This is not caused by higher prices for consumers or higher profits for the monopolist but by the underproduction of goods.
+
+### Constant Marginal Cost
 Assume a monopolist is faced with a demand that can be written as $Q=50-P/2$. The inverse demand function can thus be written as $P=100-2 \cdot Q$. The revenue can be written as
 $$R = P \cdot Q = (100-2 \cdot Q ) \cdot Q = 100 \cdot Q - 2 \cdot Q^2$$
-Marginal revenue is written as $MR = 100 - 4 \cdot Q$. Assume $MC =20$, then under perfect competition, we have $MC = P$, i.e., $20 = 100-2 \cdot Q$. And hence, the socially optimum output quantity is $Q_c=20$. Under monopoly pricing, we have $MC = MR$, i.e., $20 = 100-4 \cdot Q$. And hence, the monopoly output quantity is $Q_m=20$. This situation is illustrated in Panel (a) of the figure below.
+Marginal revenue is written as $MR=100-4 \cdot Q$. Assume *MC=20*, then under perfect competition, we have *P=MC*, i.e., $20 = 100-2 \cdot Q$. And hence, the socially optimum output quantity is $Q_c=20$. Under monopoly pricing, we have *MC=MR*, i.e., $20 = 100-4 \cdot Q$. And hence, the monopoly output quantity is $Q_m=20$. This situation is illustrated in Panel (a) of the figure below.
 
 ```{r IPCmc,echo=FALSE,fig.cap="Examples of output decisions by a monopolist under constant and increasing marginal cost."}
 demand         = function(x){100-2*x}
@@ -71,19 +82,22 @@ par(mfrow=c(1,2))
        segments(q_inc,0,q_inc,demand(q_inc),lty=2,col="black")
        segments(0,demand(q_inc),q_inc,demand(q_inc),lty=2,col="black")
        legend("top",legend=c("Demand","MR","MC"),fill=c("black","blue","red"),bty="n")
-rm(q_con,q_inc,demand,MC_con,MC_inc)
+rm(q_con,q_inc,demand,MC_con,MC_inc,MR)
 ```
 
-### Monopoly Output: Increasing Marginal Cost}
-Suppose that the cost function is written as $C = 100 + Q^2$ with increasing marginal cost function $MC = 2 \cdot Q$. If the inverse demand function is written as $P=100-2 \cdot Q$, then the marginal revenue function is $MR = 100 - 4 \cdot Q$. Similar to the example with constant marginal cost, we set $MR=MC$, i.e.,
-$$100 - 4 \cdot Q = 2 \cdot Q$$
-Solving leads to $Q_m=100/6$ which is illustrated in Panel (b), Figure \ref{fig:MON_MC}. What is the socially optimum output? Assume the government wants to achieve the socially optimal outcome with regulation. Further, assume that the government envisions taxing the monopolist. Does this solve the problem?
+### Increasing Marginal Cost
+Suppose that the cost function is written as $C=100+Q^2$ with increasing marginal cost function $MC=2 \cdot Q$. If the inverse demand function is written as $P=100-2 \cdot Q$, then the marginal revenue function is $MR=100-4 \cdot Q$. Similar to the example with constant marginal cost, we set *MR=MC*, i.e., $100-4 \cdot Q=2 \cdot Q$. Solving leads to $Q_m=100/6$ which is illustrated in Panel (b) of the figure above. Again the quantity chosen by the monopolist is not socially optimal. 
 
-\subsection{Monopoly and Elasticity of Demand}
+Let's consider two policies to restore efficiency:
+
+- Per-unit tax
+- Price ceiling
+
+### Monopoly and Elasticity
 A monopolist produces on the elastic portion of the demand curve. It can be shown that
-$$\underbrace{\frac{p-MC}{p}}_{\text{Lerner Index}} = -\frac{1}{\epsilon_D}$$
-The interpretation of the above equation is that the more elastic demand the higher the availability of substitutes. Markup over marginal cost is reduced if the elasticity becomes larger (Figure \ref{fig:MON_elasticity}). Suppose a profit-maximizing monopolist is producing 800 units of output and is charging a price of \$40 per unit. If the price elasticity of demand for the product is -2, find the marginal cost of the last unit produced. Answer: \$20
-$$\frac{p-MC}{p} = -\frac{1}{\epsilon_D} \quad \Leftrightarrow \quad p \left(1+\frac{1}{\epsilon_D} \right) = MC$$
+$$\underbrace{\frac{p-MC}{p}}_{\text{Lerner Index}} = -\frac{1}{\epsilon_D} \quad \Leftrightarrow \quad p \cdot \left(1+\frac{1}{\epsilon_D} \right) = MC$$
+The interpretation of the above equation is that the more elastic demand, the higher the availability of substitutes. Markup over marginal cost is reduced if the elasticity becomes larger (see figure below). 
+
 ```{r IPCelasticity,echo=FALSE,fig.cap="The magnitude of above marginal cost pricing depends on the elasticity of the demand function."}
 demand_el      = function(x){100-x}
 demand_in      = function(x){100-4*x}
@@ -94,29 +108,28 @@ q_el           = optimr(3,function(x){(MR_el(x)-MC(x))^2},method=c("BFGS"))
 q_el           = q_el$par
 q_in           = optimr(3,function(x){(MR_in(x)-MC(x))^2},method=c("BFGS"))
 q_in           = q_in$par
-     par(mfrow=c(1,2))
-          curve(demand_el,from=0,to=50,xlab="output",main="(a) Elastic Demand",yaxs="i",
-                xaxs="i",col="black",ylim=c(0,100))
-               curve(MR_el,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="blue")
-               curve(MC,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="red")
-               segments(q_el,0,q_el,demand_el(q_el),lty=2,col="black")
-               segments(0,demand_el(q_el),q_el,demand_el(q_el),lty=2,col="black")
-               legend("left",legend=c("Demand","MR","MC"),fill=c("black","blue","red"),bty="n")
-          curve(demand_in,from=0,to=50,xlab="output",main="(b) Inelastic Demand",
-                yaxs="i",xaxs="i",col="black",ylim=c(0,100))
-               curve(MR_in,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="blue")
-               curve(MC,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="red")
-               segments(q_in,0,q_in,demand_in(q_in),lty=2,col="black")
-               segments(0,demand_in(q_in),q_in,demand_in(q_in),lty=2,col="black")
-               legend("top",legend=c("Demand","MR","MC"),fill=c("black","blue","red"),bty="n")
+par(mfrow=c(1,2))
+  curve(demand_el,from=0,to=50,xlab="output",main="(a) Elastic Demand",yaxs="i",xaxs="i",col="black",ylim=c(0,100))
+       curve(MR_el,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="blue")
+       curve(MC,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="red")
+       segments(q_el,0,q_el,demand_el(q_el),lty=2,col="black")
+       segments(0,demand_el(q_el),q_el,demand_el(q_el),lty=2,col="black")
+       legend("left",legend=c("Demand","MR","MC"),fill=c("black","blue","red"),bty="n")
+  curve(demand_in,from=0,to=50,xlab="output",main="(b) Inelastic Demand",yaxs="i",xaxs="i",col="black",ylim=c(0,100))
+       curve(MR_in,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="blue")
+       curve(MC,from=0,to=50,add=TRUE,yaxs="i",xaxs="i",col="red")
+       segments(q_in,0,q_in,demand_in(q_in),lty=2,col="black")
+       segments(0,demand_in(q_in),q_in,demand_in(q_in),lty=2,col="black")
+       legend("top",legend=c("Demand","MR","MC"),fill=c("black","blue","red"),bty="n")
+rm(q_el,q_in,demand_el,demand_in,MC,MR_el,MR_in)
 ```
 
 ## Price Discrimination
-A single-price monopoly is limited to charging the same price for each unit of output sold. If price discrimination is possible, the monopolist charges different prices to different customers, i.e., the monopolist can divide customers into different categories based on their willingness-to-pay (WTP). The firm must (1) have market power, (2) identify consumers' WTP, and (3) prevent low-price customers from reselling to high price customers in order for price discrimination to be feasible. Price discrimination is always beneficial to producers otherwise they would not charge different prices to different consumers. It can harm consumers because there will be a higher price for some consumers but it also has lower prices for others. The additional producer's profit represents a monetary loss to consumers. Examples are movie theaters, buses, trains, airplanes, amusement parks, or restaurants where a difference in prices is based on groups, e.g., students, seniors, children. Price discrimination can also be observed for events such as sport games where season tickets and quantity discounts are offered. There are three types of price discrimination:
+A single-price monopoly is limited to charging the same price for each unit of output sold. If price discrimination is possible, the monopolist charges different prices to different customers, i.e., the monopolist can divide customers into different categories based on their willingness-to-pay (WTP). The firm must (1) have market power, (2) identify consumers' WTP, and (3) prevent low-price customers from reselling to high-price customers in order for price discrimination to be feasible. Price discrimination is always beneficial to producers otherwise they would not charge different prices to different consumers. It can harm consumers because there will be a higher price for some consumers but it also has lower prices for others. The additional producer's profit represents a monetary loss to consumers. Examples are movie theaters, buses, trains, airplanes, amusement parks, or restaurants where a difference in prices is based on groups, e.g., students, seniors, children. Price discrimination can also be observed for events such as sport games where season tickets and quantity discounts are offered. There are three types of price discrimination:
 
-- Perfect (or ``first degree'') price discrimination is achieved if the marginal revenue curve is equivalent to the demand curve.
-- Nonlinear pricing or ``second degree'' price discrimination occurs with different types of consumers without observation of type. This results in offering different quantities of the good at different prices. Examples are different classes of service, hobbling a product (restrictions on the use of a device), quantity discounts, and so on.
-- Imperfect (or ``third degree'') price discrimination occurs with different types of consumers with observation of type.
+- **First Degree**: This is also known as perfect price discrimination and is achieved if the marginal revenue curve is equivalent to the demand curve.
+- **Second Degree**: This is also known as nonlinear pricing and occurs with different types of consumers without observation of type. This results in offering different quantities of the good at different prices. Consumers self-select into a type. Common examples are different classes of service, hobbling a product (restrictions on the use of a device), quantity discounts, and so on.
+- **Second Degree**: Also known as imperfect price discrimination occurs with different types of consumers with observation of type. Common examples for this type of price discrimination are museum or movie theatre entries with senior or student pricing. 
 
 ## Oligopoly
 An oligopoly market is characterized by few sellers, blocked entry and exit, imperfect dissemination of information, and the opportunity for positive economic profits in the long-run. There is a strategic interdependence among the firms that is commonly represented by the Bertrand model, Cournot model or the Stackelberg model. A very powerful approach to model the strategic interaction among firms is game theory which will be covered in the next chapter.
@@ -126,100 +139,73 @@ The barriers to entry can result from (1) economies of scale or natural oligopol
 Oligopoly is a very common market structure. There can be a dominant single firm surrounded by a number of smaller firms (Anheuser-Busch 47\% and MillerCoors 30\%), three dominant firms (Universal Music Group 39\%, Sonic Music Entertainment 30\%, and Warner Music Group 19\%), duopoly which is an oligopoly with only two sellers (Airbus and Boeing). Examples of less concentrated markets are cereals with Kellogg, General Mills, Post, and Quaker Oats. But there are far more examples such as oil/gasoline, cars, cable/internet, smartphones, textbooks, rental cars, airlines, aluminum etc. at the national level or gasoline, food, and various professional services at the local level.
 
 ### Measurement of Market Concentration
-The economic census provides a comprehensive statistical profile of the economy. Industry statistics are classified using the North American Industry Classification System (NAICS). The main categories are Agriculture, Forestry, Fishing and Hunting (Code 11), Mining, Quarrying, and Oil and Gas Extraction (Code 21), Utilities (Code 22), Construction (Code 23), Manufacturing (Code 31-33), Wholesale Trade (Code 42), Retail Trade (Code 44-45), Transportation and Warehousing (Code 48-49), Information (Code 51), Finance and Insurance (Code 52), Real Estate and Rental and Leasing (Code 53), Professional, Scientific, and Technical Services (Code 54), Management of Companies and Enterprises (Code 55), Administrative and Support and Waste Management and Remediation Services (Code 56), Educational Services (Code 61), Health Care and Social Assistance (Code 62), Arts, Entertainment, and Recreation (Code 71), Accommodation and Food Services  (Code 72), Other Services (except Public Administration)  (Code 81), Public Administration (Code 92).
+The economic census provides a comprehensive statistical profile of the economy. Industry statistics are classified using the [North American Industry Classification System (NAICS)](https://www.census.gov/naics/). The main categories are Agriculture, Forestry, Fishing and Hunting (Code 11), Mining, Quarrying, and Oil and Gas Extraction (Code 21), Utilities (Code 22), Construction (Code 23), Manufacturing (Code 31-33), Wholesale Trade (Code 42), Retail Trade (Code 44-45), Transportation and Warehousing (Code 48-49), Information (Code 51), Finance and Insurance (Code 52), Real Estate and Rental and Leasing (Code 53), Professional, Scientific, and Technical Services (Code 54), Management of Companies and Enterprises (Code 55), Administrative and Support and Waste Management and Remediation Services (Code 56), Educational Services (Code 61), Health Care and Social Assistance (Code 62), Arts, Entertainment, and Recreation (Code 71), Accommodation and Food Services  (Code 72), Other Services (except Public Administration)  (Code 81), Public Administration (Code 92). In the table below, we have data from the 2007 Economic Census for military armored vehicle, tank, and tank component manufacturing (336992), dog and cat food manufacturing (311111), quick printing (323114), ready-mix concrete manufacturing (327320).
 
 NAICS  | Firms | Sales in billion |  CR$_4$ |  CR$_8$ |  CR$_{20}$ |  CR$_{50}$ | HHI 
--------|-------|------------------|---------|---------|------------|------------|--------
+-------|------:|-----------------:|--------:|--------:|-----------:|-----------:|-------:
 336992 | 61    | 10,988           |  81.8   |  93.7   |  98.0      |  99.9      | 2,477.1 
 311111 | 199   |  14,505          |  71.0   |  83.5   |  92.6      |  98.2      | 2,325.1
 323114 | 6,041 |  3,263           |  3.8    |  5.8    |  10.3      |  17.4      | 8.4
 327320 | 2,460 |  34,837          |  22.6   | 28.2    |  39.9      |  52.9      | 312.9
 
-        \caption{2007 Economic Census Example: Military armored vehicle, tank, and tank component manufacturing (336992), Dog and cat food manufacturing (311111), Quick printing (323114), Ready-mix concrete manufacturing (327320)}
-    \end{table}
+There are two common measures for the concentration of market power within a particular industry: (1) Concentration ratio and (2) Herfindahl-Hirschman Index.
 
-Concentration ratios measure the combined market share percentage of the i$^{\text{th}}$ leading firms:
+The concentration ratio measures the combined market share percentage of the *n* leading firms:
 $$CR_n = \sum_{i=1}^n \frac{{\text{Firm Sales}}_i}{\text{Industry Sales}} \times 100$$
-
-For a monopoly, we have $CR_n = 100$ and for a perfectly competitive industry we have $CR_n \approx 0$. So if we have many firms, the concentration ratio decreases. The Herfindahl-Hirschmann Index is the sum of squared market share percentage for all competitors:
+For a monopoly, we have $CR_n=100$ and for a perfectly competitive industry we have $CR_n \approx 0$, that is, the concentration ratio decreases for many firms. The Herfindahl-Hirschman Index (HHI) is the sum of squared market share percentage for all competitors:
 $$ HHI = \sum_i \left( \frac{{\text{Firm Sales}}_i}{\text{Industry Sales}} \times 100 \right)^2$$
-For a monopoly, $HHI=10,000$ and for a perfectly competitive industry $HHI \approx 0$. %Suppose we have four firms in the market
+For a monopoly, HHI=10,000 and for a perfectly competitive industry $HHI \approx 0$. Suppose we have four firms (labeled $F_i$) in the market and three industries (*A*, *B*, and *C*). The revenues of those firms are presented in the table below:
 
-$F_1$   | $F_2$ | $F_3$ | $F_4$ |  $CR_2$   | $CR_4$    |  HHI 
---------|-------|-------|-------|-----------|-----------|-----
-25      | 25    | 25    | 25    |  50       | 100       | 2500 
-70      | 10    | 10    | 10    |  80       | 100       | 5200 
-40      | 40    | 10    | 10    |  80       | 100       | 3400 
+Industry |$F_1$ | $F_2$ | $F_3$ | $F_4$ | Industry Sales | $CR_2$ |  HHI 
+:--------|-----:|------:|------:|------:|---------------:|-------:|----:
+*A*      | 30   | 30    | 30    |  30   | 120            | 50     | 2500 
+*B*      | 84   | 28    | 17    |  11   | 140            | 80     | 4209
+*C*      | 114  | 110   | 36    |  20   | 280            | 80     | 3417
 
+### Cournot, Bertrand, and Stackelberg Models
+The following models attempt to explain competitive behavior among two or more firms. All three models are relatively old. The Cournot model was published in 1838, the Bertrand model was formulated in 1883, and the Stackelberg model was described in 1934.
 
-### Bertrand, Cournot, and Stackelberg Models
-The following models attempt to explain competitive behavior among two firms or more firms. All three models are relatively old. The Cournot model was published in 1838, the Bertrand model was formulated in 1883, and the Stackelberg model was described in 1934.
-% Cournot example: Real estate in a large metropolitan area. say something about product differentiation. betrand model can be for airlines.
-Suppose that the demand is written as $P=30-Q=30-Q_1-Q2$ and the marginal cost is equal to 2. Then the profit is written as
-$$\pi = 30-Q_1-Q_1^2-Q1 \cdot Q2 - 2 \cdot Q_1$$
-The reaction function is written
-$$Q_i = 14-\frac{Q_j}{2}$$
-and the price is $P=11.34$. In the Stackelberg model, the leading firm moves first and the follower observes the action of the leading firm and decides on output quantity.
+The Cournot Model assumes that there are two firms in the market producing an identical good. Suppose that the demand is written as follows:
+$$P=40-Q=40-Q_1-Q_2$$
+where $Q_1$ and $Q_2$ are the output quantities of the two firms. The marginal cost is equal to 2. Each firm *i* maximizes its profits:
+$$\pi_i = (40-Q_i-Q_j) \cdot Q_i - 2 \cdot Q_i = 38 \cdot Q_i-Q_i^2-Q_i \cdot Q_j $$
+Taking the first order condition and setting it to zero yields:
+$$38-2 \cdot Q_i-Q_j=0$$
+And thus, the reaction function is written as:
+$$Q_i = 19-\frac{Q_j}{2}$$
+Since the reaction function is the same for both firms, the resulting quantities are $Q_1=Q_2=12.67$ and the price is $P=14.67$.
 
-### Collusion
-Recall the Cournot output of $q = 9.34$ and that under perfect competition, we have $p=MC$ leading to $q_1 = q_2 = 14$ and $\pi_1 = \pi_2 = 0$. The question becomes if the two firms could do better for themselves. The answer is yes if both firms act together as a monopolist with $p = 30 - q$, $MR = 30 - 2q$, $q = 14 \Rightarrow q_1 = q_2 = 7$.
+The Bertrand Model assumes that competition between the two firms leads to the perfectly competitive outcomes, i.e., price equals marginal cost. In this case, $P=2$ and $Q_1=Q_2=19$ 
 
-Firms can agree on explicit collusion where cooperation involves direct communication between competing firms about setting prices. This type of behavior is usually illegal and involves severe penalties. Tacit collusion is oligopolistic cooperation which does not involve an explicit agreement. To achieve this, there is a tit-for-tat strategy. Do to another player this period what he has done to you in the previous period. Limits to collusion are the downward sloping demand function, legal issues, and incentives to cheat on any agreement because each player can do even better by cheating.
+In the Stackelberg model, the leading firm moves first (i.e., sets the production quantity) and the follower observes the action of the leading firm and decides on output quantity. Assume that the leader is firm 1 and the follower is firm 2. In this case, firm 1 maximizes its profit given the reaction function of firm 2:
+$$\pi_1=\left(40-Q_1-19+\frac{Q_1}{2}\right) \cdot Q_1-2 \cdot Q_1=19 \cdot Q_1-\frac{Q_1^2}{2}$$
+Taking the first order conditions results in $19-Q_1=0$ and thus, we have $Q_1=19$, $Q_2=9.5$, and $P=11.5$. Note that the leading firm is producing more in the Stackelberg Model than the follower. 
 
+### Cartel and Collusion
+The previous section on the models developed by Cournot, Bertrand, and Stackelberg illustrates that competition reduces the profits and there is a strategic interaction. There is a way around competition which is highly illegal in all countries: cartels. Here cartels for legal products are considered and not drug cartel which adds a whole different category of legal problems.
 
-Suppose a simple demand function $p = 1-q$ and no cost. The profit of firm 1 is $\pi = q(1-q) = q-q^2$. Under a monopoly, we have $q = 0.5$ and $\pi = 0.25$. If a second firm is in the market, we have
-    \begin{align*}
-        \pi_1 & = q_1(1-q_1-q_2)\\
-        \pi_2 & = q_2(1-q_1-q_2)\\
-              & = q_2 - q_1 q_2 - q^2
-    \end{align*}
-Optimal quantity for firm 2
-    \begin{equation*}
-        q_2 = \frac{1-q_1}{2}
-    \end{equation*}
-Reaction of firm 1
-    \begin{align*}
-        \pi_1  & = q_1(1-q_1-\frac{1-q_1}{2})\\
-                & = q_1 - q_1^2 - \frac{q_1}{2} + \frac{q_1^2}{2}
-    \end{align*}
+In a cartel, multiple firms act as if they are a monopolist. In the previous section, the following demand function was considered: $P=40-Q$. The marginal revenue associated with this (inverse) demand function is $MR=40-2 \cdot Q$. Thus, setting marginal revenue equal to marginal cost ($MC=2$) leads to a monopolistic production quantity of $Q=19$. Both firms could agree to produce 9.5 units each which would lead to a price of 21. 
 
+Note that firms do not need to engage in explicit collusion (i.e., direct communication) but can engagne in implicit collusion simply by using a tit-for-tat strategy. Assuming multiple periods, an individual firm could raise prices in one period and see if the other firm follows the signal by raising prices as well. From an economic perspective, cartels are unstable because prices are high and firms can undercut each other. This instability is used by antitrust agencies to destabilize them even more. For example, legislation usually has no penalty for the first firm blowing the whistle on a cartel.
 
-% Go over the Binger and Hoffman example about price discrimination.
+The United Potato Growers of America *aspires to be to potatoes what OPEC is to oil by carefully managing supply to keep demand high and constant, resulting in a more stable return for farmers.* This is how the Wall Street Journal describes the situation in the U.S. potatoes market in [This Spud's Not for You: Growing Co-Op of Farmers Seeks to Become OPEC of Potatoes by Controlling Supply](https://www.wsj.com/articles/SB115923613007373896). The Capper-Volstead Act exempted farmers from federal antitrust laws which allowed the United Potato Growers of America to destroy 680 million pounds of potatoes in 2005 in order to keep prices high. This increased the price of potatoes by 48.5\% which was mostly absorbed by retailers and thus, consumers did not see a large price increase. There has been an issue of overproduction of potatoes which resulted in a decrease of price. Controlling the supply helped stabilize (or increase) the price of potatoes.
 
-## Examples
-The United Potato Growers of America ``aspires to be to potatoes what OPEC is to oil by carefully managing supply to keep demand high and constant, resulting in a more stable return for farmers.'' This is how the Wall Street Journal describes the situation in the U.S. potatoes market.\footnote{``This Spud's Not for You: Growing Co-Op of Farmers Seeks to Become OPEC of Potatoes by Controlling Supply, 26 September 2006.} Agricultural producers are exempt from anti-trust legislation (the Capper-Volstead Act exempted farmers from federal antitrust laws) which allowed the United Potato Growers of America to destroy 680 million pounds of potatoes in 2005 in order to keep prices high. This increased the price of potatoes by 48.5\% which was mostly absorbed by retailers and thus, consumers did not see a large price increase. There has been an issue of overproduction of potatoes which resulted in a decrease of price. Controlling the supply helped stabilize (or increase) the price of potatoes.
-
-% check or search for OXFAM behind the brand infographic for the original source of the food oligopoly.
-% https://www.oxfamamerica.org/explore/stories/these-10-companies-make-a-lot-of-the-food-we-buy-heres-how-we-made-them-better/
-% https://worldmaritimenews.com/archives/272206/shipping-majors-cleared-in-us-cartel-investigation/
+There have also been allegations that major container shipping lines engage in price-fixing (cartel) behavior. Those [charges were dropped](https://www.wsj.com/articles/u-s-drops-container-shipping-cartel-investigation-without-charges-11551200327) though. 
 
 ## Exercises
 
 1. *Drug Monopoly*: Mark is a producer who has the monopoly on a drug curing a particular disease. The following equations characterize his economic environment:
 
-    - Demand:
-        $$Q=150-3 \cdot P \Leftrightarrow P=50-\frac{Q}{3}$$
-                    \end{equation*}
-    - Total revenue:
-                    \begin{equation*}
-                        TR = 50 \cdot Q - \frac{Q^2}{3}
-                    \end{equation*}
-    - Marginal revenue:
-                    \begin{equation*}
-                        MR = 50-\frac{2}{3} \cdot Q
-                    \end{equation*}
-    - Total cost:
-                    \begin{equation*}
-                        TC= 4 \cdot Q
-                    \end{equation*}
-    - Marginal cost
-                    \begin{equation*}
-                        MC=4
-                    \end{equation*}
-            \end{itemize}
+    - Demand:$Q=150-3 \cdot P \Leftrightarrow P=50-\frac{Q}{3}$
+    - Total revenue: $TR = 50 \cdot Q - \frac{Q^2}{3}$
+    - Marginal revenue: $MR = 50-\frac{2}{3} \cdot Q$
+    - Total cost: $TC= 4 \cdot Q$
+    - Marginal cost: $MC=4$
 
 What is the profit maximizing price and output quantity? What is his profit? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? To regulate the monopoly, a tax of \$1 is imposed. Given the tax, calculate the new price, quantity, and deadweight loss.
 
 2. *Electricity Market Monopoly*: An electric utility company has a monopoly in a large metropolitan area. The inverse demand and marginal revenue functions are $P=50-Q$ and $MR= 50-2 \cdot Q$. The marginal cost function is $MC = 10+2 \cdot Q$. What is the profit maximizing price and output quantity? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? The government sets a price ceiling at $p=MC$. What is the price and output of the regulated monopoly?
         
 3. *Monopoly Profit Tax*: Assume a regulator wants to impose a 25\% tax on the profit of a monopolist to reduce the inefficiency associated with the monopolist. What is the effect of this policy on the deadweight loss. Use a graph to illustrate.
+
+4. *Concentration Ratio*: Calculate $CR_3$ for the example about the four firms in three industries.
