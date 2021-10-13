@@ -202,10 +202,16 @@ There have also been allegations that major container shipping lines engage in p
     - Total cost: $TC= 4 \cdot Q$
     - Marginal cost: $MC=4$
 
-What is the profit maximizing price and output quantity? What is his profit? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? To regulate the monopoly, a tax of \$1 is imposed. Given the tax, calculate the new price, quantity, and deadweight loss.
+    What is the profit maximizing price and output quantity? What is his profit? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? To regulate the monopoly, a tax of \$1 is imposed. Given the tax, calculate the new price, quantity, and deadweight loss.
 
 2. *Electricity Market Monopoly*: An electric utility company has a monopoly in a large metropolitan area. The inverse demand and marginal revenue functions are $P=50-Q$ and $MR= 50-2 \cdot Q$. The marginal cost function is $MC = 10+2 \cdot Q$. What is the profit maximizing price and output quantity? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? The government sets a price ceiling at $p=MC$. What is the price and output of the regulated monopoly?
         
 3. *Monopoly Profit Tax*: Assume a regulator wants to impose a 25\% tax on the profit of a monopolist to reduce the inefficiency associated with the monopolist. What is the effect of this policy on the deadweight loss. Use a graph to illustrate.
 
-4. *Concentration Ratio*: Calculate $CR_3$ for the example about the four firms in three industries.
+4. *Government Monopoly*: A city is considering privatizing their parking spaces because members on the city council are under the impression that handing it over to a private business "increases efficiency." The city currently set the price equal to (constant) marginal cost. Use graphs to answer the following issues. Assume that the marginal cost and demand do not change in any of the cases. 
+
+    a. Explain to the city council members why selling the parking spaces to a single, profit maximizing (unregulated) firm will decrease efficiency. 
+    b. What price policy can be implemented to avoid the abovementioned loss in efficiceny?
+    c. If the council members still want to sell the parking spaces but do not want to get involved in price regulation, what third option do they have. 
+
+5. *Concentration Ratio*: Calculate $CR_3$ for the example about the four firms in three industries.
