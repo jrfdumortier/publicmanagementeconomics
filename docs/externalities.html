@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10.1 Externalities | Public Management Economics</title>
   <meta name="description" content="10.1 Externalities | Public Management Economics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10.1 Externalities | Public Management Economics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jerome Dumortier" />
 
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +34,7 @@
 <link rel="prev" href="public-policy.html"/>
 <link rel="next" href="public-goods.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -156,11 +156,13 @@
 <li class="chapter" data-level="10.1.3" data-path="externalities.html"><a href="externalities.html#pollution-control"><i class="fa fa-check"></i><b>10.1.3</b> Pollution Control</a></li>
 <li class="chapter" data-level="10.1.4" data-path="externalities.html"><a href="externalities.html#policy-examples-so_2-allowance-trading-program"><i class="fa fa-check"></i><b>10.1.4</b> Policy Examples: SO<span class="math inline">\(_2\)</span> Allowance Trading Program</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="public-goods.html"><a href="public-goods.html#provision-of-public-goods"><i class="fa fa-check"></i><b>10.2.1</b> Provision of Public Goods</a></li>
+<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a></li>
+<li class="chapter" data-level="10.3" data-path="natural-resource-management.html"><a href="natural-resource-management.html"><i class="fa fa-check"></i><b>10.3</b> Natural Resource Management</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="natural-resource-management.html"><a href="natural-resource-management.html#fisheries"><i class="fa fa-check"></i><b>10.3.1</b> Fisheries</a></li>
+<li class="chapter" data-level="10.3.2" data-path="natural-resource-management.html"><a href="natural-resource-management.html#forest-management"><i class="fa fa-check"></i><b>10.3.2</b> Forest Management</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="common-resource-fisheries-and-population-dynamics.html"><a href="common-resource-fisheries-and-population-dynamics.html"><i class="fa fa-check"></i><b>10.3</b> Common Resource: Fisheries and Population Dynamics</a></li>
-<li class="chapter" data-level="10.4" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.4</b> Exercises</a></li>
+<li class="chapter" data-level="10.4" data-path="asymmetric-information.html"><a href="asymmetric-information.html"><i class="fa fa-check"></i><b>10.4</b> Asymmetric Information</a></li>
+<li class="chapter" data-level="10.5" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>11</b> Case Studies</a><ul>
 <li class="chapter" data-level="11.1" data-path="profit-maximization-for-a-nonprofit.html"><a href="profit-maximization-for-a-nonprofit.html"><i class="fa fa-check"></i><b>11.1</b> Profit Maximization for a Nonprofit</a></li>
@@ -190,7 +192,7 @@
             <section class="normal" id="section-">
 <div id="externalities" class="section level2">
 <h2><span class="header-section-number">10.1</span> Externalities</h2>
-<p>Externalities are costs (negative externalities) or benefits (positive externalities) on non-market participants. There are no incentives for market participants to take those (social) costs and benefits into account and thus, they base their decisions only on private benefits and costs. Consider the following examples:</p>
+<p>Externalities are costs (negative externalities) or benefits (positive externalities) on non-market participants. There are no incentives for market participants to take those (social) costs and benefits into account and thus, they base their decisions only on private benefits and costs. Consider the following examples of externalities:</p>
 <ul>
 <li><p>The manufacturer of cigarettes observes private marginal cost, i.e., the marginal cost of producing cigarettes, but ignores the cost of negative health outcomes that is paid by society. For example, the marginal cost of producing a cigarette may be 3 cents and the marginal external cost of smoking the cigarette may be 2 cents. Thus, the private marginal cost is 3 cents but the social marginal cost is 5 cents. The cigarette manufacturer bases its production decision on 3 cents. A social marginal cost above the private marginal cost is an example of a negative externality. The firm’s supply curve does not capture all social marginal costs associated with its product.</p></li>
 <li><p>Consider the production of sugary and fatty food and drink items. Producers and consumers of those items do not take the cost into account that the resulting increase in obesity has on non-market participants. The following was published in The Seattle Times on December 21, 2011 under the title <a href="https://www.seattletimes.com/seattle-news/as-passengers-add-girth-ferries-drop-capacity/">As passengers add girth, ferries drop capacity</a>:</p>
@@ -261,7 +263,6 @@ Figure 10.4: Efficient Outcome
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -302,7 +303,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {

@@ -32,6 +32,7 @@ fig:PUPnegext1
 fig:PUPnegext2
 fig:PUPnegext3
 fig:PUPnegext4
+fig:PUBfisheries
 preface
 introduction
 real-versus-nominal-prices
@@ -99,8 +100,10 @@ coase-theorem
 pollution-control
 policy-examples-so_2-allowance-trading-program
 public-goods
-provision-of-public-goods
-common-resource-fisheries-and-population-dynamics
+natural-resource-management
+fisheries
+forest-management
+asymmetric-information
 exercises-7
 case-studies
 profit-maximization-for-a-nonprofit

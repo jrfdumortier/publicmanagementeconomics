@@ -1,8 +1,12 @@
 # Public Policy
-The requirements for markets to allocate resources efficiently are (1) that markets exist for all goods and services in the economy, (2) perfect competition, (3) perfect information, (4) property rights are assigned to all resources and commodities, and (5) there are no externalities. In the following sections, we look at cases where those conditions are violated and where public policy can intervene to improve or restore efficiency. 
+The requirements for markets to allocate resources efficiently are (1) that markets exist for all goods and services in the economy, (2) perfect competition, (3) perfect information, (4) property rights are assigned to all resources and commodities, and (5) there are no externalities. In the following sections, we look at cases where those conditions are violated and where public policy can intervene to improve or restore efficiency. There are video associated with the concepts covered in this chapter:
+
+- [Positive and Negative Externalities](https://youtu.be/bXkJ2aCP4-4)
+- [Pollution Control Policies](https://youtu.be/fbDIqlCzD4E)
+- [Asymmetric Information and Insurance Markets](https://youtu.be/k3veHT4rSiU)
 
 ## Externalities
-Externalities are costs (negative externalities) or benefits (positive externalities) on non-market participants. There are no incentives for market participants to take those (social) costs and benefits into account and thus, they base their decisions only on private benefits and costs. Consider the following examples:
+Externalities are costs (negative externalities) or benefits (positive externalities) on non-market participants. There are no incentives for market participants to take those (social) costs and benefits into account and thus, they base their decisions only on private benefits and costs. Consider the following examples of externalities:
 
 - The manufacturer of cigarettes observes private marginal cost, i.e., the marginal cost of producing cigarettes, but ignores the cost of negative health outcomes that is paid by society. For example, the marginal cost of producing a cigarette may be 3 cents and the marginal external cost of smoking the cigarette may be 2 cents. Thus, the private marginal cost is 3 cents but the social marginal cost is 5 cents. The cigarette manufacturer bases its production decision on 3 cents. A social marginal cost above the private marginal cost is an example of a negative externality. The firm's supply curve does not capture all social marginal costs associated with its product.
 - Consider the production of sugary and fatty food and drink items. Producers and consumers of those items do not take the cost into account that the resulting increase in obesity has on non-market participants. The following was published in The Seattle Times  on December 21, 2011 under the title [As passengers add girth, ferries drop capacity](https://www.seattletimes.com/seattle-news/as-passengers-add-girth-ferries-drop-capacity/):
@@ -81,7 +85,6 @@ curve(funpmc,from=0,to=25,ylim=c(0,100),yaxs="i",xaxs="i",xlab="Quantity",ylab="
 rm(list=ls())    
 ```
         
-
 ### Pigouvian Tax
 A Pigouvian tax is a per-unit production tax equal to the difference between social marginal cost and private marginal cost. It is difficult to implement because of unknown social costs of externality. By reducing the market quantity to the efficient quantity, a Pigouvian tax eliminates the DWL from the pollution externality. Difference between Pigouvian tax and pollution tax is that the former is a per-unit tax on output and the latter is a per-unit tax on pollution.
 
@@ -108,14 +111,13 @@ Suppose that both firms emit 50 tons of pollution per year and the government wa
 ###  Policy Examples: SO$_2$ Allowance Trading Program
 Theoretically, a well designed pollution tax or cap-and-trade can minimize the total cost of achieving environmental protection [Stavins (1998)](https://doi.org/10.1257/jep.12.3.69). The SO$_2$ Allowance Trading Program established under Title IV of the Clean Air Act amendment of 1990 aimed at reducing emissions by 10 million tons over 1980 levels. The purpose of the program was to control for acid rain to reduce acidification of forest and aquatic ecosystems. However, there have been significant benefits to human health as well . In this program, it was also possible to bank allowances for later use. The compliance with the program was enforced by a penalty of \$2,000 per ton of emissions exceeding the allowance together with the requirement to offset the emissions the following year. The program was mostly successful due to a liberalization in railroads [Schmalensee and Stavins (2013)](https://doi.org/10.1257/jep.27.1.103). Also, the cost of the program was ten times cheaper than initially estimated [Kerr (1998)](https://doi.org/10.1126/science.282.5391.1024).
 
-
 ## Public Goods
 Public goods can be consumed by more than one individual at the same time, e.g., national defense, police officers in a city (up to a certain extent). A good is rival if it cannot be consumed by more than one individual at a time. It is excludable if non-paying consumers can be excluded from consumption. Our primary focus so far has been on pure private goods - goods that are both rival and excludable. The Tragedy of the Commons arises when rival goods are made non-excludable through common ownership. Public goods are both non-rival and non-excludable; e.g. national defense, lighthouse. Club goods are non-rival but excludable; e.g. public swimming pools.
 
-|                |     Rival    |  Non-Rival  |
-|----------------|:------------:|:-----------:|
-| Excludable     | Private Good |  Club Good  |
-| Non-Excludable |  Common Good | Public Good |
+|                    |     Rival    |  Non-Rival  |
+|--------------------|:------------:|:-----------:|
+| **Excludable**     | Private Good |  Club Good  |
+| **Non-Excludable** |  Common Good | Public Good |
 
 Common goods lead to the ``Tragedy of the Commons'', e.g., swimming pool as a club good, free rider problem. Suppose that two future roommates need to decided whether to bring a TV to the dormitory. The value of a TV for each player is \$100 and the cost of a TV is \$150.
 
@@ -125,83 +127,149 @@ Common goods lead to the ``Tragedy of the Commons'', e.g., swimming pool as a cl
 | **Player A** | Buy    |    1,1  | 20,0   |
 |              | Don't buy |   0,20  | 5,5    |
 
-
-### Provision of Public Goods
-Suppose that the benefit of a public good $q$ can be represented as follows:
-$$U_A(q)  =10q-q^2 \\
-        =10(q_A+q_B) -(q_A+q_B)^2\\
-U_B(q)  =10q-\frac{q^2}{2} \\
-        =10(q_A+q_B) -\frac{(q_A+q_B)^2}{2}$$
-
-The cost of acquiring the good is $C(q)=8(q_A+q_B)$. So the total benefit to society can be written as
-$$B_S(q_A,q_B) = 20(q_A+q_B) -1.5(q_A+q_B)^2-8(q_A+q_B)$$
-Solving the first-order conditions leads to $20 -3(q_A+q_B)=8$. Thus, societal benefit is maximized if $q_T=4$. So if $MB_a=10-2q$, $MB_b=10-q$, and $MC=8$, then we have
+Suppose that the utility of a public good associated with its total quantity $Q_T$ can be represented as follows for consumer can bet written as:
+$$U_A(Q_T) = 10 \cdot Q_T^2 = 10 \cdot (Q_A+Q_B)-(Q_A+Q_B)^2$$
+And the utility for consumer *B* is expressed as:
+$$U_B(Q_T) = 10 \cdot Q_T-\frac{Q_T^2}{2} =10 \cdot (Q_A+Q_B) -\frac{(Q_A+Q_B)^2}{2}$$
+The cost of acquiring the good is $C(Q_T)=8(Q_A+Q_B)$. So the total benefit to society can be written as
+$$B_S(Q_A,Q_B) = 20 \cdot (Q_A+Q_B)-1.5 \cdot (Q_A+Q_B)^2-8 \cdot (Q_A+Q_B)$$
+Solving the first-order conditions leads to $20-3 \cdot (Q_A+Q_B)=8$. Thus, societal benefit is maximized if $Q_T=4$. The key characteristic of a public good that the unit purchased by one consumer can also be consumed by all other consumers. So if $MB_a=10-2q$, $MB_b=10-q$, and $MC=8$, then we have
 
 $$MB_a = MC \quad \Rightarrow \quad q = 1\\
   MB_b = MC \quad \Rightarrow \quad q = 2$$
 
 But since individual $A$ has already purchased 1 unit, individual $B$ will free ride and they will end up with 2 units.
 
-## Common Resource: Fisheries and Population Dynamics
-Let $f(X)$ denote the net growth rate, i.e., births minus deaths excluding harvest, of a fish species. The total population is denoted with $X$ and the maximum fish population is denoted with $k$ and is often referred to as the carrying capacity with unsustainable quantity after this amount. Before the peak, fish rapidly grow and there are plenty of food and space for the species. After the peak, depletion of the fish by the environment, food scarcity and less space for species.
+## Natural Resource Management
+This section considers two common examples of resource management:
 
-Assume that harvest is a result of effort (boats) and the fish population, i.e., $H = G(X,E)$, with $X$ representing fish population and $E$ representing effort, i.e, boats, equipment, nets, bait, and so on. The more effort a fisherman expends, the higher the harvest. The higher the fish population, the more the fishermen catch. This means that there can be the same harvest rate but different levels of fish population and effort. In the steady state, the harvest rate equals net birth rate of the fish, i.e., $H = f(X)$. Furthermore, assume that the price of fish is $p$ and that the cost of effort is $c$. Thus the profit equation can be written as
-$$\pi = p \times h - c \times E = p \times G(E,X) - c \times E $$
+- Fisheries
+- Forest Rotation
 
-With an open access resource, profits are driven to zero resulting in low harvest and fish population.
+### Fisheries
+Let $g=f(S)$ denote the net growth rate, i.e., births minus deaths excluding harvest, of a fish species. The fish population stock is denoted with $S$ and the maximum fish population is denoted with $k$ and is often referred to as the carrying capacity with unsustainable quantity after this amount. Assume that the function takes the following functional form:
+$$g = S \cdot \left(1-\frac{S}{k} \right)$$
+This growth function is depicted in the figure below assuming a carrying capacity of $k=100$:
 
-\subsection{Asymmetric Information, Adverse Selection, and Moral Hazard}
-The asymmetric information problem that causes higher cost customer to ``adversely select'' into the market or, alternatively, that causes low quality suppliers to adversely select into the market. Moral hazard refers to the tendency to change behavior after entering a contract, especially a contract which reduces risk.
-Possible prevention of adverse selection is to eliminate the choice of informed people, e.g., providing insurance to everyone or by mandating that everyone buy insurance. Avoiding or preventing adverse selection can be achieved via signalling and/or screening.
-        \begin{table}
-            \begin{center}
-                \begin{tabular}{lcc} \toprule
-                  Market            & Signaling     & Screening \\ \hline
-                  Life insurance    & Non-smoker    & Health exam \\
-                  Used cars         & Carfax        & Mechanic \\
-                  Labor market      & Eduction      & Interview \\
-                  Credit market     & Credit score  & ? \\ \bottomrule
-                \end{tabular}
-            \end{center}
-        \end{table}
+```{r PUBfisheries,echo=FALSE,fig.cap="Growth rate of fish as a function of stock"}
+k = 100
+g = function(S){S*(1-S/k )}
+curve(g,from=0,to=100,xlab="Fish Population Stock (S)",ylab="Growth rate (g)",yaxs="i",xaxs="i",ylim=c(0,30))
+```
 
-Assume that the demand for car insurance can be written as $q=20-2 \cdot p$ or $p=10-q/2$. Further, the marginal cost associated with a safe driver is $MC_s=2$ and the marginal cost associated with an unsafe driver is $MC_u=6$. Without asymmetric information and in a perfectly competitive market, we have marginal cost pricing, that is
-     \begin{align*}
-          2 &= 10 - \frac{q}{2} \quad \Rightarrow \text{$q=16$ and $p=2$}\\
-          6 &= 10 - \frac{q}{2} \quad \Rightarrow \text{$q=8$ and $p=6$}
-     \end{align*}
+Before the peak, fish rapidly grow and there are plenty of food and space for the species. After the peak, depletion of the fish by the environment, food scarcity, and less space for species. It can be shown that the maximum sustainable yield is $k/2$. Assuming $k=100$, the maximum amount of fish that can be harvested in a sustainable way from the fishery is 50. 
 
-Calculating the consumer surplus from this pricing policy, we can see that $CS_s=\$ 128$ and $CS_u =\$32$ leading to a total surplus of \$160. If the insurance company has no way of telling whether a driver falls in the category ``safe'' or ``unsafe,'' it has to charge a uniform price. Assuming an equal amount of safe and unsafe drivers, the company sets the price at \%4. We can show that this leads to a surplus of \$144 which is lower.
+Next, assume that harvest is a result of the fish population and effort (e.g., number of fishing boats), i.e., $h=f(S,E)$, with $S$ representing fish population and $E$ representing effort. Assume that the harvest function can be written as:
+$$h=q \cdot S \cdot E$$
+where $q$ represents a coefficient that measures the each of harvesting fish. More effort leads to a higher harvest. Higher fish population also leads to higher harvest. This means that there can be the same harvest rate but different levels of fish population and effort. In the steady state, the harvest rate equals net birth rate of the fish, i.e., $g=h$. To solve for the level of effort at the maximum sustainable yield, the growth and harvest function must be set equal to each other:
+$$S \cdot \left(1-\frac{S}{k} \right) = q \cdot S \cdot E$$
+Isolating $S$ leads to the following:
+$$S=(1-q \cdot E) \cdot k$$
+Substituting the fish stock as a function of effort into the harvest function leads to:
+$$h= q \cdot (1-q \cdot E) \cdot k \cdot E = q\cdot k \cdot E- k\cdot q^2 \cdot E^2$$
+Taking the first derivative and setting it to zero to find the effort that maximizes harvest leads to:
+$$q \cdot k -2 \cdot k \cdot q^2 \cdot E = 0$$
+Thus, the effort at the maximum sustainable yield is
+$$E^{MSY}=\frac{1}{2 \cdot q}$$
+Next, the price of fish and the cost of effort must be taken into account. Assume that the price of fish is $p$ and that the cost of effort is $c$. Thus the profit equation can be written as
+$$\pi=p \cdot h-c \cdot E$$
+Remembering that the condition for sustainability dictates that $g=h$, the harvest $h$ in the above equation can be replaced with the growth function:
+$$\pi=p \cdot S \cdot \left(1-\frac{S}{k} \right) -c \cdot E$$
+Note that the fish stock is a function of $E$ as well. From the harvest function:
+$$S=\frac{h}{q \cdot E}$$ 
+And replacing $h$ in the above equations with the function linking harvest to effort:
+$$S=\frac{q\cdot k \cdot E- k\cdot q^2 \cdot E^2}{q \cdot E} = k \cdot (1 -q \cdot E)$$
+This results in the following profit function:
+$$\pi=p \cdot q \cdot k \cdot E - p \cdot k \cdot q^2 \cdot E^2 -c \cdot E$$
+Thus, the profit maximizing effort is 
+$$E=\frac{p \cdot q \cdot k - c}{p \cdot q^2 \cdot k}$$
+This is lower than the maximum sustainable yield. 
+
+### Forest Management
+This section covers the optimal harvest of trees, which is also known as rotation period. The growth function of trees is usually assumed to be S-shaped, i.e., slow growth in early and late years but high growth in the intermediate years. Assume a tree growth function of the following function form:
+$$g=a_1 \cdot t + a_2 \cdot t^2 + a_3 \cdot t^3$$
+where $g$ represents the total timber volume in cubic meters and $t$ represents time. Assume that the growth parameters $a_1$, $a_2$, and $a_3$ take the values 40, 3, and -0.02, respectively. Then over a 100-year period, the total volume of the tree looks as depicted in the figure below.
+
+```{r PUBtreevolume,echo=FALSE}
+a1 = 40
+a2 =  3
+a3 = -0.02
+volume = function(t){a1*t+a2*t^2+a3*t^3}
+curve(volume,from=0,to=100,xlab="Time",ylab="Volume in Cubic Meters",yaxs="i",xaxs="i",ylim=c(0,15000))
+rm(a1,a2,a3,volume)
+```
+
+Assume that the price of timber per cubic meter is \$2 and that the harvest cost of the tree consists of a fixed and variable part. The fixed cost is $1,000 and the variable cost is \$0.3 per cubic meter. The net present value is calculated for three different interest rates, i.e., 1\%, 3\%, and 5\%.
+
+```{r PUBforestnpv,echo=FALSE}
+a1              = 40
+a2              = 3
+a3              = -0.02
+p               = 2
+FC              = 1000
+VC              = 0.3
+volume          = function(t){a1*t+a2*t^2+a3*t^3}
+treedata        = data.frame(age=0:100)
+treedata$volume = volume(treedata$age)
+treedata$growth = NA
+for(t in c(16:100)){
+  treedata$growth[t] = treedata$volume[t]/treedata$volume[t-1]-1}
+profit1 = data.frame(age=treedata$age,interest="1%",
+                     profit=((p-VC)*treedata$volume-FC)/(1+0.01)^treedata$age)
+profit3 = data.frame(age=treedata$age,interest="3%",
+                     profit=((p-VC)*treedata$volume-FC)/(1+0.03)^treedata$age)
+profit5 = data.frame(age=treedata$age,interest="5%",
+                     profit=((p-VC)*treedata$volume-FC)/(1+0.05)^treedata$age)
+profit  = rbind(profit1,profit3,profit5)
+
+```
+
+## Asymmetric Information
+Asymmetric information occurs if two or more parties engage in an transaction and at least one party has more information than the other. This causes high cost customer or low quality suppliers to participate in the market without the other party or parties knowing the cost and/or quality issue. The prime example for asymmetric information is the used car market. The seller has more information about the reliability and quality of the car than the buyer. There are multiple strategies to prevent or reduce asymmetric information. Some examples are:
+
+- **Used Car Market**: Companies like Carfax that track the repair and accident history of cars can help uncover possible issues with a used car.
+- **Life Insurance**: An insurance company can require a health exam prior to selling a life insurance policy.
+- **Labor Market**: Job interview are designed to reduce the asymmetric information for the employer. The potential job candidate has better information on their ability than the employer. 
+
+Assume that the demand for car insurance is $Q=20-2 \cdot P$. The inverse demand is $P=10-Q/2$. Further, the marginal costs associated with a safe and unsafe drivers are $MC_S=2$ and $MC_u=6$, respectively. A perfectly competitive market without asymmetric information results in welfare maximizing marginal cost pricing. For the safe driver, this leads to:
+$$2=10-\frac{Q}{2}$$
+Thus, quantity and price for safe drivers are $Q=16$ and $P=2$. Similarly, for the unsafe driver:
+$$6=10-\frac{Q}{2}$$
+Thus, quantity and price for safe drivers are $Q=8$ and $P=6$. Calculating the consumer surplus from this pricing policy leads to $CS_S=\$ 128$ and $CS_U =\$32$. The total surplus of \$160. If the insurance company cannot determine in which category a driver falls, it has to charge a uniform price. Assuming an equal amount of safe and unsafe drivers, the company sets the price at \$4. It can be shown that this leads to a surplus of \$144, which is lower than the \$160 under no asymmetric information. This insurance problem is also illustrated in the video [Asymmetric Information and Insurance Markets](https://youtu.be/k3veHT4rSiU).
 
 ## Exercises
-1. Suppose that the inverse demand function for a particular good can be written as $P=400-5 \cdot Q$ and that private marginal cost $PMC=5 \cdot Q$. The additional external damage per unit produced is $D=2 \cdot Q$. Calculate the market price, quantity, and deadweight loss. What are the societal efficient quantity and price? Calculate the per-unit tax that would achieve the efficient outcome.
+1. ***Negative Production Externality I*** (***): Suppose that the inverse demand function for a particular good can be written as $P=400-5 \cdot Q$ and that private marginal cost $PMC=5 \cdot Q$. The additional external damage per unit produced is $D=2 \cdot Q$. Support the answers to the questions below by using a graph. 
+    a. Calculate the market price, quantity, and deadweight loss. 
+    b. What are the efficient quantity and price? 
+    c. Calculate the per-unit tax that would achieve the efficient outcome.
 
-2. Supply and demand for a good are given by the following equations:
-    $$Q^D = 1000-5 \cdot P\\
-      Q^S = 2 \cdot P-100$$
-   The marginal external cost is \$7. Calculate the market price, quantity, and deadweight loss. What are the societal efficient quantity and price? Calculate the per-unit tax that would achieve the efficient outcome.
+2. ***Negative Production Externality II*** (***): Demand and supply for a good are written as $Q^D=1000-5 \cdot P$ and $Q^S=2 \cdot P-100$, respectively. The marginal external cost is \$7. Support the answers to the questions below by using a graph. 
+    a. Calculate the market price, quantity, and deadweight loss. 
+    b. What are the efficient quantity and price? 
+    c. Calculate the per-unit tax that would achieve the efficient outcome.
 
-3. *Polluting Monopolist*: John has a monopoly in the local oil refinement market. The oil demand function is $P=80-Q$ and the marginal revenue is $MR(Q)=80-2 \cdot Q$. The private marginal cost is $MC=10$. During the refinement process, air, water, and soil pollution occurs at a constant cost of \$5 per unit of oil. What is the profit maximizing price and output quantity? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? Should the government tax emissions? If yes, at what rate? If no, why? Use a graph to illustrate your answers.
+3. ***Polluting Monopolist*** (***): John has a monopoly in the oil refinement market. The oil demand function is $P=80-Q$ and the marginal revenue is $MR(Q)=80-2 \cdot Q$. The private marginal cost is $MC=10$. During the refinement process, air, water, and soil pollution occurs at a constant cost of \$5 per unit of oil. Support the answers to the questions below by using a graph.
+    a. What are the profit maximizing price and quantity? 
+    b. What are the efficient price and quantity? 
+    c. Calculate the deadweight loss associated with the monopoly situation? Should the government tax emissions? If yes, at what rate? If no, why?
 
-4. *Pollination*: Pollination by bees is very important for plant reproduction and substantial fees are paid to beekeepers [(Rucker et al., 2012)](https://doi.org/10.1093/ajae/aas031). Imagine a beekeeper and an apple orchard farmer being neighbors. Note this is a situation of a positive externality. The beekeeper receives the revenue from selling honey but in the absence of any payments, does not receive any money for the bees pollinating nearby orchards or fields. Suppose that one beehive ($H$) can pollinate one acre. The pollination of an acre without the bees costs \$20 per acre. The beekeeper can sell the honey from a beehive at \$50. The total cost of the beekeeper is $TC = H^2 + 20$ and marginal costs $MC = 2 \cdot H$. Represent this problem graphically.
+4. ***Pollination*** (***): Pollination by bees is very important for plant reproduction and substantial fees are paid to beekeepers [(Rucker et al., 2012)](https://doi.org/10.1093/ajae/aas031). Imagine a beekeeper and an apple orchard farmer being neighbors. Note this is a situation of a positive externality. The beekeeper receives the revenue from selling honey but in the absence of any payments, does not receive any money for the bees pollinating nearby orchards or fields. Suppose that one beehive ($H$) can pollinate one hectare. The pollination of an hectare without the bees costs \$20. The beekeeper can sell the honey from a beehive at \$50. The total cost of the beekeeper is $TC=H^2+20$ and marginal costs $MC=2 \cdot H$. Support the answers to the questions below by using a graph.
     a. How many hives would the beekeeper maintain if operating independently of the farmer?
     b. What is the socially efficient number of hives?
     c. In the absence of transaction costs, what outcomes do you expect to arise from bargaining between the beekeeper and the farmer?
     d. How high would total transaction costs have to be to erase all gains from bargaining?
 
-5. *Efficient Polluting Monopolist*: In class, we have discussed that an externality and a monopoly, if looked at separately, lead to a deadweight loss. Using a graph, let us illustrate the case where a polluting monopolist can be efficient in the absence of any intervention. Draw a linear demand function and the corresponding marginal revenue function. Next, draw an upward sloping marginal cost function starting at the origin (note that the result does not change if you draw the marginal cost function with an intercept). Determine the profit maximizing output and price. Next draw an external marginal cost function such that the initially determine quantity and output are efficient, i.e., with no deadweight loss.
+5. ***Efficient Polluting Monopolist*** (**): Externalities and monopoly power lead to a deadweight loss when looked at separately. Using a graph, illustrate the case where a polluting monopolist can be efficient in the absence of any intervention. Draw a linear demand function and the corresponding marginal revenue function. Next, draw an upward sloping marginal cost function starting at the origin (note that the result does not change if you draw the marginal cost function with an intercept). Determine the profit maximizing output and price. Next draw an external marginal cost function such that the initially determine quantity and output are efficient, i.e., with no deadweight loss.
 
-6. *Deadweight Loss from a Negative Externality*: The demand function for a polluting good is $P=360-4 \cdot Q$. The private marginal cost is $PMC = 6 \cdot Q$ and the social marginal cost is $SMC = 8 \cdot Q$. What is the price and quantity in market equilibrium? Is this efficient? If not, calculate the efficient market equilibrium and the deadweight loss associated with the inefficient allocation.
+6. ***Pareto vs. Kaldor-Hicks Efficiency*** (**): Consider the following table. Does this project meet the criteria of Pareto efficiency? Kaldor-Hicks efficiency? Would it pass a majority vote?
 
-7. *Pareto vs. Kaldor-Hicks Efficiency*: Consider the following table. Does this project meet the criteria of Pareto efficiency? Kaldor-Hicks efficiency? Would it pass a majority vote?
+    | Individual Resident | Individual Benefit | Cost Share   |
+    |:--------------------|-------------------:|-------------:|
+    | A                   | \$4,500            | \$3,000      |
+    | B                   | \$1,000            | \$3,000      |
+    | C                   | \$2,500            | \$3,000      |
+    | D                   | \$4,500            | \$3,000      |
+    | E                   | \$1,500            | \$3,000      |
+    |Total Benefit        | \$14,000           | \$15,000     |
 
-| Individual Resident | Individual Benefit | Cost Share   |
-|:--------------------|-------------------:|-------------:|
-| A                   | \$4,500            | \$3,000      |
-| B                   | \$1,000            | \$3,000      |
-| C                   | \$2,500            | \$3,000      |
-| D                   | \$4,500            | \$3,000      |
-| E                   | \$1,500            | \$3,000      |
-|Total Benefit        | \$14,000           | \$15,000     |
-
-8. Three neighbors vote on installing a streetlight. If they vote ``yes,'' each neighbor has to pay \$100. They value the streetlight at \$200, \$150, and \$50, respectively. Does this project meet the criteria of Pareto efficiency? Kaldo-Hicks efficiency? Would it pass a majority vote?
+7. ***Streetlight Installation*** (**): Three neighbors vote on installing a streetlight. If they vote in favor of the streetlight, each neighbor has to pay \$100. They each value the streetlight at \$200, \$150, and \$50, respectively. Does this project meet the criteria of Pareto efficiency? Kaldo-Hicks efficiency? Would it pass a majority vote?

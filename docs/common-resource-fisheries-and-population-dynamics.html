@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10.3 Common Resource: Fisheries and Population Dynamics | Public Management Economics</title>
   <meta name="description" content="10.3 Common Resource: Fisheries and Population Dynamics | Public Management Economics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10.3 Common Resource: Fisheries and Population Dynamics | Public Management Economics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jerome Dumortier" />
 
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +32,9 @@
   
   
 <link rel="prev" href="public-goods.html"/>
-<link rel="next" href="exercises-7.html"/>
+<link rel="next" href="asymmetric-information.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -156,11 +156,10 @@
 <li class="chapter" data-level="10.1.3" data-path="externalities.html"><a href="externalities.html#pollution-control"><i class="fa fa-check"></i><b>10.1.3</b> Pollution Control</a></li>
 <li class="chapter" data-level="10.1.4" data-path="externalities.html"><a href="externalities.html#policy-examples-so_2-allowance-trading-program"><i class="fa fa-check"></i><b>10.1.4</b> Policy Examples: SO<span class="math inline">\(_2\)</span> Allowance Trading Program</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="public-goods.html"><a href="public-goods.html#provision-of-public-goods"><i class="fa fa-check"></i><b>10.2.1</b> Provision of Public Goods</a></li>
-</ul></li>
+<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a></li>
 <li class="chapter" data-level="10.3" data-path="common-resource-fisheries-and-population-dynamics.html"><a href="common-resource-fisheries-and-population-dynamics.html"><i class="fa fa-check"></i><b>10.3</b> Common Resource: Fisheries and Population Dynamics</a></li>
-<li class="chapter" data-level="10.4" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.4</b> Exercises</a></li>
+<li class="chapter" data-level="10.4" data-path="asymmetric-information.html"><a href="asymmetric-information.html"><i class="fa fa-check"></i><b>10.4</b> Asymmetric Information</a></li>
+<li class="chapter" data-level="10.5" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>11</b> Case Studies</a><ul>
 <li class="chapter" data-level="11.1" data-path="profit-maximization-for-a-nonprofit.html"><a href="profit-maximization-for-a-nonprofit.html"><i class="fa fa-check"></i><b>11.1</b> Profit Maximization for a Nonprofit</a></li>
@@ -194,16 +193,6 @@
 <p>Assume that harvest is a result of effort (boats) and the fish population, i.e., <span class="math inline">\(H = G(X,E)\)</span>, with <span class="math inline">\(X\)</span> representing fish population and <span class="math inline">\(E\)</span> representing effort, i.e, boats, equipment, nets, bait, and so on. The more effort a fisherman expends, the higher the harvest. The higher the fish population, the more the fishermen catch. This means that there can be the same harvest rate but different levels of fish population and effort. In the steady state, the harvest rate equals net birth rate of the fish, i.e., <span class="math inline">\(H = f(X)\)</span>. Furthermore, assume that the price of fish is <span class="math inline">\(p\)</span> and that the cost of effort is <span class="math inline">\(c\)</span>. Thus the profit equation can be written as
 <span class="math display">\[\pi = p \times h - c \times E = p \times G(E,X) - c \times E \]</span></p>
 <p>With an open access resource, profits are driven to zero resulting in low harvest and fish population.</p>
-
-The asymmetric information problem that causes higher cost customer to ``adversely select’’ into the market or, alternatively, that causes low quality suppliers to adversely select into the market. Moral hazard refers to the tendency to change behavior after entering a contract, especially a contract which reduces risk.
-Possible prevention of adverse selection is to eliminate the choice of informed people, e.g., providing insurance to everyone or by mandating that everyone buy insurance. Avoiding or preventing adverse selection can be achieved via signalling and/or screening.
-
-<p>Assume that the demand for car insurance can be written as <span class="math inline">\(q=20-2 \cdot p\)</span> or <span class="math inline">\(p=10-q/2\)</span>. Further, the marginal cost associated with a safe driver is <span class="math inline">\(MC_s=2\)</span> and the marginal cost associated with an unsafe driver is <span class="math inline">\(MC_u=6\)</span>. Without asymmetric information and in a perfectly competitive market, we have marginal cost pricing, that is
-<span class="math display">\[\begin{align*}
-          2 &amp;= 10 - \frac{q}{2} \quad \Rightarrow \text{$q=16$ and $p=2$}\\
-          6 &amp;= 10 - \frac{q}{2} \quad \Rightarrow \text{$q=8$ and $p=6$}
-     \end{align*}\]</span></p>
-<p>Calculating the consumer surplus from this pricing policy, we can see that <span class="math inline">\(CS_s=\$ 128\)</span> and <span class="math inline">\(CS_u =\$32\)</span> leading to a total surplus of $160. If the insurance company has no way of telling whether a driver falls in the category <code>safe'' or</code>unsafe,’’ it has to charge a uniform price. Assuming an equal amount of safe and unsafe drivers, the company sets the price at %4. We can show that this leads to a surplus of $144 which is lower.</p>
 </div>
             </section>
 
@@ -211,11 +200,10 @@ Possible prevention of adverse selection is to eliminate the choice of informed 
         </div>
       </div>
 <a href="public-goods.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercises-7.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="asymmetric-information.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -256,7 +244,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {

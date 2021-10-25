@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>10.4 Exercises | Public Management Economics</title>
-  <meta name="description" content="10.4 Exercises | Public Management Economics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <title>10.5 Exercises | Public Management Economics</title>
+  <meta name="description" content="10.5 Exercises | Public Management Economics" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="10.4 Exercises | Public Management Economics" />
+  <meta property="og:title" content="10.5 Exercises | Public Management Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="10.4 Exercises | Public Management Economics" />
+  <meta name="twitter:title" content="10.5 Exercises | Public Management Economics" />
   
   
   
@@ -24,16 +24,17 @@
 <meta name="author" content="Jerome Dumortier" />
 
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="common-resource-fisheries-and-population-dynamics.html"/>
+<link rel="prev" href="asymmetric-information.html"/>
 <link rel="next" href="case-studies.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -156,11 +156,13 @@
 <li class="chapter" data-level="10.1.3" data-path="externalities.html"><a href="externalities.html#pollution-control"><i class="fa fa-check"></i><b>10.1.3</b> Pollution Control</a></li>
 <li class="chapter" data-level="10.1.4" data-path="externalities.html"><a href="externalities.html#policy-examples-so_2-allowance-trading-program"><i class="fa fa-check"></i><b>10.1.4</b> Policy Examples: SO<span class="math inline">\(_2\)</span> Allowance Trading Program</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="public-goods.html"><a href="public-goods.html#provision-of-public-goods"><i class="fa fa-check"></i><b>10.2.1</b> Provision of Public Goods</a></li>
+<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a></li>
+<li class="chapter" data-level="10.3" data-path="natural-resource-management.html"><a href="natural-resource-management.html"><i class="fa fa-check"></i><b>10.3</b> Natural Resource Management</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="natural-resource-management.html"><a href="natural-resource-management.html#fisheries"><i class="fa fa-check"></i><b>10.3.1</b> Fisheries</a></li>
+<li class="chapter" data-level="10.3.2" data-path="natural-resource-management.html"><a href="natural-resource-management.html#forest-management"><i class="fa fa-check"></i><b>10.3.2</b> Forest Management</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="common-resource-fisheries-and-population-dynamics.html"><a href="common-resource-fisheries-and-population-dynamics.html"><i class="fa fa-check"></i><b>10.3</b> Common Resource: Fisheries and Population Dynamics</a></li>
-<li class="chapter" data-level="10.4" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.4</b> Exercises</a></li>
+<li class="chapter" data-level="10.4" data-path="asymmetric-information.html"><a href="asymmetric-information.html"><i class="fa fa-check"></i><b>10.4</b> Asymmetric Information</a></li>
+<li class="chapter" data-level="10.5" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>11</b> Case Studies</a><ul>
 <li class="chapter" data-level="11.1" data-path="profit-maximization-for-a-nonprofit.html"><a href="profit-maximization-for-a-nonprofit.html"><i class="fa fa-check"></i><b>11.1</b> Profit Maximization for a Nonprofit</a></li>
@@ -189,25 +191,35 @@
 
             <section class="normal" id="section-">
 <div id="exercises-7" class="section level2">
-<h2><span class="header-section-number">10.4</span> Exercises</h2>
+<h2><span class="header-section-number">10.5</span> Exercises</h2>
 <ol style="list-style-type: decimal">
-<li><p>Suppose that the inverse demand function for a particular good can be written as <span class="math inline">\(P=400-5 \cdot Q\)</span> and that private marginal cost <span class="math inline">\(PMC=5 \cdot Q\)</span>. The additional external damage per unit produced is <span class="math inline">\(D=2 \cdot Q\)</span>. Calculate the market price, quantity, and deadweight loss. What are the societal efficient quantity and price? Calculate the per-unit tax that would achieve the efficient outcome.</p></li>
-<li><p>Supply and demand for a good are given by the following equations:
-<span class="math display">\[Q^D = 1000-5 \cdot P\\
-   Q^S = 2 \cdot P-100\]</span>
-The marginal external cost is $7. Calculate the market price, quantity, and deadweight loss. What are the societal efficient quantity and price? Calculate the per-unit tax that would achieve the efficient outcome.</p></li>
-<li><p><em>Polluting Monopolist</em>: John has a monopoly in the local oil refinement market. The oil demand function is <span class="math inline">\(P=80-Q\)</span> and the marginal revenue is <span class="math inline">\(MR(Q)=80-2 \cdot Q\)</span>. The private marginal cost is <span class="math inline">\(MC=10\)</span>. During the refinement process, air, water, and soil pollution occurs at a constant cost of $5 per unit of oil. What is the profit maximizing price and output quantity? What is the efficient price and output quantity? Calculate the deadweight loss associated with the monopoly situation? Should the government tax emissions? If yes, at what rate? If no, why? Use a graph to illustrate your answers.</p></li>
-<li><p><em>Pollination</em>: Pollination by bees is very important for plant reproduction and substantial fees are paid to beekeepers <a href="https://doi.org/10.1093/ajae/aas031">(Rucker et al., 2012)</a>. Imagine a beekeeper and an apple orchard farmer being neighbors. Note this is a situation of a positive externality. The beekeeper receives the revenue from selling honey but in the absence of any payments, does not receive any money for the bees pollinating nearby orchards or fields. Suppose that one beehive (<span class="math inline">\(H\)</span>) can pollinate one acre. The pollination of an acre without the bees costs $20 per acre. The beekeeper can sell the honey from a beehive at $50. The total cost of the beekeeper is <span class="math inline">\(TC = H^2 + 20\)</span> and marginal costs <span class="math inline">\(MC = 2 \cdot H\)</span>. Represent this problem graphically.</p>
+<li><p><strong><em>Negative Production Externality I</em></strong> (***): Suppose that the inverse demand function for a particular good can be written as <span class="math inline">\(P=400-5 \cdot Q\)</span> and that private marginal cost <span class="math inline">\(PMC=5 \cdot Q\)</span>. The additional external damage per unit produced is <span class="math inline">\(D=2 \cdot Q\)</span>. Support the answers to the questions below by using a graph.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the market price, quantity, and deadweight loss.</li>
+<li>What are the efficient quantity and price?</li>
+<li>Calculate the per-unit tax that would achieve the efficient outcome.</li>
+</ol></li>
+<li><p><strong><em>Negative Production Externality II</em></strong> (***): Demand and supply for a good are written as <span class="math inline">\(Q^D=1000-5 \cdot P\)</span> and <span class="math inline">\(Q^S=2 \cdot P-100\)</span>, respectively. The marginal external cost is $7. Support the answers to the questions below by using a graph.</p>
+<ol style="list-style-type: lower-alpha">
+<li>Calculate the market price, quantity, and deadweight loss.</li>
+<li>What are the efficient quantity and price?</li>
+<li>Calculate the per-unit tax that would achieve the efficient outcome.</li>
+</ol></li>
+<li><p><strong><em>Polluting Monopolist</em></strong> (***): John has a monopoly in the oil refinement market. The oil demand function is <span class="math inline">\(P=80-Q\)</span> and the marginal revenue is <span class="math inline">\(MR(Q)=80-2 \cdot Q\)</span>. The private marginal cost is <span class="math inline">\(MC=10\)</span>. During the refinement process, air, water, and soil pollution occurs at a constant cost of $5 per unit of oil. Support the answers to the questions below by using a graph.</p>
+<ol style="list-style-type: lower-alpha">
+<li>What are the profit maximizing price and quantity?</li>
+<li>What are the efficient price and quantity?</li>
+<li>Calculate the deadweight loss associated with the monopoly situation? Should the government tax emissions? If yes, at what rate? If no, why?</li>
+</ol></li>
+<li><p><strong><em>Pollination</em></strong> (***): Pollination by bees is very important for plant reproduction and substantial fees are paid to beekeepers <a href="https://doi.org/10.1093/ajae/aas031">(Rucker et al., 2012)</a>. Imagine a beekeeper and an apple orchard farmer being neighbors. Note this is a situation of a positive externality. The beekeeper receives the revenue from selling honey but in the absence of any payments, does not receive any money for the bees pollinating nearby orchards or fields. Suppose that one beehive (<span class="math inline">\(H\)</span>) can pollinate one hectare. The pollination of an hectare without the bees costs $20. The beekeeper can sell the honey from a beehive at $50. The total cost of the beekeeper is <span class="math inline">\(TC=H^2+20\)</span> and marginal costs <span class="math inline">\(MC=2 \cdot H\)</span>. Support the answers to the questions below by using a graph.</p>
 <ol style="list-style-type: lower-alpha">
 <li>How many hives would the beekeeper maintain if operating independently of the farmer?</li>
 <li>What is the socially efficient number of hives?</li>
 <li>In the absence of transaction costs, what outcomes do you expect to arise from bargaining between the beekeeper and the farmer?</li>
 <li>How high would total transaction costs have to be to erase all gains from bargaining?</li>
 </ol></li>
-<li><p><em>Efficient Polluting Monopolist</em>: In class, we have discussed that an externality and a monopoly, if looked at separately, lead to a deadweight loss. Using a graph, let us illustrate the case where a polluting monopolist can be efficient in the absence of any intervention. Draw a linear demand function and the corresponding marginal revenue function. Next, draw an upward sloping marginal cost function starting at the origin (note that the result does not change if you draw the marginal cost function with an intercept). Determine the profit maximizing output and price. Next draw an external marginal cost function such that the initially determine quantity and output are efficient, i.e., with no deadweight loss.</p></li>
-<li><p><em>Deadweight Loss from a Negative Externality</em>: The demand function for a polluting good is <span class="math inline">\(P=360-4 \cdot Q\)</span>. The private marginal cost is <span class="math inline">\(PMC = 6 \cdot Q\)</span> and the social marginal cost is <span class="math inline">\(SMC = 8 \cdot Q\)</span>. What is the price and quantity in market equilibrium? Is this efficient? If not, calculate the efficient market equilibrium and the deadweight loss associated with the inefficient allocation.</p></li>
-<li><p><em>Pareto vs. Kaldor-Hicks Efficiency</em>: Consider the following table. Does this project meet the criteria of Pareto efficiency? Kaldor-Hicks efficiency? Would it pass a majority vote?</p></li>
-</ol>
+<li><p><strong><em>Efficient Polluting Monopolist</em></strong> (**): Externalities and monopoly power lead to a deadweight loss when looked at separately. Using a graph, illustrate the case where a polluting monopolist can be efficient in the absence of any intervention. Draw a linear demand function and the corresponding marginal revenue function. Next, draw an upward sloping marginal cost function starting at the origin (note that the result does not change if you draw the marginal cost function with an intercept). Determine the profit maximizing output and price. Next draw an external marginal cost function such that the initially determine quantity and output are efficient, i.e., with no deadweight loss.</p></li>
+<li><p><strong><em>Pareto vs. Kaldor-Hicks Efficiency</em></strong> (**): Consider the following table. Does this project meet the criteria of Pareto efficiency? Kaldor-Hicks efficiency? Would it pass a majority vote?</p>
 <table>
 <thead>
 <tr class="header">
@@ -248,9 +260,8 @@ The marginal external cost is $7. Calculate the market price, quantity, and dead
 <td align="right">$15,000</td>
 </tr>
 </tbody>
-</table>
-<ol start="8" style="list-style-type: decimal">
-<li>Three neighbors vote on installing a streetlight. If they vote ``yes,’’ each neighbor has to pay $100. They value the streetlight at $200, $150, and $50, respectively. Does this project meet the criteria of Pareto efficiency? Kaldo-Hicks efficiency? Would it pass a majority vote?</li>
+</table></li>
+<li><p><strong><em>Streetlight Installation</em></strong> (**): Three neighbors vote on installing a streetlight. If they vote in favor of the streetlight, each neighbor has to pay $100. They each value the streetlight at $200, $150, and $50, respectively. Does this project meet the criteria of Pareto efficiency? Kaldo-Hicks efficiency? Would it pass a majority vote?</p></li>
 </ol>
 
 </div>
@@ -260,12 +271,11 @@ The marginal external cost is $7. Calculate the market price, quantity, and dead
           </div>
         </div>
       </div>
-<a href="common-resource-fisheries-and-population-dynamics.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="asymmetric-information.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 <a href="case-studies.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -306,7 +316,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {

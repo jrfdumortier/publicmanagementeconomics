@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>10.2 Public Goods | Public Management Economics</title>
   <meta name="description" content="10.2 Public Goods | Public Management Economics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="10.2 Public Goods | Public Management Economics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jerome Dumortier" />
 
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +32,9 @@
   
   
 <link rel="prev" href="externalities.html"/>
-<link rel="next" href="common-resource-fisheries-and-population-dynamics.html"/>
+<link rel="next" href="natural-resource-management.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -156,11 +156,13 @@
 <li class="chapter" data-level="10.1.3" data-path="externalities.html"><a href="externalities.html#pollution-control"><i class="fa fa-check"></i><b>10.1.3</b> Pollution Control</a></li>
 <li class="chapter" data-level="10.1.4" data-path="externalities.html"><a href="externalities.html#policy-examples-so_2-allowance-trading-program"><i class="fa fa-check"></i><b>10.1.4</b> Policy Examples: SO<span class="math inline">\(_2\)</span> Allowance Trading Program</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="public-goods.html"><a href="public-goods.html#provision-of-public-goods"><i class="fa fa-check"></i><b>10.2.1</b> Provision of Public Goods</a></li>
+<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a></li>
+<li class="chapter" data-level="10.3" data-path="natural-resource-management.html"><a href="natural-resource-management.html"><i class="fa fa-check"></i><b>10.3</b> Natural Resource Management</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="natural-resource-management.html"><a href="natural-resource-management.html#fisheries"><i class="fa fa-check"></i><b>10.3.1</b> Fisheries</a></li>
+<li class="chapter" data-level="10.3.2" data-path="natural-resource-management.html"><a href="natural-resource-management.html#forest-management"><i class="fa fa-check"></i><b>10.3.2</b> Forest Management</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="common-resource-fisheries-and-population-dynamics.html"><a href="common-resource-fisheries-and-population-dynamics.html"><i class="fa fa-check"></i><b>10.3</b> Common Resource: Fisheries and Population Dynamics</a></li>
-<li class="chapter" data-level="10.4" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.4</b> Exercises</a></li>
+<li class="chapter" data-level="10.4" data-path="asymmetric-information.html"><a href="asymmetric-information.html"><i class="fa fa-check"></i><b>10.4</b> Asymmetric Information</a></li>
+<li class="chapter" data-level="10.5" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>11</b> Case Studies</a><ul>
 <li class="chapter" data-level="11.1" data-path="profit-maximization-for-a-nonprofit.html"><a href="profit-maximization-for-a-nonprofit.html"><i class="fa fa-check"></i><b>11.1</b> Profit Maximization for a Nonprofit</a></li>
@@ -201,12 +203,12 @@
 </thead>
 <tbody>
 <tr class="odd">
-<td>Excludable</td>
+<td><strong>Excludable</strong></td>
 <td align="center">Private Good</td>
 <td align="center">Club Good</td>
 </tr>
 <tr class="even">
-<td>Non-Excludable</td>
+<td><strong>Non-Excludable</strong></td>
 <td align="center">Common Good</td>
 <td align="center">Public Good</td>
 </tr>
@@ -243,20 +245,16 @@
 </tr>
 </tbody>
 </table>
-<div id="provision-of-public-goods" class="section level3">
-<h3><span class="header-section-number">10.2.1</span> Provision of Public Goods</h3>
-<p>Suppose that the benefit of a public good <span class="math inline">\(q\)</span> can be represented as follows:
-<span class="math display">\[U_A(q)  =10q-q^2 \\
-        =10(q_A+q_B) -(q_A+q_B)^2\\
-U_B(q)  =10q-\frac{q^2}{2} \\
-        =10(q_A+q_B) -\frac{(q_A+q_B)^2}{2}\]</span></p>
-<p>The cost of acquiring the good is <span class="math inline">\(C(q)=8(q_A+q_B)\)</span>. So the total benefit to society can be written as
-<span class="math display">\[B_S(q_A,q_B) = 20(q_A+q_B) -1.5(q_A+q_B)^2-8(q_A+q_B)\]</span>
-Solving the first-order conditions leads to <span class="math inline">\(20 -3(q_A+q_B)=8\)</span>. Thus, societal benefit is maximized if <span class="math inline">\(q_T=4\)</span>. So if <span class="math inline">\(MB_a=10-2q\)</span>, <span class="math inline">\(MB_b=10-q\)</span>, and <span class="math inline">\(MC=8\)</span>, then we have</p>
+<p>Suppose that the utility of a public good associated with its total quantity <span class="math inline">\(Q_T\)</span> can be represented as follows for consumer can bet written as:
+<span class="math display">\[U_A(Q_T) = 10 \cdot Q_T^2 = 10 \cdot (Q_A+Q_B)-(Q_A+Q_B)^2\]</span>
+And the utility for consumer <em>B</em> is expressed as:
+<span class="math display">\[U_B(Q_T) = 10 \cdot Q_T-\frac{Q_T^2}{2} =10 \cdot (Q_A+Q_B) -\frac{(Q_A+Q_B)^2}{2}\]</span>
+The cost of acquiring the good is <span class="math inline">\(C(Q_T)=8(Q_A+Q_B)\)</span>. So the total benefit to society can be written as
+<span class="math display">\[B_S(Q_A,Q_B) = 20 \cdot (Q_A+Q_B)-1.5 \cdot (Q_A+Q_B)^2-8 \cdot (Q_A+Q_B)\]</span>
+Solving the first-order conditions leads to <span class="math inline">\(20-3 \cdot (Q_A+Q_B)=8\)</span>. Thus, societal benefit is maximized if <span class="math inline">\(Q_T=4\)</span>. The key characteristic of a public good that the unit purchased by one consumer can also be consumed by all other consumers. So if <span class="math inline">\(MB_a=10-2q\)</span>, <span class="math inline">\(MB_b=10-q\)</span>, and <span class="math inline">\(MC=8\)</span>, then we have</p>
 <p><span class="math display">\[MB_a = MC \quad \Rightarrow \quad q = 1\\
   MB_b = MC \quad \Rightarrow \quad q = 2\]</span></p>
 <p>But since individual <span class="math inline">\(A\)</span> has already purchased 1 unit, individual <span class="math inline">\(B\)</span> will free ride and they will end up with 2 units.</p>
-</div>
 </div>
             </section>
 
@@ -264,11 +262,10 @@ Solving the first-order conditions leads to <span class="math inline">\(20 -3(q_
         </div>
       </div>
 <a href="externalities.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="common-resource-fisheries-and-population-dynamics.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="natural-resource-management.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -309,7 +306,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {

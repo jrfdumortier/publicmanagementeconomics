@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4.3 Profit Maximization | Public Management Economics</title>
   <meta name="description" content="4.3 Profit Maximization | Public Management Economics" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4.3 Profit Maximization | Public Management Economics" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="Jerome Dumortier" />
 
 
-<meta name="date" content="2021-10-13" />
+<meta name="date" content="2021-10-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -34,6 +34,7 @@
 <link rel="prev" href="production-in-the-short--and-long-run.html"/>
 <link rel="next" href="exercises-2.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -41,7 +42,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -156,11 +156,13 @@
 <li class="chapter" data-level="10.1.3" data-path="externalities.html"><a href="externalities.html#pollution-control"><i class="fa fa-check"></i><b>10.1.3</b> Pollution Control</a></li>
 <li class="chapter" data-level="10.1.4" data-path="externalities.html"><a href="externalities.html#policy-examples-so_2-allowance-trading-program"><i class="fa fa-check"></i><b>10.1.4</b> Policy Examples: SO<span class="math inline">\(_2\)</span> Allowance Trading Program</a></li>
 </ul></li>
-<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a><ul>
-<li class="chapter" data-level="10.2.1" data-path="public-goods.html"><a href="public-goods.html#provision-of-public-goods"><i class="fa fa-check"></i><b>10.2.1</b> Provision of Public Goods</a></li>
+<li class="chapter" data-level="10.2" data-path="public-goods.html"><a href="public-goods.html"><i class="fa fa-check"></i><b>10.2</b> Public Goods</a></li>
+<li class="chapter" data-level="10.3" data-path="natural-resource-management.html"><a href="natural-resource-management.html"><i class="fa fa-check"></i><b>10.3</b> Natural Resource Management</a><ul>
+<li class="chapter" data-level="10.3.1" data-path="natural-resource-management.html"><a href="natural-resource-management.html#fisheries"><i class="fa fa-check"></i><b>10.3.1</b> Fisheries</a></li>
+<li class="chapter" data-level="10.3.2" data-path="natural-resource-management.html"><a href="natural-resource-management.html#forest-management"><i class="fa fa-check"></i><b>10.3.2</b> Forest Management</a></li>
 </ul></li>
-<li class="chapter" data-level="10.3" data-path="common-resource-fisheries-and-population-dynamics.html"><a href="common-resource-fisheries-and-population-dynamics.html"><i class="fa fa-check"></i><b>10.3</b> Common Resource: Fisheries and Population Dynamics</a></li>
-<li class="chapter" data-level="10.4" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.4</b> Exercises</a></li>
+<li class="chapter" data-level="10.4" data-path="asymmetric-information.html"><a href="asymmetric-information.html"><i class="fa fa-check"></i><b>10.4</b> Asymmetric Information</a></li>
+<li class="chapter" data-level="10.5" data-path="exercises-7.html"><a href="exercises-7.html"><i class="fa fa-check"></i><b>10.5</b> Exercises</a></li>
 </ul></li>
 <li class="chapter" data-level="11" data-path="case-studies.html"><a href="case-studies.html"><i class="fa fa-check"></i><b>11</b> Case Studies</a><ul>
 <li class="chapter" data-level="11.1" data-path="profit-maximization-for-a-nonprofit.html"><a href="profit-maximization-for-a-nonprofit.html"><i class="fa fa-check"></i><b>11.1</b> Profit Maximization for a Nonprofit</a></li>
@@ -218,7 +220,6 @@ Figure 4.5: Two different ways of illustrating profit maximization
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -259,7 +260,7 @@ gitbook.start({
 },
 "download": null,
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
