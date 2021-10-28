@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>4.3 Profit Maximization | Public Management Economics</title>
-  <meta name="description" content="4.3 Profit Maximization | Public Management Economics" />
+  <title>12.4 Inflation | Public Management Economics</title>
+  <meta name="description" content="12.4 Inflation | Public Management Economics" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="4.3 Profit Maximization | Public Management Economics" />
+  <meta property="og:title" content="12.4 Inflation | Public Management Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4.3 Profit Maximization | Public Management Economics" />
+  <meta name="twitter:title" content="12.4 Inflation | Public Management Economics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="production-in-the-short--and-long-run.html"/>
-<link rel="next" href="exercises-2.html"/>
+<link rel="prev" href="intertemporal-decision-making.html"/>
+<link rel="next" href="life-cycle-hypothesis.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -273,24 +273,34 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="profit-maximization" class="section level2">
-<h2><span class="header-section-number">4.3</span> Profit Maximization</h2>
-<p>Assume we have a single output that uses workers. The output price is <span class="math inline">\(p\)</span> and the wage per worker is <span class="math inline">\(w\)</span>. Then the profit maximization problem can be written as:
-<span class="math display">\[\max \quad p \cdot f(L) - w \cdot L\]</span>
-And the solution to this problem can be written as:
-<span class="math display">\[p \cdot f&#39;(L) = w \quad \Leftrightarrow \quad f&#39;(L) = \frac{w}{p}\]</span>
-Put differently <span class="math inline">\(\pi = p \cdot y - w \cdot x\)</span>. Solving for <span class="math inline">\(y\)</span>:
-<span class="math display">\[y =\frac{\pi - w \cdot x}{p} = \frac{\pi}{p} + \frac{w}{p} \cdot x\]</span>
-The profit maximization problem as a function of output is <span class="math inline">\(\pi(q) = R(q) - C(q)\)</span> where <span class="math inline">\(R = p \cdot q\)</span>. To find the profit maximizing output, we need the marginal revenue
-<span class="math display">\[\frac{\Delta R}{\Delta q} = p\]</span>
-and the marginal cost
-<span class="math display">\[\frac{\Delta C}{\Delta Q} = MC\]</span>
-Hence, the profit maximization condition is: <span class="math inline">\(MC(q) = MR(q)\)</span>. This is true for any market structure. What differs across market structures is marginal revenue.</p>
-<div class="figure"><span style="display:block;" id="fig:PROprofitmax"></span>
-<img src="bookdownproj_files/figure-html/PROprofitmax-1.png" alt="Two different ways of illustrating profit maximization" width="672" />
-<p class="caption">
-Figure 4.5: Two different ways of illustrating profit maximization
-</p>
+<div id="inflation" class="section level2">
+<h2><span class="header-section-number">12.4</span> Inflation</h2>
+<p>Define the inflation rate as <span class="math inline">\(\pi\)</span> such that <span class="math inline">\(p_1 (1+\pi) = p_2\)</span>. So we can write
+<span class="math display">\[p_1 c_1+\frac{p_1 (1+\pi) c_2}{1+r} = m_1+\frac{m_2}{1+r}\]</span>
+With inflation, the slope of the budget constraint can be written as
+<span class="math display">\[1+\rho = \frac{1+r}{1+\pi}\]</span>
+where <span class="math inline">\(\rho\)</span> represents the real interest rate.</p>
+<div id="choice-problem" class="section level3">
+<h3><span class="header-section-number">12.4.1</span> Choice Problem</h3>
+<p>The consumer has preferences represented as follows:
+<span class="math display">\[U(c_1,c_2) = u(c_1) + \beta u(c_2)\]</span>
+To determine the effects of a change in the interest rate on consumers, we have to differentiate between an increase/decrease of the interest rate and whether the consumer is initially a lender/saver or borrower. An increase in the interest rate is a change in the price of consumption in period 1 relative to period 2. An increase in the interest rate is equivalent to an increase in the price of first period consumption. At a higher interest rate, you give up more second period consumption in order to have a unit of first period consumption. So the substitution effect says the consumer should consume less and save more in the first period if the interest rate increases.</p>
+<ul>
+<li><p><strong>Initial lender/saver and increase in interest rate</strong>: Increasing the interest rate tilts the budget line to make it steeper. An initial lender remains a lender. There are two effects:</p>
+<ul>
+<li>Income effect: If a lender/saver, then the higher interest rate increase income for a given amount of saving. The effect of the interest rate increase for an initial lender is to raise the value of the consumer’s initial savings because the consumer earns a higher return on this savings. The reduces first period consumption.</li>
+<li>Substitution effect: The interest rate <span class="math inline">\(\rho\)</span> is the relative price of consumption in period 1 to consumption in period 2, i.e., <span class="math inline">\(c_1\)</span> becomes more expensive relative to <span class="math inline">\(c_2\)</span>. This increases <span class="math inline">\(c_2\)</span> and reduces <span class="math inline">\(c_1\)</span>.
+For a lender/saver, an increase in <span class="math inline">\(\rho\)</span> increases <span class="math inline">\(c_2\)</span> and may increase or decrease <span class="math inline">\(c_1\)</span>.</li>
+</ul></li>
+<li><p><strong>Initial lender/saver and decrease in interest rate</strong>. A lender might or might not become a
+borrower.</p></li>
+<li><p><strong>Initial borrower and increase in interest rate.</strong> A borrower might or might not become a lender. For a consumer who is an initial borrower, the income effect goes in the same direction as the substitution effect, i.e., a higher interest rate means less …first period consumption. The interest rate increase makes borrowing more expensive, so the consumer is poorer and chooses less …first period consumption. There are two effects: (1) Income and (2) substitution effect.
+Income effect: If borrower, then the income effect is negative for <span class="math inline">\(c_1\)</span> and <span class="math inline">\(c_2\)</span>.
+Substitution effect: Gross interest rate <span class="math inline">\(1+r\)</span> is relative price of consumption in period 1 to consumption in period 2: <span class="math inline">\(c_1\)</span> becomes more expensive relative to <span class="math inline">\(c_2\)</span>: This increases <span class="math inline">\(c_2\)</span> and reduces <span class="math inline">\(c_1\)</span>. For a borrower an increase in <span class="math inline">\(\rho\)</span> reduces <span class="math inline">\(c_1\)</span> and may increase or decrease <span class="math inline">\(c_2\)</span>:</p></li>
+<li><p><strong>Initial borrower and decrease in interest rate.</strong> In this case analogous reasoning shows that if the consumer is initially a borrower, and the interest rate declines, the consumer must remain a borrower; becoming a lender would violate revealed preference. There are two effects:</p></li>
+</ul>
+<p>There is an ambiguous effect of an interest rate increase on <span class="math inline">\(c_1\)</span>, <span class="math inline">\(s_1\)</span> for an initial saver/lender.</p>
+<p>Unambiguous Effect of an Interest Rate Increase for an Initial Borrower Thus the effect of an interest rate increase for an initial borrower is to reduce first period consumption and increase savings. The overall effect of the interest rate on savings is thus ambiguous, assuming the economy has some borrowers and some lenders.</p>
 </div>
 </div>
             </section>
@@ -298,8 +308,8 @@ Figure 4.5: Two different ways of illustrating profit maximization
           </div>
         </div>
       </div>
-<a href="production-in-the-short--and-long-run.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="exercises-2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="intertemporal-decision-making.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="life-cycle-hypothesis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -330,7 +340,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/producertheory.rmd",
+"link": "https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/dynamicaspects.rmd",
 "text": "Edit"
 },
 "history": {
@@ -338,7 +348,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/producertheory.rmd",
+"link": "https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/dynamicaspects.rmd",
 "text": null
 },
 "download": null,

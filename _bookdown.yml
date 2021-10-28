@@ -3,9 +3,10 @@ output_dir: docs
 delete_merged_file: true
 edit: https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/%s
 view: https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/%s
-rmd_files: ["index.rmd","introduction.rmd","consumertheory.rmd","producertheory.rmd","costtheory.rmd",
-"supplydemand.rmd","perfectcompetition.rmd","imperfectcompetition.rmd","gametheory.rmd",
-"publicpolicy.rmd","casestudies.rmd"]
+rmd_files: ["index.rmd","introduction.rmd","consumertheory.rmd","producertheory.rmd",
+"costtheory.rmd","supplydemand.rmd","perfectcompetition.rmd","imperfectcompetition.rmd",
+"gametheory.rmd","publicpolicy.rmd","riskuncertainty.rmd","dynamicaspects.rmd",
+"casestudies.rmd"]
 language:
   ui:
     chapter_name: ""

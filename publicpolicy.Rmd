@@ -146,6 +146,29 @@ This section considers two common examples of resource management:
 - Fisheries
 - Forest Rotation
 
+Before introducing the forestry example, the topic of Net Present Value (NPV) must be presented. Although dynamic aspects of economics are covered later in the book, NPV must be introduced to understand the forestry example. 
+
+### Net Present Value
+Net present value (NPV) analysis is based on the idea that a dollar today is different from a dollar tomorrow. Suppose a person has the choice of receiving \$1,000 either today or in a year from now. The person would certainly take the money today and not wait a year because they can take the money know, put it in a bank account, and receive the \$1,000 plus interest in a year from now. For example, assume that the interest rate is 2\% per year. If you make a bank deposit of \$1,000 today ($t=0$), then the value of the bank account in one year will be $V_1 = \$1,000 \cdot 1.02 = \$1,020$. The bank account value in two years ($t=2$) will be $V_2=\$1,000 \cdot 1.02 \cdot 1.02=\$1,040.40$. The general equation (compound interest) for the bank account value is $n$ years given an interest rate of $r$ is:
+$$V_n = \$1,000 \cdot (1+r)^n$$
+
+The opposite of compound interest is discounting. Assume a stream of income of \$100 at the end of each year over the next three years.
+$$NPV = \frac{100}{1+r} + \frac{100}{(1+r)^2} + \frac{100}{(1+r)^3}$$
+Assuming that you receive \$100 at the end of the following three years with an interest rate of 2\%, then the NPV of that stream is \$288.39. Put differently, if you deposit \$283.39 today, you can withdraw exactly \$100 at the end of years 1, 2, and 3. The net present value formula of a stream of $X_t$ per year $t$:
+$$NPV = \sum_{t=1}^T \frac{X_t}{(1+r)^t}$$
+Net present value calculations are often used in investment decisions by firms but also in court cases relating to wrongful death. In particular, if a person dies while still working, families can seek compensations in the amount of the net present value of earnings. For example, assume that a person who was supposed to retire at age 65 dies in a car accident at age 60. That person was earning \$50,000 at the time of death and the expected growth rate ($g$) of the earnings were 2\% per year. Note that the person could have also died of other causes between the age of 60 and 65 and thus, we need to account for that probability ($d$). To do so, we can consult so called [life tables compiled by the Centers for Disease Control and Prevention (CDC)](https://www.cdc.gov/nchs/products/life_tables.htm). The 2014 table reveal the probabilities of dying displayed in the table below.
+
+| Age  | 60-61    | 61-62    | 62-63    | 63-64    | 64-65    |
+|:-----|----------|----------|----------|----------|----------|
+|$d_t$ | 0.008959 | 0.009606 | 0.010288 | 0.010995 | 0.011735 |
+
+Hence, if we assume the person would have received \$50,000 this year and over the next five years, we can use the following equation to calculate the net present value of earnings given a discount rate of 5\%.
+
+$$NPV = 50,000 + \sum_{t=1}^5 \frac{50,000 \cdot (1+g)^t \cdot (1-d_t)}{(1+0.05)^t}$$
+Hence, the net present value of earnings is \$277,013.36. Note that the perpetual stream of $X$ dollars
+$$NPV = \frac{X}{r}$$
+This means that the present value of an infinite stream of money is finite.
+
 ### Fisheries
 Let $g=f(S)$ denote the net growth rate, i.e., births minus deaths excluding harvest, of a fish species. The fish population stock is denoted with $S$ and the maximum fish population is denoted with $k$ and is often referred to as the carrying capacity with unsustainable quantity after this amount. Assume that the function takes the following functional form:
 $$g = S \cdot \left(1-\frac{S}{k} \right)$$
