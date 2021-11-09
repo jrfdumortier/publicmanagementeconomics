@@ -93,6 +93,11 @@ prisoners-dilemma
 stag-hunt
 up-or-down
 rock-paper-scissors
+cartel-game
+beach-location-game
+repeated-games
+sequential-games-and-entry-deterrence
+exercises-7
 public-policy
 externalities
 pigouvian-tax
@@ -105,13 +110,13 @@ net-present-value
 fisheries
 forest-management
 asymmetric-information
-exercises-7
+exercises-8
 risk-and-uncertainty
 uncertainty
 expected-utility
 risk-diversification
 insurance-market
-exercises-8
+exercises-9
 dynamic-aspects
 assets
 resource-extraction
@@ -123,6 +128,6 @@ life-cycle-hypothesis
 case-studies
 profit-maximization-for-a-nonprofit
 parks-and-recreation
-environmental-policy
-ride-sharing-in-your-hometown
 fuel-taxation-and-low-income-families
+ride-sharing-in-your-hometown
+environmental-policy

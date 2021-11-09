@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.1 Budget Constraint | Public Management Economics</title>
-  <meta name="description" content="3.1 Budget Constraint | Public Management Economics" />
+  <title>9.2 Repeated Games | Public Management Economics</title>
+  <meta name="description" content="9.2 Repeated Games | Public Management Economics" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.1 Budget Constraint | Public Management Economics" />
+  <meta property="og:title" content="9.2 Repeated Games | Public Management Economics" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.1 Budget Constraint | Public Management Economics" />
+  <meta name="twitter:title" content="9.2 Repeated Games | Public Management Economics" />
   
   
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="consumer-theory.html"/>
-<link rel="next" href="consumer-preferences.html"/>
+<link rel="prev" href="single-shot-games.html"/>
+<link rel="next" href="sequential-games-and-entry-deterrence.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -214,40 +214,47 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="budget-constraint" class="section level2">
-<h2><span class="header-section-number">3.1</span> Budget Constraint</h2>
-<p>A budget constraint represents all combinations of products that can be purchased for a fixed amount. All our examples in this section will be based on two goods, e.g., <em>x</em> and <em>y</em>. Of course, there are many more goods out there but two goods are all that are necessary to explain the main concepts. In this case, the budget constraint is written as:
-<span class="math display">\[B = P_x \cdot Q_x + P_y \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{B}{P_y}-\frac{P_x}{P_y} \cdot Q_x\]</span>
-A change in income results in a shift of the budget line but the slope remains the same. If prices change, the budget line rotates and the slope changes. To illustrate those concepts, consider the following situations:</p>
-<ul>
-<li>Situation 1: <span class="math inline">\(B=100\)</span>, <span class="math inline">\(P_x=10\)</span>, and <span class="math inline">\(P_y=5\)</span>
-<span class="math display">\[100 = 10 \cdot Q_x + 5 \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{100-10 \cdot Q_x}{5} = 20 - 2 \cdot Q_x\]</span></li>
-<li>Situation 2: <span class="math inline">\(B=150\)</span>, <span class="math inline">\(P_x=10\)</span>, and <span class="math inline">\(P_y=5\)</span>
-<span class="math display">\[150 = 10 \cdot Q_x + 5 \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{150-10 \cdot Q_x}{5} = 30 - 2 \cdot Q_x\]</span></li>
-<li>Situation 3: <span class="math inline">\(B=100\)</span>, <span class="math inline">\(P_x=10\)</span>, and <span class="math inline">\(P_y=10\)</span>
-<span class="math display">\[100 = 10 \cdot Q_x + 10 \cdot Q_y \quad \Rightarrow \quad Q_y = \frac{100-10 \cdot Q_x}{10} = 10 - Q_x\]</span></li>
-</ul>
-<p>Those changes are represented in the figure below.</p>
-<div class="figure"><span style="display:block;" id="fig:CONbc"></span>
-<img src="bookdownproj_files/figure-html/CONbc-1.png" alt="Changes in the budget constraint due to changes in income and price. If the income changes, the budget constraint shifts parallel as depicted in Panel (a). A change in price results in a different slope as depicted in Panel (b)." width="672" />
-<p class="caption">
-Figure 3.1: Changes in the budget constraint due to changes in income and price. If the income changes, the budget constraint shifts parallel as depicted in Panel (a). A change in price results in a different slope as depicted in Panel (b).
-</p>
-</div>
-<p>A budget constraint is linear only if there is no price change over the range. If there are restrictions on what can be bought, e.g., food stamps or quantity discounts, the budget constraint is not linear anymore. To illustrate this point, draw the budget constraints for the following situations:</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(M = 100\)</span>, <span class="math inline">\(P_y=2\)</span>, and <span class="math inline">\(P_x =4\)</span></li>
-<li><span class="math inline">\(M = 100\)</span>, <span class="math inline">\(P_y=2\)</span>, and <span class="math inline">\(P_x =4\)</span> if less than 10 units are bought and <span class="math inline">\(P_x=3\)</span> for units after 10.</li>
-<li><span class="math inline">\(M = 100\)</span>, <span class="math inline">\(P_y=2\)</span>, and <span class="math inline">\(P_x =4\)</span> if less than 10 units are bought and <span class="math inline">\(P_x=3\)</span> on all units if more than 10 are bought.</li>
-</ol>
+<div id="repeated-games" class="section level2">
+<h2><span class="header-section-number">9.2</span> Repeated Games</h2>
+<p>We have seen that in the single shot prisoner’s dilemma there is no Nash Equilibrium. It is possible to identify an optimal strategy for an infinitely repeated game. This is called a trigger strategy. In the first round, player <em>A</em> cooperates and does not confess. In every round after, if player <em>B</em> cooperated on previous round, <em>A</em> cooperates. If <em>B</em> defected on previous round, <em>A</em> then defects. Strategy does very well because it offers an immediate punishment for defection and has a forgiving strategy. An application is the carrot-and-stick strategy that underlies most attempts at raising children. Consider the following game between Pepsi and Coca-Cola. Note that one-time win from a low price is 5 and the loss in repeated games is 4 (discount rate becomes important).</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"></th>
+<th align="left"></th>
+<th align="center">Player B</th>
+<th align="center"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="center">Don’t cheat</td>
+<td align="center">Cheat</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Player A</strong></td>
+<td align="left">Don’t cheat</td>
+<td align="center">12,12</td>
+<td align="center">6,17</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Cheat</td>
+<td align="center">17,6</td>
+<td align="center">8,8</td>
+</tr>
+</tbody>
+</table>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="consumer-theory.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="consumer-preferences.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="single-shot-games.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="sequential-games-and-entry-deterrence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -278,7 +285,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/consumertheory.rmd",
+"link": "https://github.com/jrfdumortier/publicmanagementeconomics/edit/master/gametheory.rmd",
 "text": "Edit"
 },
 "history": {
@@ -286,7 +293,7 @@ gitbook.start({
 "text": null
 },
 "view": {
-"link": "https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/consumertheory.rmd",
+"link": "https://github.com/jrfdumortier/publicmanagementeconomics/blob/master/gametheory.rmd",
 "text": null
 },
 "download": null,

@@ -45,7 +45,7 @@ And the expected utility is:
 $$E(U) = 0.6 \cdot U(\$1) + 0.4 \cdot U(\$8)$$
 We also have $u(\$3.8)$. Note that $u(\$3.8) > 0.6 \cdot u(\$1) + 0.4 \cdot u(\$8)$
 
-```{r RSKexpectedutility}
+```{r RSKexpectedutility,echo=FALSE}
 payoff    = c(4,25)
 prob      = 0.5
 utility   = function(w){w^0.4}
@@ -80,7 +80,7 @@ To illustrate this concept, assume that the probability of a house fire is 1\%. 
 
 An actuarially fair insurance premium is equal to the probability of a claim times to payout.
 
-```{r}
+```{r RSKinsurance,,echo=FALSE}
 fireinsurance  = function(ninsur){
      fire = matrix(0,ndraws,1)
      for (i in 1:ndraws){

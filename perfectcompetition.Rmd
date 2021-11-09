@@ -22,7 +22,7 @@ Note that the first welfare theorem contains the expression ``under certain cond
 
 ## Zero Economic Profit Condition
 
-```{r COMprofitloss,echo=FALSE,fig.cap="Derivation of profit and loss from the marginal and average cost functions based on the price"}
+```{r COMprofitloss,echo=FALSE,fig.cap="Derivation of profit and loss from the marginal and average cost functions based on the price",fig.align='center'}
 cost           = function(x){450+100*x-3*x^2+0.2*x^3}
 MC             = function(x){100-6*x+0.6*x^2}
 AVC            = function(x){100-3*x+0.2*x^2}
@@ -46,10 +46,9 @@ curve(MC,add=TRUE)
 segments(0,p2,25,p2)
 points(qstar2,p2)
 points(qstar2,ATC(qstar2))
-
 ```
 
-```{r COMlre,echo=FALSE,fig.cap="Long-Run Equilibrium"}
+```{r COMlre,echo=FALSE,fig.align='center',fig.wdith=6,fig.height=8,fig.cap="Long-Run Equilibrium"}
 supply          = function(q){50+0.232193933543168*q+ss}      
 demand          = function(q){300-0.5*q+ds}       
 MC              = function(q){100-6*q+0.6*q^2}
@@ -274,25 +273,27 @@ ts        = 0
                segments(qd(3.5),0,qd(3.5),pd(qd(3.5)),col="red")
 ```
 
-
-% Price floors for airlines. https://www.theatlantic.com/business/archive/2013/02/how-airline-ticket-prices-fell-50-in-30-years-and-why-nobody-noticed/273506/
-
+Until 1978, there were price floors for airline tickets in the U.S. which artificially inflated ticket prices. Deregulation made those [airline tickets decrease](https://www.theatlantic.com/business/archive/2013/02/how-airline-ticket-prices-fell-50-in-30-years-and-why-nobody-noticed/273506/) since 1980. Price floors for airlines. 
 
 ## Exercises
-1. *Fair Trade Coffee*: The following questions ask you to consider the market for Regular Coffee and Fair Trade Coffee. Fair Trade USA defines fair trade as follows: *Fair Trade goods are just that. Fair. From far-away farms to your shopping cart, products that bear our logo come from farmers and workers who are justly compensated. We help farmers in developing countries build sustainable businesses that positively influence their communities.* Suppose that there is an advertising campaign that promotes the purchase of fair trade coffee. Assume that the marketing campaign works and that it influences the demand for fair trade coffee, i.e., consumers change their tastes and some consumers switch to fair trade coffee.
-    a. Draw two supply and demand graphs; one for ``Fair Trade Coffee'' and one for ``Regular Coffee.'' Assume that both markets are in equilibrium before the marketing campaign. Mark the equilibrium price and quantity.
-    b. Show the new equilibrium quantity and price in the graph for the ``Fair Trade Coffee.''
+1. ***Fair Trade Coffee*** (**): The following questions ask you to consider the market for Regular Coffee and Fair Trade Coffee. Fair Trade USA defines fair trade as follows: 
+
+      >Fair Trade goods are just that. Fair. From far-away farms to your shopping cart, products that bear our logo come from farmers and workers who are justly compensated. We help farmers in developing countries build sustainable businesses that positively influence their communities.
+      
+      Suppose that there is an advertising campaign that promotes the purchase of fair trade coffee. Assume that the marketing campaign works and that it influences the demand for fair trade coffee, i.e., consumers change their tastes and some consumers switch to fair trade coffee.
+    a. Draw two supply and demand graphs; one for Fair Trade Coffee and one for Regular Coffee. Assume that both markets are in equilibrium before the marketing campaign. Mark the equilibrium price and quantity.
+    b. Show the new equilibrium quantity and price in the graph for the Fair Trade Coffee.
     c. Illustrate the effects in the market for Regular Coffee. Show the new equilibrium quantity and price in the graph for the Regular Coffee. What conclusions do you draw? How does the zero-economic profit condition affect the market for Regular Coffee?
 
-2. *Pontoon Boats*: The demand function for pontoon boat rentals on Lake Michigan is written as $Q^D=50-0.2 \cdot P$. The supply curve is $Q^S=0.3 \cdot P$. When answering, be sure to differentiate between the price paid by the consumer and the price received by the producer. For each part, also calculate producer and consumer surplus.
+2. ***Pontoon Boats*** (***): The demand function for pontoon boat rentals on Lake Michigan is written as $Q^D=50-0.2 \cdot P$. The supply curve is $Q^S=0.3 \cdot P$. When answering, be sure to differentiate between the price paid by the consumer and the price received by the producer. For each part, also calculate producer and consumer surplus.
     a. What are the equilibrium price and equilibrium quantity?
     b. Because of air and noise pollution, a per-unit tax of \$10 per rental is imposed on consumers. What are the new equilibrium price and equilibrium quantity?
     c. A state representative from one of the bordering states argues that pontoon boat rental operators only have revenue in the summer and thus, suffer from the tax. Hence, they propose a per-unit subsidy of \$6 to the rental operators. What are the new equilibrium price and equilibrium quantity under this scheme? Note that we have a tax on consumers and a subsidy for producers at the same time.
     d. What if the per-unit tax on consumers is reduced to \$4 and the per-unit subsidy for rental operators is eliminated? How is this different from the answer in the previous part?
 
-3. *License Fee Reduction*: Draw a marginal and average total cost curves for a perfectly competitive industry that is in the long-run equilibrium. What is the profit of the firm in the initial situation? The legislator wants to support business and reduced the annual (fixed) business license fee for all firms. What happens to this industry in the short- and long-run? Illustrate in your graph.
+3. ***License Fee Reduction*** (***): Draw a marginal and average total cost curves for a perfectly competitive industry that is in the long-run equilibrium. What is the profit of the firm in the initial situation? The legislator wants to support business and reduced the annual (fixed) business license fee for all firms. What happens to this industry in the short- and long-run? Illustrate in your graph.
 
-4. *Hallstatt*: Take any tourist spot around the world and you will find the same situation: A lot of producers (technically, they are vendors but let us stay with the term producer) selling some cheesy souvenir item. Let us consider this market which is characterized by a lot of producers and a lot of consumers (tourists). Suppose that the place for which you are answering this question is a small town. To put the question in context, consider the folowing excerpt from a Washington Post article titled ``Nothing to see here: Popular European destinations want fewer tourists:''
+4. ***Hallstatt*** (***): Take any tourist spot around the world and you will find the same situation: A lot of producers (technically, they are vendors but let us stay with the term producer) selling some cheesy souvenir item. Let us consider this market which is characterized by a lot of producers and a lot of consumers (tourists). Suppose that the place for which you are answering this question is a small town. To put the question in context, consider the folowing excerpt from a Washington Post article titled ``Nothing to see here: Popular European destinations want fewer tourists:''
 
     >Hallstatt may not have the same name-recognition as Venice or Amsterdam. But if you Google Austria, you'll see the village dominates the images that pop up. It looks a lot like Arendelle in Disney's Frozen, with the bell tower of the Lutheran Church standing in for the central tower of Queen Elsa's castle. A salt-mining town dating from the late Bronze Age, and a UNESCO World Heritage site since 1997, Hallstatt has become especially popular among travelers from Asia. The hype began with a 2006 South Korean TV series, ``Spring Waltz,'' that was partially shot in Hallstatt. Six years later, the China Minmetals mining company opened a life-size replica of Hallstatt in the southern Chinese province of Guangdong. The company even mimicked Hallstatt's central church, although the Chinese version contains a banquet hall. Residents of the real Hallstatt, who hadn't been consulted on the project, were stunned when they learned of it. Now, filmmakers, journalists and tourists alike come to Hallstatt in droves. The town, with a population of about 800, drew 1 million visitors last year.
 

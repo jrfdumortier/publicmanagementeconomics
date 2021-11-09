@@ -24,10 +24,6 @@ Some important factors that make the demand curve shift are:
 - **Expected price**: An increase (decrease) in the expected price shifts the demand function to the right (left).
 
 ## Supply Curve
-
-
-![U.S. Drought Monitor from August 14, 2012 illustrating the areas affected by intense dryness.](https://droughtmonitor.unl.edu/data/png/20120814/20120814_usdm.png)
-
 The quantity supplied is the number of units of a good that all sellers in the market choose to sell over some time period, given the constraints that they face. The quantity supplied maximizes producer profits. The supply function can be expressed as $Q^s=f(p,p_r,w,T,\dots)$.
 
 Quantity supplied ($Q^s$) is a function of output price ($p$), price of inputs ($r$), wages ($w$), technology ($T$), and possibly other factors such as taxes, subsidies, etc. The law of supply states that when the price of a good rises and everything else remains the same, the quantity of the good supplied will rise. In case of a price change, we have
@@ -118,35 +114,23 @@ Simultaneous shift of demand and supply leads to ambiguous effect on price and q
 | Supply $\circ$      | P$\uparrow$,Q $\uparrow$ |        P $\circ$,Q $\circ$ | P$\downarrow$,Q $\downarrow$
 | Supply $\downarrow$ | P$\uparrow$,Q ?          | P$\uparrow$,Q $\downarrow$ | P?,Q $\downarrow$
 
+In 2012, a severe drought hit farmers and cropland in the United States. The British News Magazine The Economist had at least two articles on this subject titled [The 2012 drought will dent farm profits and push up food prices](https://www.economist.com/united-states/2012/07/21/drying-times) and [Supply shocks: Feeling a drought](https://www.economist.com/free-exchange/2012/08/14/feeling-a-drought) which summarizes the effects on agricultural markets. The figure below illustrates the areas affected by the drought and the intensity. The world price of corn increases by 30\% because the U.S. is responsible for 52.5\% of world corn exports.
+![U.S. Drought Monitor from August 14, 2012 illustrating the areas affected by intense dryness.](https://droughtmonitor.unl.edu/data/png/20120814/20120814_usdm.png)
 
-In 2012, a severe drought hit farmers and cropland in the United States.\footnote{\emph{The Economist} has at least two articles on this subject titled ``The 2012 drought will dent farm profits and push up food prices'' (July 21st, 2012) and ``Supply shocks: Feeling a drought'' (August 14th, 2012) which summarizes the effects on agricultural markets.} Figure \ref{fig:SND_drought} illustrates the areas affected by the drought and the intensity. As mentioned in the article, the world price of corn increases by 30\% because the U.S. is responsible for 52.5\% of world corn exports.
 
 ### Examples
-\noindent \emph{Numerical Example}\\
-Demand as a function of income, i.e., $q^d = f(p,I)$:
-    \begin{equation*}
-        q^d = 300-2p+4I
-    \end{equation*}
-Supply as a function of the price
-    \begin{equation*}
-        q^s = 3 p - 50
-    \end{equation*}
-What is the market equilibrium if the income level is $I=25$? What if $I=50$?\\
+Consider demand as a function of price (P) and income (I):
+$$Q^D = 300-2 \cdot P+4 \cdot I$$
+Supply is a function of price:
+$$Q^S=3 \cdot P-50$$
+What is the market equilibrium if the income level is $I=25$? What if $I=50$?
 
-
-
-\noindent \emph{Demand for U.S. Wheat}\\
-Initial situation in 1998:
-    \begin{gather*}
-        q^d = 3244-283 \cdot p\\
-        q^s = 1944 + 207 \cdot p\\
-        p = 2.65
-    \end{gather*}
-At the end of 1998, Indonesia and Brazil open their market for U.S. wheat, i.e., 200 million bushels of additional demand
-    \begin{gather*}
-        q^d = 3444-283 \cdot p\\
-        p =3.06
-    \end{gather*}
+Consider the market for U.S. wheat in 1998:
+$$Q^D = 3244-283 \cdot P\\
+  Q^s = 1944 + 207 \cdot P$$
+This situation leads to an equilibrium price of $P=2.65$. At the end of 1998, Indonesia and Brazil opened their market for U.S. wheat, i.e., 200 million bushels of additional demand. Thus, the demand function becomes:
+$$Q^D = 3444-283 \cdot P$$
+This results in an equilibrium price of $P=3.06$.
 
 ## Elasticity
 Elasticity measures the percentage change in one variable ($y$) divided by the percentage change in some other variable ($x$).
@@ -202,8 +186,7 @@ There are also come special cases of elasticity depicted in Figure.
 rm(demand)
 ```
 
-
-% Explain the relationship between elasticity and revenue using a graph with the demand function and the area in terms of revenue change.
+The relationship between elasticity and revenue can also be explained with a demand function graph and the area in terms of revenue change.
 
 ## Consumer and Producer Surplus
 Consider a demand function of the form $Q=10-P$ and a supply function of the form $Q=P-2$.
@@ -251,21 +234,21 @@ In a 2005 article [To Reduce the Cost of Teenage Temptation, Why Not Just Raise 
 
 ## Exercises
 
-1. *Books*: The demand for books is $Q^D = 81-P$ and the supply of books is $Q^S = 8 \cdot P$. What is the equilibrium quantity and price?
+1. ***Books*** (*): The demand for books is $Q^D = 81-P$ and the supply of books is $Q^S = 8 \cdot P$. What is the equilibrium quantity and price?
 
-2. *Gasoline Demand*: The demand for gasoline in the U.S. is very inelastic. Why do you think that is the case? Assume that it is -0.2. If gasoline prices decrease by 3\%, by how many percent does the quantity demanded change?
+2. ***Gasoline Demand*** (*): The demand for gasoline in the U.S. is very inelastic. Why do you think that is the case? Assume that it is -0.2. If gasoline prices decrease by 3\%, by how many percent does the quantity demanded change?
 
-3. *Ice Cream Demand*: The demand function for ice cream is $Q=T-5 \cdot P-40$ where $Q$, $P$, and $T$ represent the quantity, price, and temperature, respectively.
+3. ***Ice Cream Demand*** (**): The demand function for ice cream is $Q=T-5 \cdot P-40$ where $Q$, $P$, and $T$ represent the quantity, price, and temperature, respectively.
     a. Draw the demand curve for $T=80$.
     b.  In your graph, show what happens if the temperature drops to 70. Does the demand curve shift or are we moving along the demand function?
     c. The price of ice cream decreases from \$4 to \$3 without a change in temperature ($T=80$). In your graph, show how this affects the quantity demanded. Does the demand curve shift or are we moving along the demand function?
 
-4. *Societal Collapse*: During the COVID-19 pandemic, a (non-economist) friend of mine was getting gasoline and noticed many nozzles had bags over them since the gas station was low on supply despite low prices. Fearing the beginning of societal collapse, he sent me a text message because he did not understand how prices and supply could be low simultaneously. Draw a demand and supply graph starting with the pre-COVID equilibrium price and quantity. Then, show what happens if people change their driving behavior towards fewer trips. How would you have explained the situation to my friend? (It later turned out that the gas station simply forgot to put the restock order in with corporate.)
+4. ***Societal Collapse*** (**): During the COVID-19 pandemic, a (non-economist) friend of mine was getting gasoline and noticed many nozzles had bags over them since the gas station was low on supply despite low prices. Fearing the beginning of societal collapse, he sent me a text message because he did not understand how prices and supply could be low simultaneously. Draw a demand and supply graph starting with the pre-COVID equilibrium price and quantity. Then, show what happens if people change their driving behavior towards fewer trips. How would you have explained the situation to my friend? (It later turned out that the gas station simply forgot to put the restock order in with corporate.)
 
-5. *Feeling a Drought*: The following is an extract of an article title [Supply shocks: Feeling a drought](https://www.economist.com/free-exchange/2012/08/14/feeling-a-drought) from the British news magazine The Economist. Read the paragraph and answer the question below.
+5. ***Feeling a Drought*** (***): The following is an extract of an article title [Supply shocks: Feeling a drought](https://www.economist.com/free-exchange/2012/08/14/feeling-a-drought) from the British news magazine The Economist. Read the paragraph and answer the question below.
 
     >Much of America's agricultural heartland is in the grips of extreme to exceptional drought. It is becoming increasingly clear that this drought will take a significant toll on some of the nation's principal food crops, especially corn, wheat, and soybeans. As a result, food prices are soaring - the price of corn rose 23\% in July - and those food price increases are beginning to make their way into official inflation figures. This morning, the Bureau of Labour Statistics released its July producer price index. Headline prices for finished goods rose 0.3\% for the month, above expectations. The internals of the report show a sharp division between food price trends and the movement of prices for most other goods. Finished core prices rose a strong 0.4\% to 0.5\% for finished foods. But core prices for intermediate and crude goods actually fell in July, while intermediate and crude food indexes soared. Prices for crude food stuffs rose by 5.2\% in July alone. The impact of the drought on production is quite clearly a supply shock; productive capacity has actually been diminished and prices have risen as a result. Other things equal, the economy will grow a bit less than expected before the scope of the drought became clear and inflation will be a bit higher.
 
-Corn is a significant input to the production of meat because a high proportion of livestock feed uses corn. I want you to draw two supply and demand graphs (i.e., two markets): One for corn and one for meat. Illustrate the effects of the drought on the market for corn and how this translates into the market for meat.
+    Corn is a significant input to the production of meat because a high proportion of livestock feed uses corn. I want you to draw two supply and demand graphs (i.e., two markets): One for corn and one for meat. Illustrate the effects of the drought on the market for corn and how this translates into the market for meat.
 
-6. *War on Drugs*: Concerned about the high consumption of illegal, highly addictive drugs in the state, the governor solicits ideas to address the problem. State Representative Carson, a hardliner on drugs, suggests that the police should focus on reducing the number of drug dealers in the state. Representative Carter suggests an education campaign to inform potential consumers (e.g., high school students) about the adverse effects of using addictive drugs. To answer the question, assume that both proposals work in reality and have the desired effects. Using two supply and demand graphs for the drug market (i.e., one for each representative), illustrate the effects of the two proposals. Assume that the market for drugs is initially in equilibrium. Then proceed to show the effects of the policy proposals. Based on your analysis, which policy would you recommend? Why?
+6. ***War on Drugs*** (***): Concerned about the high consumption of illegal, highly addictive drugs in the state, the governor solicits ideas to address the problem. State Representative Carson, a hardliner on drugs, suggests that the police should focus on reducing the number of drug dealers in the state. Representative Carter suggests an education campaign to inform potential consumers (e.g., high school students) about the adverse effects of using addictive drugs. To answer the question, assume that both proposals work in reality and have the desired effects. Using two supply and demand graphs for the drug market (i.e., one for each representative), illustrate the effects of the two proposals. Assume that the market for drugs is initially in equilibrium. Then proceed to show the effects of the policy proposals. Based on your analysis, which policy would you recommend? Why?
