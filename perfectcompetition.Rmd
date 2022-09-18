@@ -276,7 +276,7 @@ ts        = 0
 Until 1978, there were price floors for airline tickets in the U.S. which artificially inflated ticket prices. Deregulation made those [airline tickets decrease](https://www.theatlantic.com/business/archive/2013/02/how-airline-ticket-prices-fell-50-in-30-years-and-why-nobody-noticed/273506/) since 1980. Price floors for airlines. 
 
 ## Exercises
-1. ***Fair Trade Coffee*** (**): The following questions ask you to consider the market for Regular Coffee and Fair Trade Coffee. Fair Trade USA defines fair trade as follows: 
+1. ***Fair Trade Coffee*** (***): The following questions ask you to consider the market for Regular Coffee and Fair Trade Coffee. Fair Trade USA defines fair trade as follows: 
 
       >Fair Trade goods are just that. Fair. From far-away farms to your shopping cart, products that bear our logo come from farmers and workers who are justly compensated. We help farmers in developing countries build sustainable businesses that positively influence their communities.
       

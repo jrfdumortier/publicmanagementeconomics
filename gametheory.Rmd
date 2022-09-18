@@ -114,3 +114,15 @@ Note that in all the questions, the term Nash Equilibrium is used but it also re
     |        | Late    | 80, 80    | 90, 90     |
 
 4. ***Public Goods Game*** (**): There is a public goods game in experimental economics. Each player initially has \$20 and then secretly selects whether to contribute the amount to a public pool or not. If the player does not contribute, they simply get the \$20. If the money is contributed, the amount in the public pool is multiplied by 1.5 and divided equally by the number of players and returned. The game represents a situation where the contribution to a public good (e.g., education or infrastructure) increases the payoff for everyone in society. For example, if both players contribute, they get back $(\$40 \cdot 1.5)/2=\$30$. Draw the payoff matrix and identify the Nash Equilibrium strategies
+
+5. ***Holiday Gifts*** (**): My parents do not want to exchange gifts during the holiday season because it increases stress during an already busy period. Of course, my parents and I have the possibility to purchase gifts anyway and deviate from the arrangements of not purchasing gifts. So each party has two possible actions: (1) buy gifts and (2) no gifts. The utility of the parties is depicted in the matrix below. Of course, the most catastrophic outcome is when your parents purchased a gift and I sit there empty-handed. The payoff for that situation below reflects that shame (me) and disappointment (parents). What is the Nash Equilibrium? What is the problem with that Nash Equilibrium?
+
+    |              |             | Parents                ||
+    |:-------------|:------------|:-----------:|:---------:|
+    |              |             | Buy gifts   | No gifts  |
+    | **Me**       | Buy gifts   | 100,100     | 50,10     |
+    |              | No gifts    | 0,0         | 95,95     |
+    
+6. ***Collaborative Work*** (***): You and another student are engaged in a group project for a class. Each of you can exert three levels of effort: Low, medium, and high. Let us assign the numeric values of 1, 2, and 3 to low, medium, and high effort, respectively. The score you receive (together) on the project depends on the sum of effort you each put in. Let the total work be $w$ then the score $s$ you receive is given by $s=18+46 \cdot \ln(w)$ where $\ln$ represents the natural log. Round to the nearest integer for the subsequent calculations. We can do a simple example to illustrate how the equation works. Suppose that both of you put in the lowest effort. In that case, $w=2$ and $s=18+46 \cdot \ln(2)=49.88$. Rounded to the nearest integer, you receive a score of 50 for the homework. 
+     a. Suppose you independently have to decide how much effort to put in the project. You do not observe the effort of the other person prior to receiving the grade. What is the Nash Equilibrium?
+     b. Suppose that one of you works on the project first and then submits the part to the other person. That person can see the effort that was exerted and decides how much effort to put in. What is Nash Equilbrium in this sequential game?

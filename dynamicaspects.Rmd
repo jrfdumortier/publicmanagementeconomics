@@ -1,4 +1,26 @@
 # Dynamic Aspects
+This chapter introduces the concept of time into economic analysis. The first section covers the concept of Net Present Value (NPV), which is often used by private, public, and nonprofit managers to make investment decisions. The second section introduces the concept of assets, which is best understood given some examples on natural resource management in the third section. The chapter concludes with intertemporal decision making that relates consuming, saving, and borrowing across time periods. 
+
+## Net Present Value
+Net present value (NPV) analysis is based on the idea that a dollar today is different from a dollar tomorrow. Suppose a person has the choice of receiving \$1,000 either today or in a year from now. The person would certainly take the money today and not wait a year because they can take the money know, put it in a bank account, and receive the \$1,000 plus interest in a year from now. For example, assume that the interest rate is 2\% per year. If you make a bank deposit of \$1,000 today ($t=0$), then the value of the bank account in one year will be $V_1 = \$1,000 \cdot 1.02 = \$1,020$. The bank account value in two years ($t=2$) will be $V_2=\$1,000 \cdot 1.02 \cdot 1.02=\$1,040.40$. The general equation (compound interest) for the bank account value is $n$ years given an interest rate of $r$ is:
+$$V_n = \$1,000 \cdot (1+r)^n$$
+
+The opposite of compound interest is discounting. Assume a stream of income of \$100 at the end of each year over the next three years.
+$$NPV = \frac{100}{1+r} + \frac{100}{(1+r)^2} + \frac{100}{(1+r)^3}$$
+Assuming that you receive \$100 at the end of the following three years with an interest rate of 2\%, then the NPV of that stream is \$288.39. Put differently, if you deposit \$283.39 today, you can withdraw exactly \$100 at the end of years 1, 2, and 3. The net present value formula of a stream of $X_t$ per year $t$:
+$$NPV = \sum_{t=1}^T \frac{X_t}{(1+r)^t}$$
+Net present value calculations are often used in investment decisions by firms but also in court cases relating to wrongful death. In particular, if a person dies while still working, families can seek compensations in the amount of the net present value of earnings. For example, assume that a person who was supposed to retire at age 65 dies in a car accident at age 60. That person was earning \$50,000 at the time of death and the expected growth rate ($g$) of the earnings were 2\% per year. Note that the person could have also died of other causes between the age of 60 and 65 and thus, we need to account for that probability ($d$). To do so, we can consult so called [life tables compiled by the Centers for Disease Control and Prevention (CDC)](https://www.cdc.gov/nchs/products/life_tables.htm). The 2014 table reveal the probabilities of dying displayed in the table below.
+
+| Age  | 60-61    | 61-62    | 62-63    | 63-64    | 64-65    |
+|:-----|----------|----------|----------|----------|----------|
+|$d_t$ | 0.008959 | 0.009606 | 0.010288 | 0.010995 | 0.011735 |
+
+Hence, if we assume the person would have received \$50,000 this year and over the next five years, we can use the following equation to calculate the net present value of earnings given a discount rate of 5\%.
+
+$$NPV = 50,000 + \sum_{t=1}^5 \frac{50,000 \cdot (1+g)^t \cdot (1-d_t)}{(1+0.05)^t}$$
+Hence, the net present value of earnings is \$277,013.36. Note that the perpetual stream of $X$ dollars
+$$NPV = \frac{X}{r}$$
+This means that the present value of an infinite stream of money is finite.
 
 ## Assets
 Assets provide either a service flow (e.g., consumption from a house or a car) or a monetary flow (e.g., financial assets such as stocks or mutual funds) over time. Assets differ in terms of liquidity, i.e., how fast assets can be converted to cash. For example a house is very difficult to convert to cash compared to mutual fund holdings. Assets also differ in terms of returns, risk, and tax characteristics. In the absence of uncertainty, all assets should have identical returns. Otherwise, only the asset with the highest return would be purchased.
@@ -15,11 +37,102 @@ The equilibrium condition:
 $$1+r=\frac{p_1}{p_0}  \quad \Leftrightarrow \quad p_0 = \frac{p_1}{1+r}$$
 Sometimes this called the no-arbitrage condition. Those concepts may seem overly theoretical and thus, let us examine a real world example that illustrates this concept: 
 
-## Resource Extraction
-\begin{equation}
-    \frac{P_{t+1}-c}{P_t-c}=1+r
-\end{equation}
-The resource is left in the ground if $(P_{t+1}-c)(P_t-c)>1+r$ and is taken out if $(P_{t+1}-c)(P_t-c)<1+r$
+## Natural Resource Management
+This section considers two common examples of resource management:
+
+- Forest Rotation
+- Fisheries
+- Depletable Resource Extraction
+
+Before introducing the forestry example, the topic of Net Present Value (NPV) must be presented. Although dynamic aspects of economics are covered later in the book, NPV must be introduced to understand the forestry example. 
+
+### Forest Management
+This section covers the optimal harvest of trees, which is also known as rotation period. The growth function of trees is usually assumed to be S-shaped, i.e., slow growth in early and late years but high growth in the intermediate years. Assume a tree growth function of the following function form:
+$$g=a_1 \cdot t + a_2 \cdot t^2 + a_3 \cdot t^3$$
+where $g$ represents the total timber volume in cubic meters and $t$ represents time. Assume that the growth parameters $a_1$, $a_2$, and $a_3$ take the values 40, 3, and -0.02, respectively. Then over a 100-year period, the total volume of the tree looks as depicted in the figure below.
+
+```{r PUBtreevolume,echo=FALSE}
+a1 = 40
+a2 =  3
+a3 = -0.02
+volume = function(t){a1*t+a2*t^2+a3*t^3}
+curve(volume,from=0,to=100,xlab="Time",ylab="Volume in Cubic Meters",yaxs="i",xaxs="i",ylim=c(0,15000))
+rm(a1,a2,a3,volume)
+```
+
+Assume that the price of timber per cubic meter is \$2 and that the harvest cost of the tree consists of a fixed and variable part. The fixed cost is $1,000 and the variable cost is \$0.3 per cubic meter. The net present value is calculated for three different interest rates, i.e., 1\%, 3\%, and 5\%.
+
+```{r PUBforestnpv,echo=FALSE}
+a1              = 40
+a2              = 3
+a3              = -0.02
+p               = 2
+FC              = 1000
+VC              = 0.3
+volume          = function(t){a1*t+a2*t^2+a3*t^3}
+treedata        = data.frame(age=0:100)
+treedata$volume = volume(treedata$age)
+treedata$growth = NA
+for(t in c(16:100)){
+  treedata$growth[t] = treedata$volume[t]/treedata$volume[t-1]-1}
+profit1 = data.frame(age=treedata$age,interest="1%",
+                     profit=((p-VC)*treedata$volume-FC)/(1+0.01)^treedata$age)
+profit3 = data.frame(age=treedata$age,interest="3%",
+                     profit=((p-VC)*treedata$volume-FC)/(1+0.03)^treedata$age)
+profit5 = data.frame(age=treedata$age,interest="5%",
+                     profit=((p-VC)*treedata$volume-FC)/(1+0.05)^treedata$age)
+profit  = rbind(profit1,profit3,profit5)
+
+```
+
+### Fisheries
+Let $g=f(S)$ denote the net growth rate, i.e., births minus deaths excluding harvest, of a fish species. The fish population stock is denoted with $S$ and the maximum fish population is denoted with $K$, which is often referred to as the carrying capacity with unsustainable quantity after this amount. Assume that the function takes the following functional form:
+$$g = S \cdot \left(1-\frac{S}{K} \right)$$
+This growth function is depicted in the figure below assuming a carrying capacity of $k=100$:
+
+```{r PUBfisheries,echo=FALSE,fig.cap="Growth rate of fish as a function of stock"}
+K = 100
+g = function(S){S*(1-S/K)}
+curve(g,from=0,to=100,xlab="Fish Population Stock (S)",ylab="Growth rate (g)",yaxs="i",xaxs="i",ylim=c(0,30))
+```
+
+Before the peak, fish population rapidly grows and there is plenty of food and space for the species. After the peak, depletion of the fish population occurs because of food scarcity and less space for the species. It can be shown that the maximum sustainable yield, i.e., peak growth, is at $K/2$. Assuming $K=100$, the maximum amount of fish that can be harvested in a sustainable way from the fishery is 25. If no harvesting occurs, the equilibrium stock is 100.  
+
+Next, assume that harvest is a result of the fish population and effort (e.g., number of fishing boats), i.e., $h=f(S,E)$, with $S$ representing fish population and $E$ representing effort. Assume that the harvest function can be written as:
+$$h=\theta \cdot S \cdot E$$
+where $\theta$ represents a coefficient that measures the ease of harvesting fish. More effort and higher fish population leads to a higher harvest. This implies that the same harvest rate can be achieved but with different levels of fish population and effort. In the steady state required for long-term sustainable harvesting, the harvest rate equals net growth of fish, i.e., $g=h$:
+$$S \cdot \left(1-\frac{S}{K} \right) = \theta \cdot S \cdot E$$
+Isolating $S$ leads to the following:
+$$S=(1-\theta \cdot E) \cdot K$$
+Substituting the fish stock as a function of effort back into the harvest function and simplifying leads to:
+$$h= \theta \cdot E \cdot K \cdot (1-\theta \cdot E)$$
+Next, the price of fish and the cost of effort must be taken into account. Assume that the price of fish is $p$ and that the cost of effort is $c$. Then, profit ($\pi$) equation can be written as
+$$\pi=p \cdot h-c \cdot E$$
+This results in the following profit function:
+$$\pi=p \cdot \left[\theta \cdot E \cdot K \cdot(1-\theta \cdot E) \right] -c \cdot E$$
+It can be shown that the effort level $E$, which maximizes profit is written as:
+$$E=\frac{p \cdot \theta \cdot K - c}{2 \cdot p \cdot \theta^2 \cdot K}$$
+```{r PUBfisheriesprofit,echo=FALSE,fig.cap="Growth rate of fish as a function of stock"}
+K              = 100
+theta          = 0.2
+p              = 1
+c              = 5
+fishrevenue    = function(E){p*(theta*E*K*(1-theta*E))}
+fishcost       = function(E){c*E}
+fishprofit     = function(E){p*(theta*E*K*(1-theta*E))-c*E}
+optimaleffort  = (p*theta*K-c)/(2*p*theta^2*K)
+curve(fishrevenue,from=0,to=5,xlab="Effort",ylab="$",yaxs="i",xaxs="i",ylim=c(0,30))
+curve(fishcost,yaxs="i",xaxs="i",add=TRUE)
+segments(optimaleffort,0,optimaleffort,fishrevenue(optimaleffort))
+
+```
+
+### Depletable Resource Extraction
+Consider a depletable natural resource such as oil and natural gas. For simplicity, no new stocks are discovered. We can show that in equilibrium, we have the following relationship: 
+$$\frac{P_{t+1}-c}{P_t-c}=1+r$$
+where $P_t$ is the price in time period $t$, $c$ is the per-unit cost of extraction, and $r$ is the interest rate. The resource is left in the ground if $P_{t+1}-c>(1+r)\cdot (P_t-c)$ and is taken out if $P_{t+1}-c<(1+r) \cdot (P_t-c)$. 
+
+Consider a depletable resource with stock $S=50$ remaining in $t=0$. The interest rate is 5\%. The demand for the resource can be written as $P=8-0.4 \cdot Q$.
 
 ## Intertemporal Decision Making
 Intertemporal decision making involves the question of how much to consume in time period $t$, i.e., $c_t$. For now, assume two time periods $t \in \{1,2\}$. Given incomes $m_1$ and $m_2$ and given consumption prices $p_1$ and $p_2$, what is the most preferred intertemporal consumption bundle ($c_1$,$c_2$)? To answer this question, we need to know:
@@ -59,7 +172,7 @@ $$p_1 c_1+\frac{p_2}{1+r} c_2 = m_1+\frac{m_2}{1+r}$$
 So the slope of the intertemporal budget constraint is
 $$Slope = -(1+r) \cdot \frac{p_1}{p_2}$$
 
-## Inflation
+### Inflation
 Define the inflation rate as $\pi$ such that $p_1 (1+\pi) = p_2$. So we can write
 $$p_1 c_1+\frac{p_1 (1+\pi) c_2}{1+r} = m_1+\frac{m_2}{1+r}$$
 With inflation, the slope of the budget constraint can be written as
@@ -88,10 +201,17 @@ There is an ambiguous effect of an interest rate increase on $c_1$, $s_1$ for an
 
 Unambiguous Effect of an Interest Rate Increase for an Initial Borrower Thus the effect of an interest rate increase for an initial borrower is to reduce first period consumption and increase savings. The overall effect of the interest rate on savings is thus ambiguous, assuming the economy has some borrowers and some lenders.
 
-## Life Cycle Hypothesis
+### Life Cycle Hypothesis
 Individuals want a smooth consumption profile over their life. Labor income varies substantially over a lifetime, starting out low, increasing until retirement, and ending with no labor income after retirement. The life-cycle hypothesis states that individuals turn a very non-smooth labor income profile into a very smooth consumption profile by saving (and borrowing). The main prediction is that current consumption depends on total (expected) lifetime income and given initial wealth. Saving should follow a very pronounced life-cycle pattern with borrowing in the early periods of an economic life, significant saving in the high earning years from 35-50, and reducing savings in retirement years. One empirical puzzle: older household do not reduce saving to the extent predicted by the theory. Several explanations
 
 - Individuals are altruistic and want to leave bequests to their children.
 - Uncertainty with respect to length of life and health status.
 
 Permanent income hypothesis
+
+## Exercises
+
+1. ***Net Present Value*** (*): Calculate the NPV of the following income stream over three  four years: \$150, \$175, $200, and \$300. Use an interest rate of 5\%. By how much does the NPV change if the interest rate is changed to 1\%?
+
+
+

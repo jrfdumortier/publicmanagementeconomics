@@ -9,7 +9,12 @@ library(pracma)
 library(kableExtra)
 ```
 
-Economics analyzes how individuals, households, firms, governments, and society in general employ scarce resources to produce goods and services. Economists are concerned about the efficient allocation of resources. That is, could resources be reallocated in such a way to make society better off. Economists use mathematical, theory-based models to represent the aforementioned actors and how they interact in a market or some other economic activity. Only relevant features are included in models and not every detail. Empirical work is done to test economic theories. Mathematics is a necessary tool for economists. Although this book limits the use of mathematics, the reader should keep in mind that there is a mathematical relationship behind every graph presented. 
+There are slides associated with this chapter:
+
+- [Probability Distributions - Video](https://youtu.be/29eB-nzfVAM)
+- [Introduction - Slides](https://github.com/jrfdumortier/slideseconomics/blob/main/ProbabilityDistributions.pdf)
+
+Economics analyzes how individuals, households, firms, governments, and society in general employ scarce resources to produce goods and services. Economists are concerned about the efficient allocation of resources i.e., no other allocation would make society better off. Economists use mathematical, theory-based models to represent the aforementioned actors and how they interact in a market or some other economic activity. Only relevant features are included in models and not every detail. Empirical work is done to test economic theories. Mathematics is a necessary tool for economists. Although this book limits the use of mathematics, the reader should keep in mind that there is a mathematical relationship behind every graph presented. 
 
 Economic concepts are used (explicitly or implicitly) by individuals, firms, and governments. An economist would say that most of your everyday life decisions are based on economic principles starting with the decision to get out of bed in the morning. The American Economic Association (AEA) has compiled a [list of academic papers](https://www.aeaweb.org/resources/teachers/economics-concepts-examples-in-research) that help explain economic concepts using real world examples.
 
@@ -42,9 +47,9 @@ Besides the CPI, there are two other indices that can be used to differentiate r
 The figure below illustrates the evolution of the CPI since 1978. The CPI is a "measure of the average change over time in the prices paid by urban consumers for a market basket of consumer goods and services" (Bureau of Labor Statistics). The CPI is a basket of about 80.000 items. The approximate weights in the basket are food and beverages (15\%), housing (43\%), apparel (4\%), transportation (17\%), medical care (6\%), recreation (6\%), education and communication (6\%), and other goods and services (3\%). Urban consumers represent about 87\% of the U.S. Population. 
 
 ```{r INTcpi,echo=FALSE,fig.cap="CPI for [All Items in U.S. City Average](https://fred.stlouisfed.org/series/CPIAUCSL), [Medical Care in U.S. City Average](https://fred.stlouisfed.org/series/CPIMEDSL), and [Tuition, Other School Fees, and Childcare in U.S. City Average](https://fred.stlouisfed.org/series/CUSR0000SEEB)"}
-ggplot(data=cpi,aes(x=Year,y=value,group=Legend))+geom_line(aes(linetype=Legend),size=0.5)+
-        theme_bw()+theme(legend.position="bottom")+ylim(0,800)+
-        ylab("CPI (1982-1984=100)")+theme(axis.title.x=element_blank())
+ggplot(data=cpi,aes(x=Year,y=value,color=Legend))+geom_line(size=1)+
+        theme_bw()+theme(legend.position="bottom")+ylim(0,1000)+
+        ylab("CPI (1982-1984=100)")+theme(axis.title.x=element_blank(),legend.title=element_blank())
 rm(cpi)
 ```
 
@@ -53,8 +58,8 @@ $$CPI_t = \frac{MB_t}{MB_b} \cdot 100$$
 where $MB_t$ and $MB_b$ represents the cost of the market basket in time period *t* and the base year *b*, respectively. The CPI base year is 1982 to 1984 but because it is an index, the base year can be adjusted for specific purposes. The CPI is also used as an economic indicator to set policy targets or to adjust dollar values such as pensions. It is also used as a deflator for price series to translate nominal into real prices. For example, the figure below shows the nominal and the real price of gasoline. We can see that in 2000, the nominal price of gasoline was around \$1.50 but the real price was over \$2.00. For real and nominal energy prices going back to 1970, see the [Real Prices Viewer](https://www.eia.gov/outlooks/steo/realprices/) from the U.S. Energy Information Administration. 
 
 ```{r INTgasoline,echo=FALSE,fig.cap="Real and nominal [US Regular All Formulations Gas Price](https://fred.stlouisfed.org/series/GASREGM). The [GDP Implicit Price Deflator in United States](https://fred.stlouisfed.org/series/USAGDPDEFAISMEI) is used to deflate the prices. Source: Federal Reserve Economic Data."}
-ggplot(data=gasoline,aes(x=Year,y=value,group=Legend))+geom_line(aes(linetype=Legend),size=0.5)+
-    theme_bw()+theme(legend.position="bottom",axis.title.x=element_blank())+ylim(0,5)+ylab("Price in $ per Gallon")
+ggplot(data=gasoline,aes(x=Year,y=value,color=Legend))+geom_line(size=1)+
+    theme_bw()+theme(legend.position="bottom",axis.title.x=element_blank(),legend.title=element_blank())+ylim(0,5)+ylab("Price in $ per Gallon")
 rm(gasoline)
 ```
 
@@ -67,8 +72,8 @@ $$CD_{2020}=\frac{ND_{1921} \cdot CPI_{2020}}{CPI_{1921}}=\frac{12,000 \cdot 257
 The figure below also shows that an increasing price series in nominal terms can actually be decreasing or flat in real terms. The fuel tax revenue in other states and at the federal level evolve similar to the one in Indiana.
 
 ```{r INTinfueltax,echo=FALSE,fig.cap="Real and nominal fuel tax revenue for Indiana. The [GDP Implicit Price Deflator in United States](https://fred.stlouisfed.org/series/USAGDPDEFAISMEI) is used to deflate the prices. Source: [State Government Tax Collections, Motor Fuels - Selective Sales Taxes in Indiana](https://fred.stlouisfed.org/series/INFUELTAX) from the Federal Reserve Economic Data."}
-ggplot(data=infueltax,aes(x=Year,y=value/1000,group=Legend))+geom_line(aes(linetype=Legend),size=0.5)+theme_bw()+
-    theme(legend.position="bottom",axis.title.x=element_blank())+ylab("Revenue in Million $")+ylim(0,1500)
+ggplot(data=infueltax,aes(x=Year,y=value/1000000,color=Legend))+geom_line(size=1)+theme_bw()+
+    theme(legend.position="bottom",axis.title.x=element_blank(),legend.title=element_blank())+ylab("Revenue in Billion $")+ylim(0,2)
 rm(infueltax)
 ```
 
@@ -78,7 +83,7 @@ The last important concept presented in this section is the inflation rate which
 $$\pi_t=\frac{CPI_t-CPI_{t-1}}{CPI_{t-1}}\cdot 100$$
 The figure below shows the inflation annual inflation rate in the U.S. from 1960 to 2020. 
 ```{r INTinflation,echo=FALSE,fig.cap="Inflation as the growth rate from the previous period of the [Consumer Price Index: Total All Items for the United States](https://fred.stlouisfed.org/series/CPALTT01USA657N). Source: Federal Reserve Economic Data."}
-ggplot(data=inflation,aes(x=Year,y=value))+geom_line(size=0.5)+
+ggplot(data=inflation,aes(x=Year,y=value))+geom_line(size=1)+
         theme_bw()+ylim(-5,15)+ylab("Inflation Rate")+theme(axis.title.x=element_blank())
 rm(inflation)
 ```
