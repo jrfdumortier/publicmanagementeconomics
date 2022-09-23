@@ -175,7 +175,7 @@ Create a new sheet called *Cobb Douglas* and type in the following information r
      - B1 to B4: 9, 0.5 0.3, 10
      - C1 to C2: *w*, *r*
      - D1 to D2: 0.5, 0.2
-In cells A5 through H5, put the following labels: *Q*, *Kfixed*, *L*, *Q*, *MPL*, *APL*, *FC*, *VC*, and *TC.*
+In cells A5 through H5, put the following labels: *Kfixed*, *L*, *Q*, *MPL*, *APL*, *FC*, *VC*, and *TC.*
      a.  Ranging from 0 to 10 in increments of 0.1, put the units of labor in cells C6 through C106. Then fill in the remaining columns.
      b.  In three new sheets, I want you to graph your results. Graph the production function in the first sheet. Graph the average product and marginal product of labor in the second sheet. And lastly, draw the cost function in the last sheet. Be careful with the cost function, it should not be a linear line! Make sure you use the scatter plot function of Excel.
 
