@@ -27,7 +27,7 @@ The best-known game is the Prisoner's Dilemma. The payoff table for the two play
 | **Player A** | Deny    |    1,1  | 20,0   |
 |              | Confess |   0,20  | 5,5    |
 
-In the prisoner's dilemma game, there is one Nash Equilibrium. Note that it is not the optimal outcome. Every Nash Equilibrium is characterized as a state where no player has the incentive to deviate. There is also a [Dilbert cartoon](https://www.youtube.com/watch?v=ED9gaAb2BEw) associated with the prisoner's dilemma. A more thorough video explaining the prisoner's dilemma can be found [here](https://www.youtube.com/watch?v=t9Lo2fgxWHw). 
+In the prisoner's dilemma game, there is one Nash Equilibrium. Note that it is not the optimal outcome. Every Nash Equilibrium is characterized as a state where no player has the incentive to deviate. A more thorough video explaining the prisoner's dilemma can be found [here](https://www.youtube.com/watch?v=t9Lo2fgxWHw). 
 
 For a more real world application of a simultaneous move game consider a penalty shot-out in soccer. There are two players (one of them is the goal keeper) and assume (for simplicity) that they have two actions: left or right. That is, the player kicking the ball has to decide whether to kick the ball in the left or right corner and the goalkeeper has to decide whether to jump left or right. Note that the soccer ball travels to fast and the goal keeper cannot observe the direction of the ball. How this looks is demonstrated in this sequence of a [penalty shootout between Argentina and the Netherlands](https://youtu.be/p9QuQBrPTE8?t=276). 
 

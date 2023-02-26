@@ -112,7 +112,7 @@ This results in the following profit function:
 $$\pi=p \cdot \left[\theta \cdot E \cdot K \cdot(1-\theta \cdot E) \right] -c \cdot E$$
 It can be shown that the effort level $E$, which maximizes profit is written as:
 $$E=\frac{p \cdot \theta \cdot K - c}{2 \cdot p \cdot \theta^2 \cdot K}$$
-```{r PUBfisheriesprofit,echo=FALSE,fig.cap="Growth rate of fish as a function of stock"}
+```{r PUBfisheriesprofit,echo=FALSE,fig.cap="Revenue and cost as a function of effort"}
 K              = 100
 theta          = 0.2
 p              = 1
@@ -158,6 +158,7 @@ So the intertemporal budget constraint can be written as *future-valued*
 $$(1+r) c_1 + c_2 = (1+r) m_1 + m_2$$
 or as *present-valued*
 $$c_1+\frac{c_2}{1+r} = m_1+\frac{m_2}{1+r}$$
+
 ### Price Effects
 Let us relax the assumption of $p_1 = p_2 = \$ 1 $. The maximum possible consumption in period 2 is
 $$c_2 =\frac{m_2+(1+r) m_1}{p_2}$$

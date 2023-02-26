@@ -1,5 +1,9 @@
 # Case Studies
-The following case studies offer insight into economic applications that you may face while working for the government, industry, or a nonprofit. The case studies presented are abstract representations of reality and usually, many more aspects are involved. For many policy issues, there is usually no clear-cut answer. For some of the case studies, you will need to include a table in your policy brief and useful templates are included in the Excel file [Public Management Economics](https://github.com/jrfdumortier/publicmanagementeconomics/raw/master/Public%20Management%20Economics.xlsx). The sheets in the Excel file correspond to the following case studies:
+The following case studies offer insights into economic applications that you may face while working for government, industry, or a nonprofit. Those case studies are abstract representations of reality and many more aspects are usually involved. The reporting of the case studies should be in the form of a policy brief. The Food and Agriculture Organization of the United Nations (FAO) describes a policy brief as *a concise summary of a particular issue, the policy options to deal with it, and some recommendations on the best option* (see [Writing Effective Reports](https://www.fao.org/3/i2195e/i2195e03.pdf) for more information). 
+
+The policy brief should be easy to understand for the (non-economist) audience it is intended for. There are two types of policy briefs: (1) advocacy brief and (2) objective brief. Whereas the former argues for a particular action to take, the latter informs objectively about the various options including the pros and cons for each possible action. For the case studies, you are writing an objective brief. Decision makers usually have limited time available to read a document and it should be to the point. Decision makers are also more interested in the results and conclusion and not necessarily the technical aspect, e.g., details on economic modelling, which they assume is done correctly. I suggest you structure the policy brief as follows: (1) Title (no title page), (2) Executive Summary, (3) Introduction to the Issue, (4) Analysis, (5) Policy Implications, and (6) Conclusion. Limit the length of the policy briefs associated with the five case studies to 1000 words (excluding text in graphs and tables) and five pages maximum (including graphs and tables).
+
+For some of the case studies, you will need to include a table in your policy brief and useful templates are included in the Excel file [Public Management Economics](https://github.com/jrfdumortier/publicmanagementeconomics/raw/master/Public%20Management%20Economics.xlsx). The sheets in the Excel file correspond to the following case studies:
 
 - **NONPROFIT**: Profit Maximization for a Nonprofit
 - **PARKS**: Parks and Recreation
@@ -74,10 +78,6 @@ You also had a colleague help you by doing a literature review of cost-benefit a
 - Crime is sometimes a problem on vacant parcels of an urban area.
 - Youth in organized recreational programs are more likely to not create social disturbances than youth who do not participate in organized recreation programs.
 - Industrial and commercial parcels produce more tax revenue and require less tax revenue than residential parcels.
-
-
-
-
 
 ## Fuel Taxation and Low-Income Families
 You are the governor of a Midwestern state and concerned about the poor condition of roads. The state's fuel tax has not be adjusted for more than 20 years and thus, inflation has eroded away the purchasing power. You want to raise the gasoline tax by 20\% but face critics who claim that an already regressive tax will make the situation for low-income people even worse. Thus, you consider raising the gas tax while implementing a tax credit to low-income people. However, the tax credit must be financed somehow because the increase in gas tax goes to roads and not the tax credit. So you are a little bit in a dilemma. Before you start design a tax proposal, let us look at the current residents, their preferences, and taxes in your state.

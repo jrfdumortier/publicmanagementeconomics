@@ -123,6 +123,7 @@ fisheries
 depletable-resource-extraction
 intertemporal-decision-making
 no-price-effects
+price-effects
 inflation
 choice-problem
 life-cycle-hypothesis
