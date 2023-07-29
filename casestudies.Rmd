@@ -79,6 +79,31 @@ You also had a colleague help you by doing a literature review of cost-benefit a
 - Youth in organized recreational programs are more likely to not create social disturbances than youth who do not participate in organized recreation programs.
 - Industrial and commercial parcels produce more tax revenue and require less tax revenue than residential parcels.
 
+## Perfect versus Imperfect Competition for the Marijuana Industry
+You are the state governor and elections are coming up. And although you believe that all drugs are bad and people should just say no to drugs, you are not letting your beliefs ruin your re-election chances since a majority of voters are in favor of legalizing marijuana. Your state is facing significant budgetary constraints due to declining tax revenues and increasing public expenditures. Thus, your goal is also to raise new tax revenue while at the same time reduce the burden on law enforcement and the criminal justice system by redirecting resources away from marijuana-related law enforcement and prosecution. In addition, the marijuana industry can have a multiplier effect on the economy, as businesses within the industry purchase goods and services from other sectors. This could stimulate economic activity and job creation beyond the marijuana sector. The proposed policy for legalizing marijuana includes the following elements:
+
+- Legalization Framework: The policy establishes a legal framework for the cultivation, distribution, sale, and consumption of marijuana for recreational purposes. Specific regulations and licensing requirements will be put in place to ensure responsible and safe practices within the industry.
+- Taxation: The state will multiple taxes on the industry. The corporate tax rate is 4\% on all profits of firms. Your state currently has a sales tax of 6\%, from which marijuana sales could potentially be exempt from in favor of a per-unit tax. In addition, there is a licensing fee for businesses operating within the marijuana industry. The tax revenue generated will be allocated to specific areas such as education, public health, and substance abuse treatment programs. The licence fee is \$50,000.
+- Regulation: The state will establish a regulatory body responsible for overseeing the marijuana industry. This body will develop and enforce rules on product quality, marketing restrictions, and retailer compliance.
+
+There is one economic dilemma that you are facing and which needs to be carefully analyzed in this case study. Since legalizing marijuana creates a new industry in your state, the first firms selling the product in the marketplace will benefit from higher prices but as more firms are entering the market, prices are going to decline rapidly. This has been observed, for example, in Michigan since the legalization where prices dropped from \$18.06 to \$3.21 per gram from January 2020 to December 2022 (see [Michigan's Plummeting Cannabis Prices: A Closer Look](https://www.cannabisbusinesstimes.com/news/michigan-cannabis-adult-use-price-compression-will-bowden-grasshopper-farms/). On one hand, new marijuana firms need to pay an annual licence fees which generates revenue but on the other hand, more firms are increasing supply and put downward pressure on prices. If you were to impose a sales tax, you are afraid that sales tax revenue is declining as well if you distribute too many licences.
+
+You have collected information about the marijuana industry from other states as well as from the (so far thin) academic literature. 
+
+- Demand: Based on the consumption in other states, you estimate the following annual inverse demand function with $P$ representing the price in dollars per gram and $Q$ representing the market demand in grams:
+$$P=30-\frac{20}{50000000}\cdot Q$$ 
+- All firms potentially entering the market are identical and have the following cost function:
+$$TC(Q)=2000000+8 \cdot Q$$
+
+The firms are engaging in a Cournot-like competition. You envision two possible policy designs:
+
+1. Sales tax: The current sales tax rate of 6\% ($m=0.06$) is applied to the industry. If $N$ is the number of firms operating in the industry, the output for each individual firm $i$ is given by the following equation (with $A$ and $B$ representing the intercept and slope of the inverse demand function, respectively, and $C$ representing the marginal cost):
+$$Q_i=\frac{A-(1+m) \cdot C}{(N+1)\cdot B}$$
+2. Per unit tax: In this case, the industry would be exempt from the sales tax and a per-unit tax of \$1 per gram would be applied. In that case, the output of each individual firm is given by the following equation:
+$$Q_i=\frac{A-t-C}{(N+1)\cdot B}$$
+
+You are willing to have a maximum of 50 firms operating in the state. Remember that you can control the number of firms by restricting licensing. For each of the two scenarios, calculate the price prevailing for consumers, the quantity of marijuana sold in the market, the profit for each firm, and the government revenue. Remember that the government revenue comes from the licence fees, corporate taxes, and either a sales or a per unit tax. What is the optimal number of firms operating in the market from a tax revenue standpoint. 
+
 ## Fuel Taxation and Low-Income Families
 You are the governor of a Midwestern state and concerned about the poor condition of roads. The state's fuel tax has not be adjusted for more than 20 years and thus, inflation has eroded away the purchasing power. You want to raise the gasoline tax by 20\% but face critics who claim that an already regressive tax will make the situation for low-income people even worse. Thus, you consider raising the gas tax while implementing a tax credit to low-income people. However, the tax credit must be financed somehow because the increase in gas tax goes to roads and not the tax credit. So you are a little bit in a dilemma. Before you start design a tax proposal, let us look at the current residents, their preferences, and taxes in your state.
 
@@ -117,7 +142,6 @@ $$MC=0.5+0.001 \cdot Q$$
 Currently, the number of cabs operating in your city is fixed at 1500. In reality, cities distribute so-called medallions to taxi drivers. There is a limited number of medallions and thus, the number of taxis is limited by the number of medallions distributed. Also, cabs are not allowed to change their price based on demand. The price they must use is the equilibrium price under normal demand.
 
 Prepare a policy brief which examines the two broad questions mentioned above but with more in-depth analysis. Calculate the consumer surplus, producer surplus under all possible situations. That is, with or without Unter, with or without surge pricing for cabs and/or Unter, etc. Be as thorough as possible.
-
 
 ## Environmental Policy
 You are a policy analyst for the Department of Natural Resources (DNR) in SPEAstate. The two largest firms in SPEAstate are SPEAoil (oil refinery) and SPEApaper (paper mill). Both firms are located at a river and discharge the identical pollutant into the river. The DNR would like to increase the water quality because recreational activities downstream are sometimes restricted due to a high concentration of pollutants. The DNR considers three possible policies: (1) command and control, (2) pollution tax, and (3) cap-and-trade.

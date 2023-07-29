@@ -131,6 +131,7 @@ exercises-10
 case-studies
 profit-maximization-for-a-nonprofit
 parks-and-recreation
+perfect-versus-imperfect-competition-for-the-marijuana-industry
 fuel-taxation-and-low-income-families
 ride-sharing-in-your-hometown
 environmental-policy
